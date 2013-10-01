@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TNTU-APP.iml" filepath="$PROJECT_DIR$/TNTU-APP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TNTU-APP/TNTU-APP-TNTU-APP.iml" filepath="$PROJECT_DIR$/TNTU-APP/TNTU-APP-TNTU-APP.iml" />
+    </modules>
+  </component>
+</project>
+
