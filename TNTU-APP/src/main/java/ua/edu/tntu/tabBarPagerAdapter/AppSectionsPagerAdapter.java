@@ -1,8 +1,11 @@
-package ua.edu.tntu.tabBarActivity;
+package ua.edu.tntu.tabBarPagerAdapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import ua.edu.tntu.fragments.FragmentNews;
+import ua.edu.tntu.fragments.FragmentSchedule;
 
 public class AppSectionsPagerAdapter extends FragmentPagerAdapter {
 

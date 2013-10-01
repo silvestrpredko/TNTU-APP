@@ -1,4 +1,4 @@
-package ua.edu.tntu.tabBarActivity;
+package ua.edu.tntu.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,11 +8,12 @@ import android.view.ViewGroup;
 
 import ua.edu.tntu.R;
 
-public class FragmentNews extends Fragment {
+public class FragmentSchedule extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_fregment_news, container, false);
+        View rootView = inflater.inflate(R.layout.activity_fregment_schedule, container, false);
         return rootView;
     }
 }
+//huy
