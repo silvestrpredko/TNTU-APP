@@ -1,4 +1,4 @@
-package ua.edu.tntu.fragments;
+package ua.edu.tntu;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import ua.edu.tntu.R;
 
-public class FragmentNews extends Fragment {
+public class FragmentActivityNews extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
