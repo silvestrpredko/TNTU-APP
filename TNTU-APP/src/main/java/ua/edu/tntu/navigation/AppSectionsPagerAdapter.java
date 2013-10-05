@@ -1,4 +1,4 @@
-package ua.edu.tntu.tabBarPagerAdapter;
+package ua.edu.tntu.navigation;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

@@ -12,7 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import ua.edu.tntu.tabBarPagerAdapter.AppSectionsPagerAdapter;
+import ua.edu.tntu.navigation.AppSectionsPagerAdapter;
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
