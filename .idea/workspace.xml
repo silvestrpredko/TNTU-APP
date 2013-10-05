@@ -12,12 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c6bdc8d-5b1e-4e0d-94e9-6867f16ca9e1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_blue.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_green.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_purple.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_red.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_blue.xml" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_blue.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_green.xml" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_green.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_purple.xml" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_purple.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_red.xml" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_red.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_subgroup.xml" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_subgroup.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/listrow_group.xml" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/listrow_group.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TNTU-APP.iws" />
@@ -112,8 +111,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rounded_conners_button_red.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_red.xml">
+      <file leaf-file-name="rounded_corners_button_red.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_red.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="8" selection-start="441" selection-end="441" vertical-scroll-proportion="0.3035413" vertical-offset="0" max-vertical-offset="593">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rounded_corners_button_blue.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_blue.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="10" column="8" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
               <folding />
@@ -121,17 +129,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rounded_conners_button_blue.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_blue.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="8" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rounded_conners_button_green.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_green.xml">
+      <file leaf-file-name="rounded_corners_button_green.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_green.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="8" column="32" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
               <folding />
@@ -139,8 +138,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rounded_conners_button_purple.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_purple.xml">
+      <file leaf-file-name="rounded_corners_button_purple.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_purple.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="4" column="33" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
               <folding />
@@ -160,7 +159,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_subgroup.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="activity_subgroup.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_subgroup.xml">
           <provider selected="true" editor-type-id="android-designer">
             <state />
@@ -1199,7 +1198,11 @@
       <created>1380991386159</created>
       <updated>1380991386160</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changed buttons (made rounded corners)">
+      <created>1380997188356</created>
+      <updated>1380997188356</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1212,6 +1215,7 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27817747" sideWeight="0.67255217" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1224,13 +1228,12 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3157474" sideWeight="0.31139648" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3157474" sideWeight="0.67255217" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6966292" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1242,7 +1245,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Huge update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Huge update" />
+    <MESSAGE value="Changed buttons (made rounded corners)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed buttons (made rounded corners)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1330,28 +1334,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_purple.xml">
+    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_purple.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="33" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_red.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="8" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_green.xml">
+    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_green.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="32" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_blue.xml">
+    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_blue.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="8" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
           <folding />
@@ -1364,6 +1361,13 @@
       </provider>
       <provider editor-type-id="text-editor">
         <state line="65" column="17" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.0" vertical-offset="1170" max-vertical-offset="1278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_red.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="8" selection-start="441" selection-end="441" vertical-scroll-proportion="0.3035413" vertical-offset="0" max-vertical-offset="593">
           <folding />
         </state>
       </provider>
