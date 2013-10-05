@@ -10,9 +10,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Виберіть підгрупу:"
         android:id="@+id/textView2"
-        android:layout_above="@+id/button2"
+        android:layout_above="@+id/button"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="13dp" />
+        android:layout_marginBottom="24dp" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -29,7 +29,11 @@
         android:layout_height="wrap_content"
         android:text="Перша підгрупа"
         android:id="@+id/button"
-        android:layout_below="@+id/button2"
+        android:background="@drawable/rounded_corners_button_green"
+        android:textColor="#ffffff"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -37,7 +41,12 @@
         android:layout_height="wrap_content"
         android:text="Друга підгрупа"
         android:id="@+id/button2"
-        android:layout_centerVertical="true"
+        android:background="@drawable/rounded_corners_button_blue"
+        android:textColor="#ffffff"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/button"
         android:layout_alignRight="@+id/button"
         android:layout_alignLeft="@+id/button" />
 
@@ -47,12 +56,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
         android:textColor="#e67e22"
         android:textStyle="bold"
         android:typeface="sans"
-        android:textSize="55dp" />
+        android:textSize="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
