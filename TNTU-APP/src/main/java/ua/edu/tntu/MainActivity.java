@@ -16,9 +16,7 @@ import ua.edu.tntu.tabBarPagerAdapter.AppSectionsPagerAdapter;
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
-    private AppSectionsPagerAdapter sectionsPagerAdapter;
-
-    private ViewPager               viewPager;
+    private ViewPager viewPager;
 
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     public void onCreate(Bundle savedInstanceState) {
@@ -27,13 +25,14 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
         // Create the adapter that will return a fragment for each of the three primary sections
         // of the app.
-        sectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager());
+        AppSectionsPagerAdapter sectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the action bar.
         final ActionBar actionBar = getActionBar();
 
         // Specify that the Home/Up button should not be enabled, since there is no hierarchical
         // parent.
+        assert actionBar != null;
         actionBar.setHomeButtonEnabled(true);
 
         // Specify that we will be displaying tabs in the action bar.
@@ -54,19 +53,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         });
 
         // For each of the sections in the app, add a tab to the action bar.
-        for (int i = 0; i < sectionsPagerAdapter.getCount(); i++) {
-            // Create a tab with text corresponding to the page title defined by the adapter.
-            // Also specify this Activity object, which implements the TabListener interface, as the
-            // listener for when this tab is selected.
-            if (i == 0)
-            {
-                actionBar.addTab(actionBar.newTab().setIcon(R.drawable.ic_launcher).setTabListener(this));
-            }
-            else
-            {
-                actionBar.addTab(actionBar.newTab().setIcon(R.drawable.ic_launcher).setTabListener(this));
-            };
-        }
+
+        actionBar.addTab(actionBar.newTab().setText("News").setTabListener(this));
+        actionBar.addTab(actionBar.newTab().setText("Schedule").setTabListener(this));
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
@@ -75,7 +64,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main, menu);
-        getActionBar().setIcon(R.drawable.bb);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -86,7 +74,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         switch (item.getItemId()) {
             case android.R.id.home:
                 openOptionsMenu();
-                Toast.makeText(this,"You Push Back",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "You Push Back", Toast.LENGTH_SHORT).show();
             default:
                 return super.onOptionsItemSelected(item);
         }

@@ -4,10 +4,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import ua.edu.tntu.FragmentActivityNews;
-import ua.edu.tntu.FragmentActivitySchedule;
+import ua.edu.tntu.NewsFragment;
+import ua.edu.tntu.ScheduleFragment;
 
 public class AppSectionsPagerAdapter extends FragmentPagerAdapter {
+
+    public static final int NUMBER_OF_TABS = 2;
 
     public AppSectionsPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -17,13 +19,11 @@ public class AppSectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int i) {
         switch (i) {
             case 0:
-            {
-                return new FragmentActivityNews();
-            }
+                return new NewsFragment();
+
             case 1:
-            {
-                return new FragmentActivitySchedule();
-            }
+                return new ScheduleFragment();
+
             default:
                 return null;
         }
@@ -31,11 +31,20 @@ public class AppSectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return NUMBER_OF_TABS;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return "Section " + (position + 1);
+        switch (position) {
+            case 0:
+                return "News";
+
+            case 1:
+                return "Schedule";
+
+            default:
+                return "UNKNOWN";
+        }
     }
 }
