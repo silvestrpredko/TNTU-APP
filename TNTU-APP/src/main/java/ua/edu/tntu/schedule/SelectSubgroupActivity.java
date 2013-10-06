@@ -1,43 +1,40 @@
 package ua.edu.tntu.schedule;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import ua.edu.tntu.R;
 
-public class SelectSubgroupActivity extends Activity implements View.OnClickListener {
-
-    public static final String SUB_GROUP_NAME = "com.hfomn.expandedlistexample.SUB_NAME";
-
-    Button firstSub;
-    Button secondSub;
-    TextView groupName;
+public class SelectSubgroupActivity extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subgroup);
-
-        firstSub = (Button) findViewById(R.id.button);
-        secondSub = (Button) findViewById(R.id.button2);
-
-        firstSub.setOnClickListener(this);
-        secondSub.setOnClickListener(this);
-
-        Intent intent = getIntent();
-        String name = intent.getStringExtra(ExpandableListAdapter.GROUP_NAME);
-
-        groupName = (TextView) findViewById(R.id.textView);
-        groupName.setText(name);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
-    public void onClick(View v) {
-        Intent intent = new Intent(this, ScheduleTableActivity.class);
-        startActivity(intent);
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        return super.onCreateOptionsMenu(menu);
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
 }

@@ -3,6 +3,8 @@ package ua.edu.tntu;
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -37,6 +39,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
         // Specify that we will be displaying tabs in the action bar.
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#34495e")));
 
         // Set up the ViewPager, attaching the adapter and setting up a listener for when the
         // user swipes between sections.
