@@ -12,7 +12,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <item name="android:actionBarTabBarStyle">@style/customTabBar</item>
         <item name="android:actionBarTabStyle">@style/customTabStyle</item>
-
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
     </style>
 
     <style name="customTabStyle" parent="@android:style/Widget.Holo.ActionBar.TabView">
@@ -21,6 +21,16 @@
 
     <style name="customTabBar" parent="@android:style/Widget.Holo.ActionBar.TabBar">
         <item name="android:divider">@null</item>
+        <item name="android:background">#000000</item>
+    </style>
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/TitleTextStyle</item>
+        <item name="android:background">#2980b9</item>
+    </style>
+
+    <style name="TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#ffffff</item>
     </style>
 
 </resources>
