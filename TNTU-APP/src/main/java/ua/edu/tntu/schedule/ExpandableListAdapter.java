@@ -59,7 +59,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
                 Toast.makeText(activity, children,
                         Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(finalConvertView.getContext(), SelectSubgroupActivity.class);
+                Intent intent = new Intent(finalConvertView.getContext(), ScheduleTableActivity.class);
                 intent.putExtra(GROUP_NAME, children);
                 (finalConvertView.getContext()).startActivity(intent);
             }
