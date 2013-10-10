@@ -21,23 +21,15 @@ import ua.edu.tntu.ScheduleFragment;
 
 public class ScheduleTableActivity extends FragmentActivity {
 
-    DemoCollectionPagerAdapter mDemoCollectionPagerAdapter;
+    WeeksPagerAdapter mWeeksPagerAdapter;
 
-    /**
-     * The {@link android.support.v4.view.ViewPager} that will display the object collection.
-     */
     ViewPager mViewPager;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_collection_demo);
+        setContentView(R.layout.activity_weeks);
 
-        // Create an adapter that when requested, will return a fragment representing an object in
-        // the collection.
-        //
-        // ViewPager and its adapters use support library fragments, so we must use
-        // getSupportFragmentManager.
-        mDemoCollectionPagerAdapter = new DemoCollectionPagerAdapter(getSupportFragmentManager());
+        mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager());
 
         // Set up action bar.
         final ActionBar actionBar = getActionBar();
@@ -48,7 +40,7 @@ public class ScheduleTableActivity extends FragmentActivity {
 
         // Set up the ViewPager, attaching the adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
-        mViewPager.setAdapter(mDemoCollectionPagerAdapter);
+        mViewPager.setAdapter(mWeeksPagerAdapter);
     }
 
     @Override
@@ -77,29 +69,26 @@ public class ScheduleTableActivity extends FragmentActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * A {@link android.support.v4.app.FragmentStatePagerAdapter} that returns a fragment
-     * representing an object in the collection.
-     */
-    public static class DemoCollectionPagerAdapter extends FragmentStatePagerAdapter {
+    public static class WeeksPagerAdapter extends FragmentStatePagerAdapter {
 
-        public DemoCollectionPagerAdapter(FragmentManager fm) {
+        public static final int NUMBER_OF_WEEKS = 2;
+
+        public WeeksPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
         @Override
         public Fragment getItem(int i) {
-            Fragment fragment = new DemoObjectFragment();
+            Fragment fragment = new WeekObjectFragment();
             Bundle args = new Bundle();
-            args.putInt(DemoObjectFragment.ARG_OBJECT, i + 1); // Our object is just an integer :-P
+            args.putInt(WeekObjectFragment.ARG_OBJECT, i + 1);
             fragment.setArguments(args);
             return fragment;
         }
 
         @Override
         public int getCount() {
-            // For this contrived example, we have a 100-object collection.
-            return 2;
+            return NUMBER_OF_WEEKS;
         }
 
         @Override
@@ -119,10 +108,7 @@ public class ScheduleTableActivity extends FragmentActivity {
         }
     }
 
-    /**
-     * A dummy fragment representing a section of the app, but that simply displays dummy text.
-     */
-    public static class DemoObjectFragment extends Fragment {
+    public static class WeekObjectFragment extends Fragment {
 
         public static final String ARG_OBJECT = "object";
 
@@ -130,7 +116,7 @@ public class ScheduleTableActivity extends FragmentActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
 
-            View rootView = inflater.inflate(R.layout.fragment_collection_object, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_schedule_table, container, false);
             Bundle args = getArguments();
             assert rootView != null;
             ((TextView) rootView.findViewById(R.id.textView)).setText(
