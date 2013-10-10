@@ -11,12 +11,11 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c6bdc8d-5b1e-4e0d-94e9-6867f16ca9e1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/schedule/SelectSubgroupActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_subgroup.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/schedule/ExpandableListAdapter.java" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/schedule/ExpandableListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TNTU-APP/TNTU-APP-TNTU-APP.iml" afterPath="$PROJECT_DIR$/TNTU-APP/TNTU-APP-TNTU-APP.iml" />
+    <list default="true" id="3c6bdc8d-5b1e-4e0d-94e9-6867f16ca9e1" name="Default" comment="Added 'Info' tab&#10;&#10;Added 'InfoFragment.java'&#10;Added 'activity_fragment_info.xml'">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/InfoFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_fragment_info.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/navigation/AppSectionsPagerAdapter.java" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/navigation/AppSectionsPagerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/MainActivity.java" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TNTU-APP.iws" />
@@ -90,13 +89,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_schedule_table.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="activity_schedule_table.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_schedule_table.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="11" selection-start="205" selection-end="205" vertical-scroll-proportion="0.16393442" vertical-offset="0" max-vertical-offset="549">
+            <state line="5" column="11" selection-start="205" selection-end="205" vertical-scroll-proportion="-3.1034484" vertical-offset="0" max-vertical-offset="522">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InfoFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/InfoFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="60" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_fragment_info.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_fragment_info.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="10" selection-start="712" selection-end="712" vertical-scroll-proportion="0.6557377" vertical-offset="0" max-vertical-offset="549">
               <folding />
             </state>
           </provider>
@@ -132,7 +154,16 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="88" selection-start="1594" selection-end="1594" vertical-scroll-proportion="0.0" vertical-offset="756" max-vertical-offset="1908">
+            <state line="62" column="57" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1620">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppSectionsPagerAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/navigation/AppSectionsPagerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="28" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1026">
               <folding />
             </state>
           </provider>
@@ -141,7 +172,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="40" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="684">
+            <state line="14" column="40" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="666">
               <folding />
             </state>
           </provider>
@@ -513,9 +544,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_purple.xml" />
-        <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_conners_button_blue.xml" />
-        <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_red.xml" />
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_purple.xml" />
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_green.xml" />
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_blue.xml" />
@@ -523,12 +551,15 @@
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/ScheduleFragment.java" />
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/actionbar_tab_indicator.xml" />
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/MainActivity.java" />
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/menu/main.xml" />
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/schedule/SelectSubgroupActivity.java" />
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/menu/select_subgroup_menu.xml" />
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_subgroup.xml" />
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/schedule/ExpandableListAdapter.java" />
+        <option value="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/IconFragment.java" />
+        <option value="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/MainActivity.java" />
+        <option value="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/navigation/AppSectionsPagerAdapter.java" />
+        <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_fregment_info.xml" />
       </list>
     </option>
   </component>
@@ -1260,7 +1291,11 @@
       <created>1380999756284</created>
       <updated>1380999756284</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Deleted 'SelectSubgroupActivity'">
+      <created>1381428083595</created>
+      <updated>1381428083596</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1270,7 +1305,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2773781" sideWeight="0.74718195" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2773781" sideWeight="0.67310786" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3268921" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1286,7 +1321,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31494805" sideWeight="0.74718195" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31494805" sideWeight="0.67310786" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3252818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1299,32 +1334,22 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Huge update" />
     <MESSAGE value="Changed buttons (made rounded corners)" />
     <MESSAGE value="test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
+    <MESSAGE value="Deleted 'SelectSubgroupActivity'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted 'SelectSubgroupActivity'" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_purple.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="8" selection-start="308" selection-end="308" vertical-scroll-proportion="0.09944751" vertical-offset="0" max-vertical-offset="905">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_green.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="8" selection-start="308" selection-end="308" vertical-scroll-proportion="0.09944751" vertical-offset="0" max-vertical-offset="905">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_blue.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="6" selection-start="306" selection-end="306" vertical-scroll-proportion="0.09944751" vertical-offset="0" max-vertical-offset="905">
@@ -1366,14 +1391,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="40" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="88" selection-start="1594" selection-end="1594" vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="1545">
+        <state line="14" column="40" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="666">
           <folding />
         </state>
       </provider>
@@ -1418,7 +1436,40 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="11" selection-start="205" selection-end="205" vertical-scroll-proportion="0.16393442" vertical-offset="0" max-vertical-offset="549">
+        <state line="5" column="11" selection-start="205" selection-end="205" vertical-scroll-proportion="-3.1034484" vertical-offset="0" max-vertical-offset="522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/InfoFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="60" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="57" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/navigation/AppSectionsPagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="28" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1026">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_fragment_info.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="10" selection-start="712" selection-end="712" vertical-scroll-proportion="0.6557377" vertical-offset="0" max-vertical-offset="549">
           <folding />
         </state>
       </provider>

@@ -60,6 +60,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
         actionBar.addTab(actionBar.newTab().setText("News").setTabListener(this));
         actionBar.addTab(actionBar.newTab().setText("Schedule").setTabListener(this));
+        actionBar.addTab(actionBar.newTab().setText("Info").setTabListener(this));
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)

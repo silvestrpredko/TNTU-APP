@@ -4,12 +4,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import ua.edu.tntu.InfoFragment;
 import ua.edu.tntu.NewsFragment;
 import ua.edu.tntu.ScheduleFragment;
 
 public class AppSectionsPagerAdapter extends FragmentPagerAdapter {
 
-    public static final int NUMBER_OF_TABS = 2;
+    public static final int NUMBER_OF_TABS = 3;
 
     public AppSectionsPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -23,6 +24,9 @@ public class AppSectionsPagerAdapter extends FragmentPagerAdapter {
 
             case 1:
                 return new ScheduleFragment();
+
+            case 2:
+                return new InfoFragment();
 
             default:
                 return null;
@@ -42,6 +46,9 @@ public class AppSectionsPagerAdapter extends FragmentPagerAdapter {
 
             case 1:
                 return "Schedule";
+
+            case 2:
+                return "Info";
 
             default:
                 return "UNKNOWN";
