@@ -2,11 +2,10 @@
     android:id="@+id/textView1"
     android:layout_width="wrap_content"
     android:layout_height="?android:attr/listPreferredItemHeight"
-    android:layout_marginLeft="8dp"
-    android:gravity="left"
-    android:paddingLeft="32dp"
+    android:gravity="center_horizontal"
     android:paddingTop="8dp"
-    android:text="Test"
+    android:paddingBottom="8dp"
     android:textSize="24sp"
-    android:textColor="#3498db"
-    android:textAlignment="textEnd" />
+    android:textColor="#2ecc71"
+    android:textAlignment="textEnd"
+    android:textStyle="bold" />

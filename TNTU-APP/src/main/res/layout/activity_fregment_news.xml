@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#9b59b6">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#34495e">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Новини кафедри"
+        android:text="Новини"
         android:id="@+id/textView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="40dp"
+        android:textSize="80sp"
         android:textStyle="bold"
         android:typeface="normal"
-        android:textColor="#f39c12" />
+        android:textColor="#e74c3c" />
+
 </RelativeLayout>
