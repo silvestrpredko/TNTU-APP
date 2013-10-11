@@ -34,6 +34,8 @@ public class ScheduleTableActivity extends FragmentActivity {
         // Set up action bar.
         final ActionBar actionBar = getActionBar();
 
+        actionBar.setTitle("Schedule");
+
         // Specify that the Home button should show an "Up" caret, indicating that touching the
         // button will take the user one step up in the application's hierarchy.
         actionBar.setDisplayHomeAsUpEnabled(true);

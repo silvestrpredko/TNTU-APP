@@ -1,6 +1,5 @@
 <resources>
 
-    <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <item name="android:actionBarTabBarStyle">@style/customTabBar</item>
         <item name="android:actionBarTabStyle">@style/customTabStyle</item>
@@ -8,9 +7,8 @@
     </style>
 
     <style name="customTabStyle" parent="@android:style/Widget.Holo.ActionBar.TabView">
-        <item name="android:gravity">center</item>
-        <item name="android:paddingBottom">10dp</item>
         <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
     </style>
 
     <style name="customTabBar" parent="@android:style/Widget.Holo.ActionBar.TabBar">
