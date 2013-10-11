@@ -12,13 +12,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c6bdc8d-5b1e-4e0d-94e9-6867f16ca9e1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_schedule_table.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_collection_demo.xml" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_weeks.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/fragment_collection_object.xml" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/fragment_schedule_table.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/hamburguer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_blue.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_green.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_purple.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/rounded_corners_button_red.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/calendar.png" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/calendar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/schedule/ExpandableListAdapter.java" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/schedule/ExpandableListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/schedule/ScheduleTableActivity.java" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/schedule/ScheduleTableActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/MainActivity.java" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TNTU-APP/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/TNTU-APP/src/main/res/values/styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -87,12 +87,8 @@
       <file leaf-file-name="ExpandableListAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/schedule/ExpandableListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="66" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="2142">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1807#2260#0" expanded="false" />
-                <element signature="e#2249#2250#0" expanded="false" />
-              </folding>
+            <state line="19" column="66" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="2412">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,16 +96,16 @@
       <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/menu/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
+            <state line="6" column="7" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="234">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="styles.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="54" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+            <state line="17" column="54" selection-start="781" selection-end="781" vertical-scroll-proportion="0.4232715" vertical-offset="55" max-vertical-offset="648">
               <folding />
             </state>
           </provider>
@@ -121,16 +117,25 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="260" selection-end="260" vertical-scroll-proportion="-4.3448277" vertical-offset="0" max-vertical-offset="432">
+            <state line="7" column="0" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="432">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="91" selection-start="2598" selection-end="2598" vertical-scroll-proportion="0.2862069" vertical-offset="644" max-vertical-offset="1620">
+            <state line="51" column="23" selection-start="2144" selection-end="2144" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1890">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
               <folding />
             </state>
           </provider>
@@ -142,7 +147,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="33" selection-start="592" selection-end="592" vertical-scroll-proportion="-8.689655" vertical-offset="0" max-vertical-offset="396">
+            <state line="14" column="33" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="396">
               <folding />
             </state>
           </provider>
@@ -154,7 +159,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="16" selection-start="499" selection-end="499" vertical-scroll-proportion="-9.310345" vertical-offset="0" max-vertical-offset="378">
+            <state line="15" column="16" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="378">
               <folding />
             </state>
           </provider>
@@ -166,7 +171,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="24" selection-start="259" selection-end="259" vertical-scroll-proportion="-3.1034484" vertical-offset="0" max-vertical-offset="198">
+            <state line="5" column="24" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="198">
               <folding />
             </state>
           </provider>
@@ -175,7 +180,7 @@
       <file leaf-file-name="AppSectionsPagerAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/navigation/AppSectionsPagerAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1026">
+            <state line="10" column="13" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1134">
               <folding />
             </state>
           </provider>
@@ -561,8 +566,8 @@
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/fragment_schedule_table.xml" />
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_weeks.xml" />
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/MainActivity.java" />
+        <option value="$PROJECT_DIR$/TNTU-APP/src/main/res/values/styles.xml" />
       </list>
     </option>
   </component>
@@ -598,7 +603,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -869,6 +873,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1108,7 +1113,11 @@
       <created>1381430271768</created>
       <updated>1381430271768</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Refactor code">
+      <created>1381436529516</created>
+      <updated>1381436529516</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1118,7 +1127,6 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2773781" sideWeight="0.7479936" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1126,7 +1134,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258427" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2520064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1139,7 +1146,9 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3268921" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2773781" sideWeight="0.7479936" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258427" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258427" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6966292" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1159,7 +1168,8 @@
     <MESSAGE value="Changed 'styles.xml'. Replaced tabs titles with icons.&#10;&#10;Added new style to actionbar." />
     <MESSAGE value="Updated UI&#10;&#10;Changed .xml files: activity_fragment_news, activity_fragment_ schedule, listrow_details, listrow_group." />
     <MESSAGE value="Changed 'ScheduleTable.java'&#10;&#10;Added 'activity_collection_demo.xml', 'fragment_collection_object.xml'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed 'ScheduleTable.java'&#10;&#10;Added 'activity_collection_demo.xml', 'fragment_collection_object.xml'" />
+    <MESSAGE value="Refactor code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor code" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1169,47 +1179,30 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/drawable/selector_list_item.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/schedule/Group.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-          <folding />
-        </state>
+        <state line="5" column="13" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/schedule/ScheduleTableActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="34" selection-start="3970" selection-end="3970" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2088">
-          <folding />
-        </state>
+        <state line="115" column="34" selection-start="3970" selection-end="3970" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2088" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/InfoFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="60" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
-          <folding />
-        </state>
+        <state line="13" column="60" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/NewsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-          <folding />
-        </state>
+        <state line="8" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/menu/select_subgroup_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/menu/main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
           <folding />
@@ -1226,11 +1219,7 @@
     <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/schedule/ExpandableListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="66" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0" vertical-offset="1564" max-vertical-offset="2142">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1807#2260#0" expanded="false" />
-            <element signature="e#2249#2250#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1239,7 +1228,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="33" selection-start="592" selection-end="592" vertical-scroll-proportion="-8.689655" vertical-offset="0" max-vertical-offset="396">
+        <state line="14" column="33" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="396">
           <folding />
         </state>
       </provider>
@@ -1249,17 +1238,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="16" selection-start="499" selection-end="499" vertical-scroll-proportion="-9.310345" vertical-offset="0" max-vertical-offset="378">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/layout/fragment_schedule_table.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="260" selection-end="260" vertical-scroll-proportion="-4.3448277" vertical-offset="0" max-vertical-offset="432">
+        <state line="15" column="16" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="378">
           <folding />
         </state>
       </provider>
@@ -1269,21 +1248,45 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="24" selection-start="259" selection-end="259" vertical-scroll-proportion="-3.1034484" vertical-offset="0" max-vertical-offset="198">
+        <state line="5" column="24" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="198">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/values/styles.xml">
+    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/layout/fragment_schedule_table.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="54" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+        <state line="7" column="0" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="432">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="7" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/java/ua/edu/tntu/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="91" selection-start="2598" selection-end="2598" vertical-scroll-proportion="0.2862069" vertical-offset="644" max-vertical-offset="1620">
+        <state line="51" column="23" selection-start="2144" selection-end="2144" vertical-scroll-proportion="0.0" vertical-offset="500" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="593">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TNTU-APP/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="54" selection-start="781" selection-end="781" vertical-scroll-proportion="0.4232715" vertical-offset="55" max-vertical-offset="648">
           <folding />
         </state>
       </provider>
