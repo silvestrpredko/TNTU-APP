@@ -12,11 +12,11 @@
         android:layout_height="wrap_content"
         android:drawablePadding="5dp"
         android:gravity="center_horizontal"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light"
         android:padding="8dp"
         android:background="@drawable/selector_list_item"
-        android:textColor="#bdc3c7" />
-
+        android:textColor="#ecf0f1" />
 
     <View
         android:layout_width="match_parent"

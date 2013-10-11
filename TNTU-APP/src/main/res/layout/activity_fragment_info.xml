@@ -13,9 +13,9 @@
         android:id="@+id/textView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="55sp"
-        android:textStyle="bold"
+        android:textSize="60sp"
         android:typeface="normal"
-        android:textColor="#e74c3c" />
+        android:textColor="#e74c3c"
+        android:fontFamily="sans-serif-condensed" />
 
 </RelativeLayout>

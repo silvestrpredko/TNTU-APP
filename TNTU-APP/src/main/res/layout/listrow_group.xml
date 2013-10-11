@@ -5,7 +5,8 @@
     android:gravity="center_horizontal"
     android:paddingTop="8dp"
     android:paddingBottom="8dp"
-    android:textSize="24sp"
+    android:textSize="28sp"
     android:textColor="#2ecc71"
     android:textAlignment="textEnd"
+    android:fontFamily="sans-serif-light"
     android:textStyle="bold" />
