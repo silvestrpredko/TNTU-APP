@@ -105,7 +105,7 @@ public class ScheduleTableActivity extends FragmentActivity {
                     return "Другий тиждень";
 
                 default:
-                    return "Біда";
+                    return null;
             }
         }
     }

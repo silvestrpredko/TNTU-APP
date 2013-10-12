@@ -16,15 +16,14 @@ public class NewsFragment extends Fragment implements
         AdapterView.OnItemClickListener {
 
     public static final String[] titles = new String[]{"Strawberry",
-            "Banana", "Orange", "Mixed"};
+            "Orange", "Mixed"};
 
     public static final String[] descriptions = new String[]{
             "It is an aggregate accessory fruit",
-            "It is the largest herbaceous flowering plant", "Citrus Fruit",
-            "Mixed Fruits"};
+            "It is the largest herbaceous flowering plant", "Citrus Fruit"};
 
     public static final Integer[] images = {R.drawable.straw,
-            R.drawable.banana, R.drawable.orange, R.drawable.mixed};
+            R.drawable.orange, R.drawable.mixed};
 
     ListView listView;
     List<NewsRowItem> rowItems;
@@ -39,25 +38,18 @@ public class NewsFragment extends Fragment implements
 
         View rootView = inflater.inflate(R.layout.activity_fragment_news, container, false);
 
-        Activity a = getActivity();
-        if (a == null) {
-            System.out.println("NULL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        } else {
-            System.out.println("OK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        }
-
         rowItems = new ArrayList<NewsRowItem>();
 
         for (int i = 0; i < titles.length; i++) {
             NewsRowItem item = new NewsRowItem(images[i], titles[i], descriptions[i]);
             rowItems.add(item);
         }
-//
-//        listView = (ListView) getActivity().findViewById(R.id.list);
-//        NewsListAdapter adapter = new NewsListAdapter(getActivity(),
-//                R.layout.news_listrow_details, rowItems);
-//        listView.setAdapter(adapter);
-//        listView.setOnItemClickListener(this);
+
+        listView = (ListView) rootView.findViewById(R.id.list);
+        NewsListAdapter adapter = new NewsListAdapter(this.getActivity(),
+                R.layout.news_listrow_details, rowItems);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(this);
         return rootView;
     }
 
