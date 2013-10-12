@@ -46,7 +46,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
         TextView text;
 
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.listrow_details, null);
+            convertView = inflater.inflate(R.layout.schedule_listrow_details, null);
         }
 
         text = (TextView) convertView.findViewById(R.id.textView1);
@@ -102,7 +102,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.listrow_group, null);
+            convertView = inflater.inflate(R.layout.schedule_listrow_group, null);
         }
         Group group = (Group) getGroup(groupPosition);
         ((CheckedTextView) convertView).setText(group.string);

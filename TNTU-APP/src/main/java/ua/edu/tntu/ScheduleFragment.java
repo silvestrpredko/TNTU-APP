@@ -19,7 +19,7 @@ public class ScheduleFragment extends Fragment implements ExpandableListView.OnC
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_fregment_schedule, container, false);
+        View rootView = inflater.inflate(R.layout.activity_fragment_schedule, container, false);
         ExpandableListView listView = (ExpandableListView) rootView.findViewById(R.id.listView111);
         listView.setChoiceMode(ExpandableListView.CHOICE_MODE_SINGLE);
         listView.setOnChildClickListener(this);
@@ -82,7 +82,7 @@ public class ScheduleFragment extends Fragment implements ExpandableListView.OnC
     @Override
     public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
         //v.setClickable(true);
-        v.setBackgroundColor(Color.RED);
+        v.setBackgroundColor(Color.BLUE);
         return false;
     }
 }

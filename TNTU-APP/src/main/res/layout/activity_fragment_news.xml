@@ -4,17 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#34495e"
-    android:label="News">
+    android:label="News"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Новини"
+        android:text="Новини кафедри"
         android:id="@+id/textView"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="80sp"
+        android:textSize="40sp"
+        android:paddingTop="10dp"
         android:textColor="#e74c3c"
         android:fontFamily="sans-serif-condensed" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/textView" />
 
 </RelativeLayout>
