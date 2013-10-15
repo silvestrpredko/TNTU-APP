@@ -3,12 +3,10 @@ package ua.edu.tntu;
 public class NewsRowItem {
     private int imageId;
     private String title;
-    private String desc;
 
-    public NewsRowItem(int imageId, String title, String desc) {
+    public NewsRowItem(int imageId, String title) {
         this.imageId = imageId;
         this.title = title;
-        this.desc = desc;
     }
 
     public int getImageId() {
@@ -19,24 +17,11 @@ public class NewsRowItem {
         this.imageId = imageId;
     }
 
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    @Override
-    public String toString() {
-        return title + "\n" + desc;
     }
 }

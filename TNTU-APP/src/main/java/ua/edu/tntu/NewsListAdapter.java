@@ -25,7 +25,6 @@ public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
     private class ViewHolder {
         ImageView imageView;
         TextView txtTitle;
-        TextView txtDesc;
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -37,14 +36,12 @@ public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.news_listrow_details, null);
             holder = new ViewHolder();
-            holder.txtDesc = (TextView) convertView.findViewById(R.id.desc);
             holder.txtTitle = (TextView) convertView.findViewById(R.id.title);
             holder.imageView = (ImageView) convertView.findViewById(R.id.icon);
             convertView.setTag(holder);
         } else
             holder = (ViewHolder) convertView.getTag();
 
-        holder.txtDesc.setText(rowItem.getDesc());
         holder.txtTitle.setText(rowItem.getTitle());
         holder.imageView.setImageResource(rowItem.getImageId());
 

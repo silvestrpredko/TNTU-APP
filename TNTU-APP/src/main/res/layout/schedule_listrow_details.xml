@@ -16,7 +16,7 @@
         android:fontFamily="sans-serif-light"
         android:padding="8dp"
         android:background="@drawable/selector_list_item"
-        android:textColor="#ecf0f1" />
+        android:textColor="#7f8c8d" />
 
     <View
         android:layout_width="match_parent"

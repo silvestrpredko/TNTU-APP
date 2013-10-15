@@ -51,7 +51,7 @@ public class AppSectionsPagerAdapter extends FragmentPagerAdapter {
                 return "Info";
 
             default:
-                return "UNKNOWN";
+                return null;
         }
     }
 }

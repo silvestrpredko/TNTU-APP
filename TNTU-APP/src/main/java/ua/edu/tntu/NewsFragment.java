@@ -15,15 +15,15 @@ import java.util.List;
 public class NewsFragment extends Fragment implements
         AdapterView.OnItemClickListener {
 
-    public static final String[] titles = new String[]{"Strawberry",
-            "Orange", "Mixed"};
+    public static final String[] titles = new String[]{"На базі ТНТУ відбувся І етап" +
+            " Всеукраїнської студентської олімпіади з програмування у Тернопільській області",
+            "Програми подвійних магістерських дипломів університету з мережею вищих " +
+                    "шкіл Франції «n+i»",
+            "Візит делегації Мережі Вищих Інженерних Шкіл Франції «n+i»",
+            "День відкритих дверей на кафедрі програмної інженерії",
+            "Всеукраїнська студентська командна олімпіада з програмування"};
 
-    public static final String[] descriptions = new String[]{
-            "It is an aggregate accessory fruit",
-            "It is the largest herbaceous flowering plant", "Citrus Fruit"};
-
-    public static final Integer[] images = {R.drawable.straw,
-            R.drawable.orange, R.drawable.mixed};
+    public static final Integer[] images = {R.drawable.orange, R.drawable.straw, R.drawable.mixed, R.drawable.banana, R.drawable.olympiada};
 
     ListView listView;
     List<NewsRowItem> rowItems;
@@ -41,10 +41,11 @@ public class NewsFragment extends Fragment implements
         rowItems = new ArrayList<NewsRowItem>();
 
         for (int i = 0; i < titles.length; i++) {
-            NewsRowItem item = new NewsRowItem(images[i], titles[i], descriptions[i]);
+            NewsRowItem item = new NewsRowItem(images[i], titles[i]);
             rowItems.add(item);
         }
 
+        assert rootView != null;
         listView = (ListView) rootView.findViewById(R.id.list);
         NewsListAdapter adapter = new NewsListAdapter(this.getActivity(),
                 R.layout.news_listrow_details, rowItems);

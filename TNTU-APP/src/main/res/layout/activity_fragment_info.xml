@@ -3,7 +3,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#34495e">
+    android:background="#D31D8C">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,9 +13,8 @@
         android:id="@+id/textView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="60sp"
-        android:typeface="normal"
-        android:textColor="#e74c3c"
-        android:fontFamily="sans-serif-condensed" />
+        android:textSize="50sp"
+        android:textColor="#EE88CD"
+        android:fontFamily="sans-serif-light" />
 
 </RelativeLayout>

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello Petryk!</string>
+    <string name="hello_world">Hello!</string>
 
     <string name="app_name">TNTU App</string>
 

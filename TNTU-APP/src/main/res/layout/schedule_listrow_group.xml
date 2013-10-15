@@ -6,7 +6,7 @@
     android:paddingTop="8dp"
     android:paddingBottom="8dp"
     android:textSize="28sp"
-    android:textColor="#2ecc71"
+    android:textColor="#3498db"
     android:textAlignment="textEnd"
     android:fontFamily="sans-serif-light"
     android:textStyle="bold" />

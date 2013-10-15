@@ -10,7 +10,6 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import ua.edu.tntu.navigation.AppSectionsPagerAdapter;
 
@@ -56,13 +55,13 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
         // For each of the sections in the app, add a tab to the action bar.
 
-        actionBar.addTab(actionBar.newTab().setIcon(R.drawable.news_tab_icon).setTabListener(this));
-        actionBar.addTab(actionBar.newTab().setIcon(R.drawable.calendar_tab_icon).setTabListener(this));
-        actionBar.addTab(actionBar.newTab().setIcon(R.drawable.info_tab_icon).setTabListener(this));
+//        actionBar.addTab(actionBar.newTab().setIcon(R.drawable.news_tab_icon).setTabListener(this));
+//        actionBar.addTab(actionBar.newTab().setIcon(R.drawable.calendar_tab_icon).setTabListener(this));
+//        actionBar.addTab(actionBar.newTab().setIcon(R.drawable.info_tab_icon).setTabListener(this));
 
-//        actionBar.addTab(actionBar.newTab().setText("News").setTabListener(this));
-//        actionBar.addTab(actionBar.newTab().setText("Schedule").setTabListener(this));
-//        actionBar.addTab(actionBar.newTab().setText("Info").setTabListener(this));
+        actionBar.addTab(actionBar.newTab().setText("News").setTabListener(this));
+        actionBar.addTab(actionBar.newTab().setText("Schedule").setTabListener(this));
+        actionBar.addTab(actionBar.newTab().setText("Info").setTabListener(this));
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
@@ -78,10 +77,13 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
+
+        // TODO: do something with that
+
         switch (item.getItemId()) {
             case android.R.id.home:
                 openOptionsMenu();
-                Toast.makeText(this, "You Push Back", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "You Push Back", Toast.LENGTH_SHORT).show();
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -95,23 +97,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
         // When the given tab is selected, switch to the corresponding page in the ViewPager.
         viewPager.setCurrentItem(tab.getPosition());
-
-        assert getActionBar() != null;
-
-        switch (tab.getPosition()) {
-
-            case 0:
-                getActionBar().setTitle("News");
-                break;
-
-            case 1:
-                getActionBar().setTitle("Schedule");
-                break;
-
-            case 2:
-                getActionBar().setTitle("Info");
-                break;
-        }
     }
 
     @Override
