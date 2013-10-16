@@ -4,13 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#e74c3c"
-    android:label="News"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Новини кафедри"
+        android:text="@string/title_news"
         android:id="@+id/textView"
         android:layout_centerHorizontal="true"
         android:textSize="35sp"

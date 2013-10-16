@@ -21,9 +21,9 @@ import ua.edu.tntu.ScheduleFragment;
 
 public class ScheduleTableActivity extends FragmentActivity {
 
-    WeeksPagerAdapter mWeeksPagerAdapter;
+    private WeeksPagerAdapter mWeeksPagerAdapter;
 
-    ViewPager mViewPager;
+    private ViewPager mViewPager;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

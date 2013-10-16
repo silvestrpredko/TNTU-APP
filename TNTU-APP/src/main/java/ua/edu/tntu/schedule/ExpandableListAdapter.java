@@ -17,11 +17,11 @@ import ua.edu.tntu.R;
 public class ExpandableListAdapter extends BaseExpandableListAdapter
         implements ExpandableListView.OnChildClickListener {
 
-    public static final String GROUP_NAME = "ua.edu.tntu.schedule.expandedlistexample.NAME";
+    private static final String GROUP_NAME = "ua.edu.tntu.schedule.expandedlistexample.NAME";
 
     private final SparseArray<Group> groups;
-    public LayoutInflater inflater;
-    public Activity activity;
+    private LayoutInflater inflater;
+    private Activity activity;
 
     public ExpandableListAdapter(Activity act, SparseArray<Group> groups) {
         activity = act;

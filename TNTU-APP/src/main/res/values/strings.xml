@@ -8,5 +8,7 @@
 
     <string name="name">ListViewBaseAdapter</string>
     <string name="image">Thumbnail</string>
+    <string name="title_news">Новини</string>
+    <string name="title_about">Про кафедру</string>
 
 </resources>

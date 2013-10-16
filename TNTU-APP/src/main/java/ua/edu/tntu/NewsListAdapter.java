@@ -13,7 +13,7 @@ import java.util.List;
 
 public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
 
-    Context context;
+    private Context context;
 
     public NewsListAdapter(Context context, int resourceId,
                            List<NewsRowItem> items) {
@@ -28,7 +28,7 @@ public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder = null;
+        ViewHolder holder;
         NewsRowItem rowItem = getItem(position);
 
         LayoutInflater mInflater = (LayoutInflater) context
@@ -36,6 +36,7 @@ public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.news_listrow_details, null);
             holder = new ViewHolder();
+            assert convertView != null;
             holder.txtTitle = (TextView) convertView.findViewById(R.id.title);
             holder.imageView = (ImageView) convertView.findViewById(R.id.icon);
             convertView.setTag(holder);

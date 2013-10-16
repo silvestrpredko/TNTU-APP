@@ -2,6 +2,5 @@
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:showAsAction="never"
-        android:menuCategory="alternative"
-        android:actionLayout="@layout/activity_welcome_screen"/>
+        android:menuCategory="alternative" />
 </menu>

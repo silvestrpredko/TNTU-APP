@@ -14,7 +14,7 @@ import ua.edu.tntu.schedule.Group;
 
 public class ScheduleFragment extends Fragment implements ExpandableListView.OnChildClickListener {
 
-    SparseArray<Group> groups = new SparseArray<Group>();
+    private SparseArray<Group> groups = new SparseArray<Group>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

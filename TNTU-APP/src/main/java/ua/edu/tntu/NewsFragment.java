@@ -15,7 +15,7 @@ import java.util.List;
 public class NewsFragment extends Fragment implements
         AdapterView.OnItemClickListener {
 
-    public static final String[] titles = new String[]{"На базі ТНТУ відбувся І етап" +
+    private static final String[] titles = new String[]{"На базі ТНТУ відбувся І етап" +
             " Всеукраїнської студентської олімпіади з програмування у Тернопільській області",
             "Програми подвійних магістерських дипломів університету з мережею вищих " +
                     "шкіл Франції «n+i»",
@@ -23,10 +23,10 @@ public class NewsFragment extends Fragment implements
             "День відкритих дверей на кафедрі програмної інженерії",
             "Всеукраїнська студентська командна олімпіада з програмування"};
 
-    public static final Integer[] images = {R.drawable.orange, R.drawable.straw, R.drawable.mixed, R.drawable.banana, R.drawable.olympiada};
+    private static final Integer[] images = {R.drawable.orange, R.drawable.straw, R.drawable.mixed, R.drawable.banana, R.drawable.olympiada};
 
-    ListView listView;
-    List<NewsRowItem> rowItems;
+    private ListView listView;
+    private List<NewsRowItem> rowItems;
 
     @Override
     public void onAttach(Activity activity) {
