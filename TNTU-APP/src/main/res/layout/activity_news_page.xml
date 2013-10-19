@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsPageActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="На базі ТНТУ відбувся І етап Всеукраїнської студентської олімпіади з програмування у Тернопільській області"
+                android:id="@+id/textView"
+                android:layout_gravity="left|center_vertical"
+                android:padding="10dp"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-light" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView"
+                android:src="@drawable/olympiada"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:baselineAlignBottom="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:contentDescription="img" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta tempor mauris at volutpat. Donec lacinia diam dignissim neque varius, ut gravida dui hendrerit. Ut placerat ipsum sed nulla fringilla, quis malesuada mauris ultricies. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. \n\nProin facilisis justo in nulla mollis, sed accumsan dolor consequat. Quisque accumsan leo velit, a fringilla quam aliquet at. Pellentesque iaculis ullamcorper dolor, in dapibus dolor luctus non. Vivamus porta viverra ornare. \n\nPraesent at rhoncus tortor, vitae fermentum ipsum.  Maecenas adipiscing porttitor arcu, non laoreet sapien interdum id. Donec imperdiet a ligula feugiat eleifend. Aenean pulvinar tortor eu nulla condimentum, non porttitor nulla accumsan. Sed ullamcorper commodo ipsum sagittis imperdiet. Aenean lectus urna, sagittis vitae mollis ut, molestie in dolor. Aliquam placerat nunc pellentesque cursus fringilla. Maecenas venenatis velit id nunc ornare egestas. Nunc ac turpis lectus. Donec ut urna vel nisi tincidunt mollis. Phasellus suscipit leo ornare molestie commodo. Donec et felis in est tempus posuere eget at enim.  Quisque fringilla vestibulum rutrum. Pellentesque pretium dolor nisi, eget fermentum velit dignissim ut. \n\nMorbi volutpat nibh et urna ornare aliquam. Integer nulla erat, dapibus in dolor sed, tristique euismod felis. Donec blandit nisl sit amet mauris gravida, id ultricies ipsum tempus. \n\nQuisque iaculis libero justo, a convallis lorem laoreet quis. Curabitur id consectetur orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. \n\nAliquam sodales ipsum ut urna euismod pretium. Ut sit amet pretium arcu, et ultricies ipsum. Fusce eu vestibulum ipsum. Praesent a justo quis turpis laoreet posuere et id felis. \n\nNulla ultricies orci magna, sed dictum urna fringilla sed. Fusce pulvinar eros vitae arcu facilisis, ac tincidunt urna sodales."
+                android:id="@+id/textView2"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:linksClickable="true"
+                android:singleLine="false"
+                android:textAlignment="center"
+                android:textSize="14dp"
+                android:lineSpacingExtra="3dp"
+                android:visibility="visible"
+                android:fontFamily="sans-serif-light" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

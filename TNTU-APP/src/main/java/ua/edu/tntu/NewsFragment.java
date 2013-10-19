@@ -1,6 +1,7 @@
 package ua.edu.tntu;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -56,6 +57,9 @@ public class NewsFragment extends Fragment implements
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        Intent intent = new Intent(this.getActivity(), NewsPageActivity.class);
+        (this.getActivity()).startActivity(intent);
 
     }
 }
