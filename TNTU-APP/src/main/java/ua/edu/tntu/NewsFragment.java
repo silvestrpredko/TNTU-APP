@@ -20,6 +20,9 @@ import ua.edu.tntu.news.NewsRowItem;
 public class NewsFragment extends Fragment implements
         AdapterView.OnItemClickListener {
 
+    public final static String ARTICLE_TITLE = "ua.edu.tntu.TITLE";
+    public final static String IMG_ID = "ua.edu.tntu.ID";
+
     private static final String[] titles = new String[]{"На базі ТНТУ відбувся І етап" +
             " Всеукраїнської студентської олімпіади з програмування у Тернопільській області",
             "Програми подвійних магістерських дипломів університету з мережею вищих " +
@@ -63,7 +66,15 @@ public class NewsFragment extends Fragment implements
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
         Intent intent = new Intent(this.getActivity(), NewsPageActivity.class);
-        (this.getActivity()).startActivity(intent);
 
+        NewsRowItem rowItem = (NewsRowItem) parent.getItemAtPosition(position);
+
+        String title = rowItem.getTitle();
+        String imgID = String.valueOf(rowItem.getImageId());
+
+        intent.putExtra(ARTICLE_TITLE, title);
+        intent.putExtra(IMG_ID, imgID);
+
+        (this.getActivity()).startActivity(intent);
     }
 }

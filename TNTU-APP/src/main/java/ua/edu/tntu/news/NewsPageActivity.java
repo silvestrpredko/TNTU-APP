@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import ua.edu.tntu.NewsFragment;
 import ua.edu.tntu.R;
@@ -17,6 +19,17 @@ public class NewsPageActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_page);
+
+        Intent intent = getIntent();
+
+        String title = intent.getStringExtra(NewsFragment.ARTICLE_TITLE);
+        String imgID = intent.getStringExtra(NewsFragment.IMG_ID);
+
+        TextView textView = (TextView) findViewById(R.id.titleTextView);
+        textView.setText(title);
+
+        ImageView imageView = (ImageView) findViewById(R.id.articleImageView);
+        imageView.setImageResource(Integer.parseInt(imgID));
 
         final ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
