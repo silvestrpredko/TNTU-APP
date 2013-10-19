@@ -1,4 +1,4 @@
-package ua.edu.tntu;
+package ua.edu.tntu.news;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
+
+import ua.edu.tntu.R;
 
 public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
 

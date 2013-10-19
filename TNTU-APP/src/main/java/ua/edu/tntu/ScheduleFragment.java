@@ -9,12 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 
-import ua.edu.tntu.schedule.ExpandableListAdapter;
-import ua.edu.tntu.schedule.Group;
+import ua.edu.tntu.schedule.ScheduleExpandableListAdapter;
+import ua.edu.tntu.schedule.ScheduleGroup;
 
 public class ScheduleFragment extends Fragment implements ExpandableListView.OnChildClickListener {
 
-    private SparseArray<Group> groups = new SparseArray<Group>();
+    private SparseArray<ScheduleGroup> groups = new SparseArray<ScheduleGroup>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -24,59 +24,59 @@ public class ScheduleFragment extends Fragment implements ExpandableListView.OnC
         listView.setChoiceMode(ExpandableListView.CHOICE_MODE_SINGLE);
         listView.setOnChildClickListener(this);
         createData();
-        ExpandableListAdapter adapter = new ExpandableListAdapter(this.getActivity(), groups);
+        ScheduleExpandableListAdapter adapter = new ScheduleExpandableListAdapter(this.getActivity(), groups);
         listView.setAdapter(adapter);
         return rootView;
     }
 
     public void createData() {
 
-        Group group = new Group("Перший курс");
-        group.children.add("СБ-11");
-        group.children.add("СІ-11");
-        group.children.add("СН-11");
-        group.children.add("СН-12");
-        group.children.add("СП-11");
-        groups.append(0, group);
+        ScheduleGroup scheduleGroup = new ScheduleGroup("Перший курс");
+        scheduleGroup.children.add("СБ-11");
+        scheduleGroup.children.add("СІ-11");
+        scheduleGroup.children.add("СН-11");
+        scheduleGroup.children.add("СН-12");
+        scheduleGroup.children.add("СП-11");
+        groups.append(0, scheduleGroup);
 
-        group = new Group("Другий курс");
+        scheduleGroup = new ScheduleGroup("Другий курс");
 
-        group.children.add("СБ-21");
-        group.children.add("СІ-21");
-        group.children.add("СН-21");
-        group.children.add("СП-21");
-        groups.append(1, group);
+        scheduleGroup.children.add("СБ-21");
+        scheduleGroup.children.add("СІ-21");
+        scheduleGroup.children.add("СН-21");
+        scheduleGroup.children.add("СП-21");
+        groups.append(1, scheduleGroup);
 
-        group = new Group("Третій курс");
+        scheduleGroup = new ScheduleGroup("Третій курс");
 
-        group.children.add("СІс-31");
-        group.children.add("СІ-31");
-        group.children.add("СН-31");
-        group.children.add("СНс-31");
-        group.children.add("СП-31");
-        group.children.add("СПс-31");
-        groups.append(2, group);
+        scheduleGroup.children.add("СІс-31");
+        scheduleGroup.children.add("СІ-31");
+        scheduleGroup.children.add("СН-31");
+        scheduleGroup.children.add("СНс-31");
+        scheduleGroup.children.add("СП-31");
+        scheduleGroup.children.add("СПс-31");
+        groups.append(2, scheduleGroup);
 
-        group = new Group("Четвертий курс");
+        scheduleGroup = new ScheduleGroup("Четвертий курс");
 
-        group.children.add("СІ-41");
-        group.children.add("СІ-42");
-        group.children.add("СН-41");
-        group.children.add("СНс-41");
-        group.children.add("СНс-42");
-        group.children.add("СП-41");
-        groups.append(3, group);
+        scheduleGroup.children.add("СІ-41");
+        scheduleGroup.children.add("СІ-42");
+        scheduleGroup.children.add("СН-41");
+        scheduleGroup.children.add("СНс-41");
+        scheduleGroup.children.add("СНс-42");
+        scheduleGroup.children.add("СП-41");
+        groups.append(3, scheduleGroup);
 
-        group = new Group("П'ятий курс");
+        scheduleGroup = new ScheduleGroup("П'ятий курс");
 
-        group.children.add("СІ-51");
-        group.children.add("СІ-52");
-        group.children.add("СІм-51");
-        group.children.add("СН-51");
-        group.children.add("СНм-51");
-        group.children.add("СП-51");
-        group.children.add("СПм-51");
-        groups.append(4, group);
+        scheduleGroup.children.add("СІ-51");
+        scheduleGroup.children.add("СІ-52");
+        scheduleGroup.children.add("СІм-51");
+        scheduleGroup.children.add("СН-51");
+        scheduleGroup.children.add("СНм-51");
+        scheduleGroup.children.add("СП-51");
+        scheduleGroup.children.add("СПм-51");
+        groups.append(4, scheduleGroup);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package ua.edu.tntu;
+package ua.edu.tntu.news;
 
 public class NewsRowItem {
     private int imageId;

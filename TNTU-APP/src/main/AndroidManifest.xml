@@ -14,17 +14,17 @@
         android:label="@string/app_name"
         android:logo="@drawable/logo"
         android:theme="@style/AppTheme">
-        <activity android:name="ua.edu.tntu.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
+        <activity android:name=".MainActivity">
+        <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="ua.edu.tntu.schedule.ScheduleTableActivity" />
-        <activity
-            android:name="ua.edu.tntu.NewsPageActivity"
-            android:label="@string/title_activity_news_page"></activity>
+
+        <activity android:name=".schedule.ScheduleTableActivity" />
+        <activity android:name=".news.NewsPageActivity" />
+
     </application>
 
 </manifest>

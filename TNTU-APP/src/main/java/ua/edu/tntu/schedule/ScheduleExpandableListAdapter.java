@@ -14,16 +14,16 @@ import android.widget.Toast;
 
 import ua.edu.tntu.R;
 
-public class ExpandableListAdapter extends BaseExpandableListAdapter
+public class ScheduleExpandableListAdapter extends BaseExpandableListAdapter
         implements ExpandableListView.OnChildClickListener {
 
     private static final String GROUP_NAME = "ua.edu.tntu.schedule.expandedlistexample.NAME";
 
-    private final SparseArray<Group> groups;
+    private final SparseArray<ScheduleGroup> groups;
     private LayoutInflater inflater;
     private Activity activity;
 
-    public ExpandableListAdapter(Activity act, SparseArray<Group> groups) {
+    public ScheduleExpandableListAdapter(Activity act, SparseArray<ScheduleGroup> groups) {
         activity = act;
         this.groups = groups;
         inflater = act.getLayoutInflater();
@@ -104,8 +104,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.schedule_listrow_group, null);
         }
-        Group group = (Group) getGroup(groupPosition);
-        ((CheckedTextView) convertView).setText(group.string);
+        ScheduleGroup scheduleGroup = (ScheduleGroup) getGroup(groupPosition);
+        ((CheckedTextView) convertView).setText(scheduleGroup.string);
         ((CheckedTextView) convertView).setChecked(isExpanded);
         return convertView;
     }

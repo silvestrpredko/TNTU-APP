@@ -11,8 +11,4 @@
         <item name="android:background">@color/light_blue</item>
     </style>
 
-    <style name="CustomTabPageIndicator.Text" parent="CustomTabPageIndicator.Text">
-        <item name="android:textColor">@drawable/tab_text</item>
-    </style>
-
 </resources>

@@ -13,6 +13,10 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import ua.edu.tntu.news.NewsListAdapter;
+import ua.edu.tntu.news.NewsPageActivity;
+import ua.edu.tntu.news.NewsRowItem;
+
 public class NewsFragment extends Fragment implements
         AdapterView.OnItemClickListener {
 

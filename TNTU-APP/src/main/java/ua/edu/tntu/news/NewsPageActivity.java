@@ -1,4 +1,4 @@
-package ua.edu.tntu;
+package ua.edu.tntu.news;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.view.MenuItem;
+
+import ua.edu.tntu.NewsFragment;
+import ua.edu.tntu.R;
 
 public class NewsPageActivity extends Activity {
 
