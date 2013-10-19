@@ -23,7 +23,6 @@ public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
         this.context = context;
     }
 
-    /*private view holder class*/
     private class ViewHolder {
         ImageView imageView;
         TextView txtTitle;

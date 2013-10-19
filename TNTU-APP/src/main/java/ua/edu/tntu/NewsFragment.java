@@ -55,8 +55,10 @@ public class NewsFragment extends Fragment implements
 
         assert rootView != null;
         listView = (ListView) rootView.findViewById(R.id.list);
+
         NewsListAdapter adapter = new NewsListAdapter(this.getActivity(),
                 R.layout.news_listrow_details, rowItems);
+
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
         return rootView;

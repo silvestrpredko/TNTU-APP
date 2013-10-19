@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:background="#e74c3c"
+    android:background="#A0D8F1"
     android:orientation="vertical">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title_news"
-        android:id="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:textSize="35sp"
-        android:paddingTop="10dp"
-        android:textStyle="normal"
-        android:textColor="#F5FAFA"
-        android:fontFamily="sans-serif-light" />
 
     <ListView
         android:id="@+id/list"
