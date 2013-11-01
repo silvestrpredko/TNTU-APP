@@ -13,14 +13,14 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import ua.edu.tntu.news.NewsArticleActivity;
 import ua.edu.tntu.news.NewsListAdapter;
-import ua.edu.tntu.news.NewsPageActivity;
 import ua.edu.tntu.news.NewsRowItem;
 
 public class NewsFragment extends Fragment implements
         AdapterView.OnItemClickListener {
 
-    public final static String ARTICLE_TITLE = "ua.edu.tntu.TITLE";
+    public final static String NEWS_ARTICLE_TITLE = "ua.edu.tntu.TITLE";
     public final static String IMG_ID = "ua.edu.tntu.ID";
 
     private static final String[] titles = new String[]{"Після 30-го лютого студентам ТНТУ підвищать стипендію",
@@ -71,14 +71,14 @@ public class NewsFragment extends Fragment implements
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        Intent intent = new Intent(this.getActivity(), NewsPageActivity.class);
+        Intent intent = new Intent(this.getActivity(), NewsArticleActivity.class);
 
         NewsRowItem rowItem = (NewsRowItem) parent.getItemAtPosition(position);
 
         String title = rowItem.getTitle();
         String imgID = String.valueOf(rowItem.getImageId());
 
-        intent.putExtra(ARTICLE_TITLE, title);
+        intent.putExtra(NEWS_ARTICLE_TITLE, title);
         intent.putExtra(IMG_ID, imgID);
 
         (this.getActivity()).startActivity(intent);

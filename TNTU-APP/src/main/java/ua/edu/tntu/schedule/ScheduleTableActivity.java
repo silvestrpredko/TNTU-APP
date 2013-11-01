@@ -121,7 +121,7 @@ public class ScheduleTableActivity extends FragmentActivity {
             View rootView = inflater.inflate(R.layout.fragment_schedule_table, container, false);
             Bundle args = getArguments();
             assert rootView != null;
-            ((TextView) rootView.findViewById(R.id.textView)).setText(
+            ((TextView) rootView.findViewById(R.id.scheduleTextView)).setText(
                     Integer.toString(args.getInt(ARG_OBJECT)));
             return rootView;
         }

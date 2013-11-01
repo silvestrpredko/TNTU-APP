@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical">
@@ -10,10 +10,10 @@
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:drawSelectorOnTop="true"
+        android:drawSelectorOnTop="false"
         android:headerDividersEnabled="true"
         android:footerDividersEnabled="true"
-        android:fastScrollEnabled="true"
+        android:fastScrollEnabled="false"
         android:scrollingCache="true"
         android:smoothScrollbar="true"
         android:choiceMode="singleChoice"
@@ -25,6 +25,6 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:paddingTop="6dp"
-        android:stackFromBottom="false" />
+        android:textFilterEnabled="true" />
 
 </RelativeLayout>

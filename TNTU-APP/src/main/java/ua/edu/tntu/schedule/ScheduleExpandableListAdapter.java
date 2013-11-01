@@ -104,9 +104,11 @@ public class ScheduleExpandableListAdapter extends BaseExpandableListAdapter
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.schedule_listrow_group, null);
         }
+
         ScheduleGroup scheduleGroup = (ScheduleGroup) getGroup(groupPosition);
         ((CheckedTextView) convertView).setText(scheduleGroup.string);
         ((CheckedTextView) convertView).setChecked(isExpanded);
+
         return convertView;
     }
 

@@ -13,10 +13,6 @@ public class NewsRowItem {
         return imageId;
     }
 
-    public void setImageId(int imageId) {
-        this.imageId = imageId;
-    }
-
     public String getTitle() {
         return title;
     }

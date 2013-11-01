@@ -9,12 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:smoothScrollbar="true"
-        android:paddingTop="25dp"
-        android:paddingBottom="25dp"
         android:headerDividersEnabled="false"
         android:choiceMode="singleChoice"
-        android:childDivider="@color/baby_baby_blue"
+        android:childDivider="#ecf0f1"
+        android:divider="#ecf0f1"
+        android:dividerHeight="1dp"
         android:clipToPadding="false"
-        android:groupIndicator="@null" />
+        android:groupIndicator="@null"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="32dp" />
 
 </LinearLayout> 

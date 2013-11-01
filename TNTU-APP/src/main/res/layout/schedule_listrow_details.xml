@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="wrap_content"
     android:clickable="true"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -10,14 +10,11 @@
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
         android:textSize="20sp"
         android:fontFamily="sans-serif-light"
         android:padding="8dp"
-        android:background="@drawable/selector_list_item"
-        android:textColor="#7f8c8d"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp" />
+        android:background="@drawable/selector_item"
+        android:textColor="#7f8c8d" />
 
     <View
         android:layout_width="match_parent"

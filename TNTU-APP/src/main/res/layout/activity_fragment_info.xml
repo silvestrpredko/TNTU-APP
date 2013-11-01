@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/title_about"
-        android:id="@+id/textView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="50sp"
-        android:textColor="#bdc3c7"
-        android:fontFamily="sans-serif-light" />
+    <ListView
+        android:id="@+id/infoList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawSelectorOnTop="false"
+        android:headerDividersEnabled="true"
+        android:footerDividersEnabled="true"
+        android:fastScrollEnabled="false"
+        android:scrollingCache="true"
+        android:smoothScrollbar="true"
+        android:choiceMode="singleChoice"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:clipToPadding="false"
+        android:dividerHeight="1dp"
+        android:layout_marginLeft="28dp"
+        android:paddingTop="15dp"
+        android:textFilterEnabled="true" />
 
 </RelativeLayout>
