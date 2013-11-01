@@ -10,10 +10,10 @@
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:drawSelectorOnTop="false"
+        android:drawSelectorOnTop="true"
         android:headerDividersEnabled="true"
         android:footerDividersEnabled="true"
-        android:fastScrollEnabled="false"
+        android:fastScrollEnabled="true"
         android:scrollingCache="true"
         android:smoothScrollbar="true"
         android:choiceMode="singleChoice"
@@ -24,6 +24,7 @@
         android:dividerHeight="1dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:paddingTop="6dp" />
+        android:paddingTop="6dp"
+        android:stackFromBottom="false" />
 
 </RelativeLayout>

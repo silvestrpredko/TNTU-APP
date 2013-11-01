@@ -14,6 +14,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -54,6 +55,8 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
     private Paint rectPaint;
     private Paint dividerPaint;
+
+    private int lastPosition = 0;
 
     private boolean checkedTabWidths = false;
 
@@ -261,6 +264,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
                 TextView tab = (TextView) v;
                 tab.setTextSize(TypedValue.COMPLEX_UNIT_PX, tabTextSize);
                 tab.setTypeface(tabTypeface, tabTypefaceStyle);
+
                 tab.setTextColor(tabTextColor);
 
                 // setAllCaps() is only available from API 14, so the upper case is made manually if we are on a
@@ -273,6 +277,8 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
                     }
                 }
             }
+
+
         }
 
     }
@@ -320,6 +326,15 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
             scrollTo(newScrollX, 0);
         }
 
+        // MAGIC GOES HERE!!!
+        // changing tab's text style to bold
+        position = pager.getCurrentItem();
+
+        ((TextView) tabsContainer.getChildAt(lastPosition)).setTypeface(tabTypeface, tabTypefaceStyle);
+
+        ((TextView) tabsContainer.getChildAt(position)).setTypeface(tabTypeface, Typeface.BOLD);
+
+        lastPosition = position;
     }
 
     @Override
@@ -344,7 +359,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
         // if there is an offset, start interpolating left and right coordinates between current and next tab
         if (currentPositionOffset > 0f && currentPosition < tabCount - 1) {
-
+            Log.e("Error", "This code works");
             View nextTab = tabsContainer.getChildAt(currentPosition + 1);
             final float nextTabLeft = nextTab.getLeft();
             final float nextTabRight = nextTab.getRight();
@@ -353,11 +368,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
             lineRight = (currentPositionOffset * nextTabRight + (1f - currentPositionOffset) * lineRight);
         }
 
-        rectPaint.setAntiAlias(false);
-        rectPaint.setStrokeWidth(0);
         rectPaint.setStyle(Style.FILL_AND_STROKE);
-        rectPaint.clearShadowLayer();
-        rectPaint.setDither(false);
         rectPaint.setFilterBitmap(false);
         canvas.drawRect(lineLeft, height - indicatorHeight, lineRight, height, rectPaint);
 

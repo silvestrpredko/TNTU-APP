@@ -28,7 +28,8 @@
                 android:paddingLeft="16dp"
                 android:paddingTop="12dp"
                 android:paddingRight="16dp"
-                android:paddingBottom="10dp" />
+                android:paddingBottom="10dp"
+                android:textColor="#666666" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -60,7 +61,8 @@
                 android:paddingLeft="16dp"
                 android:paddingTop="10dp"
                 android:paddingRight="16dp"
-                android:paddingBottom="16dp" />
+                android:paddingBottom="16dp"
+                android:textColor="#333333" />
 
         </LinearLayout>
 

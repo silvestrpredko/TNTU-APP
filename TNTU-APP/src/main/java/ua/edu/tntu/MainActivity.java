@@ -12,7 +12,6 @@ import android.view.MenuItem;
 
 public class MainActivity extends FragmentActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +43,7 @@ public class MainActivity extends FragmentActivity {
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
 
-        private final String[] TITLES = {"Новини", "Розклад", "Про кафедру"};
+        private final String[] TITLES = {"Новини", "Розклад", "Про кафедру", "Контакти"};
 
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -72,6 +71,9 @@ public class MainActivity extends FragmentActivity {
 
                 case 2:
                     return new InfoFragment();
+
+                case 3:
+                    return new ContactsFragment();
 
                 default:
                     return null;
