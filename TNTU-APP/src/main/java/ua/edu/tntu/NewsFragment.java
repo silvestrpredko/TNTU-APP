@@ -23,15 +23,19 @@ public class NewsFragment extends Fragment implements
     public final static String ARTICLE_TITLE = "ua.edu.tntu.TITLE";
     public final static String IMG_ID = "ua.edu.tntu.ID";
 
-    private static final String[] titles = new String[]{"На базі ТНТУ відбувся І етап" +
-            " Всеукраїнської студентської олімпіади з програмування у Тернопільській області",
+    private static final String[] titles = new String[]{"Після 30-го лютого студентам ТНТУ підвищать стипендію",
+            "16-го жовтня студенти " +
+                    "ФІС відсвяткували день факультету",
+            "На базі ТНТУ відбувся І етап" +
+                    " Всеукраїнської студентської олімпіади з програмування у Тернопільській області",
             "Програми подвійних магістерських дипломів університету з мережею вищих " +
                     "шкіл Франції «n+i»",
             "Візит делегації Мережі Вищих Інженерних Шкіл Франції «n+i»",
             "День відкритих дверей на кафедрі програмної інженерії",
             "Всеукраїнська студентська командна олімпіада з програмування"};
 
-    private static final Integer[] images = {R.drawable.orange, R.drawable.straw, R.drawable.mixed, R.drawable.banana, R.drawable.olympiada};
+    private static final Integer[] images = {R.drawable.money, R.drawable.fis, R.drawable.orange, R.drawable.straw,
+            R.drawable.mixed, R.drawable.banana, R.drawable.olympiada};
 
     private ListView listView;
     private List<NewsRowItem> rowItems;

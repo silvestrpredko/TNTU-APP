@@ -3,16 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:background="#ecf0f1">
+    android:background="@color/white">
 
-<ua.edu.tntu.PagerSlidingTabStrip
+    <ua.edu.tntu.PagerSlidingTabStrip
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="48dip"
         android:background="@color/white"
-        app:dividerColor="@color/white"
-        app:indicatorColor="@color/light_blue"
-        app:indicatorHeight="5dp" />
+        app:indicatorColor="@color/baby_baby_blue"
+        app:indicatorHeight="4dp" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"

@@ -58,7 +58,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     private boolean checkedTabWidths = false;
 
     private int indicatorColor = 0xFF666666;
-    private int underlineColor = 0x1A000000;
+    private int underlineColor = 0xFFecf0f1;
     private int dividerColor = 0x1A000000;
 
     private boolean shouldExpand = false;
@@ -72,7 +72,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     private int dividerWidth = 1;
 
     private int tabTextSize = 16;
-    private int tabTextColor = 0xFF3498db;
+    private int tabTextColor = 0xFF55ACEF;
     private Typeface tabTypeface = Typeface.create("sans-serif-light", Typeface.NORMAL);
     private int tabTypefaceStyle = Typeface.NORMAL;
 
@@ -139,8 +139,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         a.recycle();
 
         rectPaint = new Paint();
-        rectPaint.setAntiAlias(true);
-        rectPaint.setStyle(Style.FILL);
+        rectPaint.setAntiAlias(false);
 
         dividerPaint = new Paint();
         dividerPaint.setAntiAlias(true);
@@ -155,6 +154,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     }
 
     public void setViewPager(ViewPager pager) {
+
         this.pager = pager;
 
         if (pager.getAdapter() == null) {
@@ -324,6 +324,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
     @Override
     protected void onDraw(Canvas canvas) {
+
         super.onDraw(canvas);
 
         if (isInEditMode() || tabCount == 0) {
@@ -352,20 +353,19 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
             lineRight = (currentPositionOffset * nextTabRight + (1f - currentPositionOffset) * lineRight);
         }
 
+        rectPaint.setAntiAlias(false);
+        rectPaint.setStrokeWidth(0);
+        rectPaint.setStyle(Style.FILL_AND_STROKE);
+        rectPaint.clearShadowLayer();
+        rectPaint.setDither(false);
+        rectPaint.setFilterBitmap(false);
         canvas.drawRect(lineLeft, height - indicatorHeight, lineRight, height, rectPaint);
 
         // draw underline
 
+        rectPaint.clearShadowLayer();
         rectPaint.setColor(underlineColor);
         canvas.drawRect(0, height - underlineHeight, tabsContainer.getWidth(), height, rectPaint);
-
-        // draw divider
-
-        dividerPaint.setColor(dividerColor);
-        for (int i = 0; i < tabCount - 1; i++) {
-            View tab = tabsContainer.getChildAt(i);
-            canvas.drawLine(tab.getRight(), dividerPadding, tab.getRight(), height - dividerPadding, dividerPaint);
-        }
     }
 
     private class PageListener implements OnPageChangeListener {

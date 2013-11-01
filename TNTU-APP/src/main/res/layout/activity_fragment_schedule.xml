@@ -1,15 +1,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/LinearLayout1"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ecf0f1"
-    android:paddingTop="25dp"
-    android:paddingBottom="25dp">
+    android:background="@color/white">
 
     <ExpandableListView
         android:id="@+id/listView111"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:smoothScrollbar="true"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:headerDividersEnabled="false"
+        android:choiceMode="singleChoice"
+        android:childDivider="@color/baby_baby_blue"
+        android:clipToPadding="false"
         android:groupIndicator="@null" />
 
 </LinearLayout> 

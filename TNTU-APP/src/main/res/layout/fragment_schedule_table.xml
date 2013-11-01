@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="false"
-    android:background="#3498db">
+    android:background="#ffffff">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,7 +13,7 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
-        android:textColor="#ecf0f1"
+        android:textColor="@color/silver"
         android:fontFamily="sans-serif-thin"
         android:textSize="200sp" />
 
