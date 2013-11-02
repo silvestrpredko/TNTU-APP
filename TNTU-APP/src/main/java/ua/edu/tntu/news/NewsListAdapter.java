@@ -38,8 +38,8 @@ public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
             convertView = mInflater.inflate(R.layout.news_listrow_details, null);
             holder = new ViewHolder();
             assert convertView != null;
-            holder.txtTitle = (TextView) convertView.findViewById(R.id.title);
-            holder.imageView = (ImageView) convertView.findViewById(R.id.icon);
+            holder.txtTitle = (TextView) convertView.findViewById(R.id.newsListItemTitle);
+            holder.imageView = (ImageView) convertView.findViewById(R.id.newsListItemImage);
             convertView.setTag(holder);
         } else
             holder = (ViewHolder) convertView.getTag();
