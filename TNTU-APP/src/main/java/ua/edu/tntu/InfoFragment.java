@@ -44,7 +44,7 @@ public class InfoFragment extends Fragment implements
         }
 
         assert rootView != null;
-        listView = (ListView) rootView.findViewById(R.id.infoList);
+        listView = (ListView) rootView.findViewById(R.id.infoListView);
 
         InfoListAdapter adapter = new InfoListAdapter(rootView.getContext(),
                 R.layout.info_listrow_details, rowItems);

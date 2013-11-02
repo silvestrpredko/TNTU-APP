@@ -7,11 +7,10 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/scheduleGroupNameTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:fontFamily="sans-serif-light"
         android:padding="8dp"
         android:background="@drawable/selector_item"
         android:textColor="#7f8c8d" />

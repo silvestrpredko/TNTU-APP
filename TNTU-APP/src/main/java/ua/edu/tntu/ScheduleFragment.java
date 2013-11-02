@@ -20,7 +20,7 @@ public class ScheduleFragment extends Fragment implements ExpandableListView.OnC
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.activity_fragment_schedule, container, false);
-        ExpandableListView listView = (ExpandableListView) rootView.findViewById(R.id.listView111);
+        ExpandableListView listView = (ExpandableListView) rootView.findViewById(R.id.scheduleListView);
         listView.setChoiceMode(ExpandableListView.CHOICE_MODE_SINGLE);
         listView.setOnChildClickListener(this);
         createData();

@@ -49,7 +49,7 @@ public class ScheduleExpandableListAdapter extends BaseExpandableListAdapter
             convertView = inflater.inflate(R.layout.schedule_listrow_details, null);
         }
 
-        text = (TextView) convertView.findViewById(R.id.textView1);
+        text = (TextView) convertView.findViewById(R.id.scheduleGroupNameTextView);
         text.setText(children);
 
         final View finalConvertView = convertView;
