@@ -26,8 +26,8 @@ public class NewsArticleActivity extends Activity {
         String title = intent.getStringExtra(NewsFragment.NEWS_ARTICLE_TITLE);
         String imgID = intent.getStringExtra(NewsFragment.IMG_ID);
 
-        TextView textView = (TextView) findViewById(R.id.newsTitleTextView);
-        textView.setText(title);
+        TextView articleNewsTitle = (TextView) findViewById(R.id.newsTitleTextView);
+        articleNewsTitle.setText(title);
 
         ImageView imageView = (ImageView) findViewById(R.id.newsImageView);
         imageView.setImageResource(Integer.parseInt(imgID));

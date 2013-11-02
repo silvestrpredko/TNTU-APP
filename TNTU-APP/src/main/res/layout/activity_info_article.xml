@@ -24,6 +24,7 @@
                 android:textSize="24sp"
                 android:paddingLeft="16dp"
                 android:paddingTop="12dp"
+                android:fontFamily="sans-serif-condensed"
                 android:paddingRight="16dp"
                 android:paddingBottom="10dp"
                 android:textColor="#666666" />
@@ -52,6 +53,7 @@
                 android:singleLine="false"
                 android:textAlignment="center"
                 android:textSize="14sp"
+                android:fontFamily="sans-serif-light"
                 android:lineSpacingExtra="3dp"
                 android:visibility="visible"
                 android:paddingLeft="16dp"

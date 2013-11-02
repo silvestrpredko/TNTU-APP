@@ -12,8 +12,9 @@
         android:id="@+id/scheduleTextView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold"
+        android:text="1"
         android:textColor="@color/silver"
-        android:textSize="200sp" />
+        android:fontFamily="sans-serif-thin"
+        android:textSize="300sp" />
 
 </RelativeLayout>
