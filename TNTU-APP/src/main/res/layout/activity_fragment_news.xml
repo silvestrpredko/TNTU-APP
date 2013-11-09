@@ -13,7 +13,6 @@
         android:drawSelectorOnTop="false"
         android:headerDividersEnabled="true"
         android:footerDividersEnabled="true"
-        android:fastScrollEnabled="false"
         android:scrollingCache="true"
         android:smoothScrollbar="true"
         android:choiceMode="singleChoice"

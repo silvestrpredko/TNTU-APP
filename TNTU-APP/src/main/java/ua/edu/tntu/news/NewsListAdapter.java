@@ -9,6 +9,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
+
 import java.util.List;
 
 import ua.edu.tntu.R;
@@ -16,11 +21,20 @@ import ua.edu.tntu.R;
 public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
 
     private Context context;
+    DisplayImageOptions displayImageOptions;
+    private ImageLoadingListener animateFirstListener;
+    ImageLoader imageLoader;
 
     public NewsListAdapter(Context context, int resourceId,
                            List<NewsRowItem> items) {
         super(context, resourceId, items);
         this.context = context;
+        displayImageOptions = new DisplayImageOptions.Builder().
+                showImageForEmptyUri(R.drawable.ic_stub).
+                showImageOnFail(R.drawable.ic_stub).
+                cacheInMemory(true).cacheOnDisc(true).build();
+
+        animateFirstListener = new AnimateFirstDisplayListener();
     }
 
     private class ViewHolder {
@@ -29,6 +43,7 @@ public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
+
         ViewHolder holder;
         NewsRowItem rowItem = getItem(position);
 
@@ -45,7 +60,10 @@ public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
             holder = (ViewHolder) convertView.getTag();
 
         holder.txtTitle.setText(rowItem.getTitle());
-        holder.imageView.setImageResource(rowItem.getImageId());
+        imageLoader = ImageLoader.getInstance();
+        imageLoader.init(ImageLoaderConfiguration.createDefault(getContext()));
+        imageLoader.displayImage(rowItem.getImageSmall(), holder.imageView,
+                displayImageOptions, animateFirstListener);
 
         return convertView;
     }

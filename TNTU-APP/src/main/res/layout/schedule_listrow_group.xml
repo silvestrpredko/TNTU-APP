@@ -5,7 +5,7 @@
     android:paddingTop="8dp"
     android:paddingBottom="8dp"
     android:textSize="28sp"
-    android:textColor="#3498db"
+    android:textColor="@color/gray"
     android:fontFamily="sans-serif-condensed"
     android:textAlignment="viewStart"
     android:background="@drawable/selector_item" />
