@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_marginLeft="75dp"
+        android:layout_width="1dp"
+        android:layout_height="70dp"
+        android:id="@+id/separator"
+        android:visibility="visible"
+        android:background="#3498db" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textViewPara"
+        android:layout_marginLeft="86dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/separator"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textViewTimeBegin"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/textViewPara"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textViewTimeEnd"
+        android:layout_below="@+id/textViewPara"
+        android:layout_toLeftOf="@+id/textViewPara"
+        android:layout_marginRight="5dp" />
+
+</RelativeLayout>

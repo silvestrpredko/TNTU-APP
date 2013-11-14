@@ -14,7 +14,9 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 import ua.edu.tntu.R;
 import ua.edu.tntu.ScheduleFragment;
@@ -81,11 +83,10 @@ public class ScheduleTableActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int i) {
-            Fragment fragment = new WeekObjectFragment();
-            Bundle args = new Bundle();
-            args.putInt(WeekObjectFragment.ARG_OBJECT, i + 1);
-            fragment.setArguments(args);
-            return fragment;
+            //            Bundle args = new Bundle();
+//            args.putInt(WeekObjectFragment.ARG_OBJECT, i + 1);
+//            fragment.setArguments(args);
+            return new ScheduleWeekTableActivity();
         }
 
         @Override
@@ -99,7 +100,7 @@ public class ScheduleTableActivity extends FragmentActivity {
             switch (position) {
 
                 case 0:
-                    return "Перший тиждень";
+                    return "Перший теждень";
 
                 case 1:
                     return "Другий тиждень";
@@ -109,20 +110,72 @@ public class ScheduleTableActivity extends FragmentActivity {
             }
         }
     }
+//
+//    public static class WeekObjectFragment extends Fragment {
+//
+//        public static final String ARG_OBJECT = "object";
+//
+//        @Override
+//        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                                 Bundle savedInstanceState) {
+//
+//            View rootView = inflater.inflate(R.layout.fragment_schedule_table, container, false);
+//            Bundle args = getArguments();
+//            assert rootView != null;
+//            ((TextView) rootView.findViewById(R.id.scheduleTextView)).setText(
+//                    Integer.toString(args.getInt(ARG_OBJECT)));
+//            return rootView;
+//        }
+//    }
 
-    public static class WeekObjectFragment extends Fragment {
-
-        public static final String ARG_OBJECT = "object";
-
+    public static class ScheduleWeekTableActivity extends Fragment {
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+
+            ArrayList<Schedule> name = new ArrayList<Schedule>();
+            String[] beginTime = new String[]{"8:00", "9:30", "11:10", "12:30"};
+            String[] endTime = new String[]{"9:20", "10:50", "12:20", "13:10"};
+            String[] para = new String[]{"Matan", "Fizika", "Geometry", "egeneering"};
+            String[] day = new String[]{"Monday", "Tuesday"};
+            Schedule item = new Schedule();
+            item.setNameOfDay("Monday");
+            name.add(item);
+            for (int i = 0; i < 4; i++) {
+                item = new Schedule();
+                item.setTimeBegin(beginTime[i]);
+                item.setTimeEnd(endTime[i]);
+                item.setPara(para[i]);
+                name.add(item);
+            }
+            item = new Schedule();
+            item.setNameOfDay("Tuesday");
+            name.add(item);
+            for (int i = 0; i < 4; i++) {
+                item = new Schedule();
+                item.setTimeBegin(beginTime[i]);
+                item.setTimeEnd(endTime[i]);
+                item.setPara(para[i]);
+                name.add(item);
+            }
+            item = new Schedule();
+            item.setNameOfDay("Wednesday");
+            name.add(item);
+            for (int i = 0; i < 4; i++) {
+                item = new Schedule();
+                item.setTimeBegin(beginTime[i]);
+                item.setTimeEnd(endTime[i]);
+                item.setPara(para[i]);
+                name.add(item);
+            }
 
             View rootView = inflater.inflate(R.layout.fragment_schedule_table, container, false);
-            Bundle args = getArguments();
-            assert rootView != null;
-            ((TextView) rootView.findViewById(R.id.scheduleTextView)).setText(
-                    Integer.toString(args.getInt(ARG_OBJECT)));
+
+            ListView listView = (ListView) rootView.findViewById(R.id.schedule_item_list_view);
+
+            ScheduleListViewAdapter scheduleListViewAdapter = new ScheduleListViewAdapter(this.getActivity(), name);
+
+            listView.setAdapter(scheduleListViewAdapter);
             return rootView;
         }
     }

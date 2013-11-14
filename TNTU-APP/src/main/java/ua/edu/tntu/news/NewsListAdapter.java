@@ -29,6 +29,7 @@ public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
                            List<NewsRowItem> items) {
         super(context, resourceId, items);
         this.context = context;
+
         displayImageOptions = new DisplayImageOptions.Builder().
                 showImageForEmptyUri(R.drawable.ic_stub).
                 showImageOnFail(R.drawable.ic_stub).
@@ -49,6 +50,7 @@ public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
 
         LayoutInflater mInflater = (LayoutInflater) context
                 .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.news_listrow_details, null);
             holder = new ViewHolder();

@@ -12,7 +12,7 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
@@ -40,7 +40,8 @@
                 android:scaleType="centerCrop"
                 android:clickable="false"
                 android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp" />
+                android:layout_marginRight="16dp"
+                android:src="@drawable/stufff" />
 
             <TextView
                 android:layout_width="match_parent"

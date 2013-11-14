@@ -47,7 +47,9 @@ public class NewsFragment extends Fragment implements
         listView = (ListView) rootView.findViewById(R.id.newsListView);
 
         if (android.os.Build.VERSION.SDK_INT > 9) {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.ThreadPolicy policy = new StrictMode.
+                    ThreadPolicy.Builder().
+                    permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
 
