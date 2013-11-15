@@ -62,6 +62,7 @@ public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
             holder = (ViewHolder) convertView.getTag();
 
         holder.txtTitle.setText(rowItem.getTitle());
+
         imageLoader = ImageLoader.getInstance();
         imageLoader.init(ImageLoaderConfiguration.createDefault(getContext()));
         imageLoader.displayImage(rowItem.getImageSmall(), holder.imageView,

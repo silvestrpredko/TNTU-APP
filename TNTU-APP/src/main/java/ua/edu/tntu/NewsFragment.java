@@ -34,6 +34,8 @@ public class NewsFragment extends Fragment implements
     private ListView listView;
     private List<NewsRowItem> items;
 
+    private boolean alreadyParsed = false;
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -44,6 +46,7 @@ public class NewsFragment extends Fragment implements
 
         View rootView = inflater.inflate(R.layout.activity_fragment_news, container, false);
 
+        assert rootView != null;
         listView = (ListView) rootView.findViewById(R.id.newsListView);
 
         if (android.os.Build.VERSION.SDK_INT > 9) {
@@ -55,9 +58,15 @@ public class NewsFragment extends Fragment implements
 
         try {
             XMLPullParserHandler parser = new XMLPullParserHandler();
-            items = parser.parse(XML_URL);
+
+            if (!alreadyParsed) {
+                items = parser.parse(XML_URL);
+                alreadyParsed = true; // don't parse again!
+            }
+
             NewsListAdapter adapter = new NewsListAdapter(this.getActivity(),
                     R.layout.news_listrow_details, items);
+
             listView.setAdapter(adapter);
         } catch (IOException e) {
             e.printStackTrace();
@@ -77,12 +86,14 @@ public class NewsFragment extends Fragment implements
         NewsRowItem rowItem = (NewsRowItem) parent.getItemAtPosition(position);
 
         String title = rowItem.getTitle();
-        String imgURL = rowItem.getImageBig();
+        String imgURLBig = rowItem.getImageBig();
+        String imgURLSmall = rowItem.getImageSmall();
         String article = rowItem.getArticle();
 
         intent.putExtra(NEWS_ARTICLE_TITLE, title);
-        intent.putExtra(NEWS_IMG_URL_BIG, imgURL);
+        intent.putExtra(NEWS_IMG_URL_BIG, imgURLBig);
         intent.putExtra(NEWS_ARTICLE_TEXT, article);
+        intent.putExtra(NEWS_IMG_URL_SMALL, imgURLSmall);
 
         (this.getActivity()).startActivity(intent);
     }

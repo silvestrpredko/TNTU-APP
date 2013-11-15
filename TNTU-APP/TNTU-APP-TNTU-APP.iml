@@ -71,6 +71,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="support-v4-18.0.0" level="project" />
     <orderEntry type="library" name="universal-image-loader-1.8.6-with-sources" level="project" />
+    <orderEntry type="library" name="universal-image-loader-1.8.6-with-sources" level="project" />
   </component>
 </module>
 

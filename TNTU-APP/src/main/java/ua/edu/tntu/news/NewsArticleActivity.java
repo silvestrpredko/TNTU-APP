@@ -35,6 +35,9 @@ public class NewsArticleActivity extends Activity {
         TextView articleNewsTitle = (TextView) findViewById(R.id.newsTitleTextView);
         articleNewsTitle.setText(title);
 
+        TextView articleNewsText = (TextView) findViewById(R.id.newsArticleTextView);
+        articleNewsText.setText(article);
+
         DisplayImageOptions displayImageOptions;
         ImageLoadingListener animateFirstListener;
 
@@ -50,9 +53,6 @@ public class NewsArticleActivity extends Activity {
         imageLoader = ImageLoader.getInstance();
         imageLoader.init(ImageLoaderConfiguration.createDefault(getApplicationContext()));
         imageLoader.displayImage(imgURL, imageView, displayImageOptions, animateFirstListener);
-
-        TextView articleNewsText = (TextView) findViewById(R.id.newsArticleTextView);
-        articleNewsText.setText(article);
 
         final ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
