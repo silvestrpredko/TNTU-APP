@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/switcher"
+        android:title=""
+        android:showAsAction="always|withText"
+        android:actionLayout="@layout/switch_to_select_subgroup_menu" />
+    <!--android:actionViewClass="android.widget.Switch"-->
+
+
 </menu>

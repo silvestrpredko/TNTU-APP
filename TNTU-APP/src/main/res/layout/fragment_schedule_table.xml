@@ -9,4 +9,6 @@
         android:id="@+id/schedule_item_list_view"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+
 </RelativeLayout>

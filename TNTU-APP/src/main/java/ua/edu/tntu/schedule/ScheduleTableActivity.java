@@ -10,13 +10,10 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListView;
-
-import java.util.ArrayList;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.Toast;
 
 import ua.edu.tntu.R;
 import ua.edu.tntu.ScheduleFragment;
@@ -25,13 +22,15 @@ public class ScheduleTableActivity extends FragmentActivity {
 
     private WeeksPagerAdapter mWeeksPagerAdapter;
 
+    int position;
+
     private ViewPager mViewPager;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weeks);
 
-        mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager());
+        // mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager());
 
         // Set up action bar.
         final ActionBar actionBar = getActionBar();
@@ -40,11 +39,56 @@ public class ScheduleTableActivity extends FragmentActivity {
 
         // Specify that the Home button should show an "Up" caret, indicating that touching the
         // button will take the user one step up in the application's hierarchy.
+        actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        // Set up the ViewPager, attaching the adapter.
+
+        actionBar.setCustomView(R.layout.switch_to_select_subgroup_menu);
+
+        actionBar.setDisplayShowCustomEnabled(true);
+
+        actionBar.setDisplayShowTitleEnabled(true);
+
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_SHOW_CUSTOM | ActionBar.DISPLAY_HOME_AS_UP | ActionBar.DISPLAY_SHOW_HOME);
+
+
+        Switch sw = (Switch) actionBar.getCustomView().findViewById(R.id.switchForActionBar);
+        mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), true, false);
+
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mWeeksPagerAdapter);
+        sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b == true) {
+                    Toast.makeText(ScheduleTableActivity.this, "is a checked", Toast.LENGTH_SHORT).show();
+
+
+                    mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), true, false);
+
+                    position = mViewPager.getCurrentItem();
+
+                    mViewPager = (ViewPager) findViewById(R.id.pager);
+                    mViewPager.setAdapter(mWeeksPagerAdapter);
+                    mViewPager.setCurrentItem(position);
+                } else {
+                    Toast.makeText(ScheduleTableActivity.this, "is not checked", Toast.LENGTH_SHORT).show();
+                    mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), false, true);
+                    position = mViewPager.getCurrentItem();
+
+                    mViewPager = (ViewPager) findViewById(R.id.pager);
+                    mViewPager.setAdapter(mWeeksPagerAdapter);
+                    mViewPager.setCurrentItem(position);
+
+                }
+
+            }
+        });
+
+
+//        // Set up the ViewPager, attaching the adapter.
+//        mViewPager = (ViewPager) findViewById(R.id.pager);
+//        mViewPager.setAdapter(mWeeksPagerAdapter);
     }
 
     @Override
@@ -71,22 +115,33 @@ public class ScheduleTableActivity extends FragmentActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+
+
     }
 
-    public static class WeeksPagerAdapter extends FragmentStatePagerAdapter {
+    public class WeeksPagerAdapter extends FragmentStatePagerAdapter {
 
         public static final int NUMBER_OF_WEEKS = 2;
 
-        public WeeksPagerAdapter(FragmentManager fm) {
+        private boolean firstWeek;
+        private boolean secondWeek;
+
+        public WeeksPagerAdapter(FragmentManager fm, boolean firstWeek, boolean secondWeek) {
             super(fm);
+            this.firstWeek = firstWeek;
+            this.secondWeek = secondWeek;
         }
 
         @Override
         public Fragment getItem(int i) {
-            //            Bundle args = new Bundle();
+//            Bundle args = new Bundle();
 //            args.putInt(WeekObjectFragment.ARG_OBJECT, i + 1);
 //            fragment.setArguments(args);
-            return new ScheduleWeekTableActivity();
+            if (i == 0) {
+                return new ScheduleWeekTableFragment(firstWeek);
+            } else {
+                return new ScheduleWeekTableFragment(secondWeek);
+            }
         }
 
         @Override
@@ -108,75 +163,6 @@ public class ScheduleTableActivity extends FragmentActivity {
                 default:
                     return null;
             }
-        }
-    }
-//
-//    public static class WeekObjectFragment extends Fragment {
-//
-//        public static final String ARG_OBJECT = "object";
-//
-//        @Override
-//        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                                 Bundle savedInstanceState) {
-//
-//            View rootView = inflater.inflate(R.layout.fragment_schedule_table, container, false);
-//            Bundle args = getArguments();
-//            assert rootView != null;
-//            ((TextView) rootView.findViewById(R.id.scheduleTextView)).setText(
-//                    Integer.toString(args.getInt(ARG_OBJECT)));
-//            return rootView;
-//        }
-//    }
-
-    public static class ScheduleWeekTableActivity extends Fragment {
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-
-            ArrayList<Schedule> name = new ArrayList<Schedule>();
-            String[] beginTime = new String[]{"8:00", "9:30", "11:10", "12:30"};
-            String[] endTime = new String[]{"9:20", "10:50", "12:20", "13:10"};
-            String[] para = new String[]{"Matan", "Fizika", "Geometry", "egeneering"};
-            String[] day = new String[]{"Monday", "Tuesday"};
-            Schedule item = new Schedule();
-            item.setNameOfDay("Monday");
-            name.add(item);
-            for (int i = 0; i < 4; i++) {
-                item = new Schedule();
-                item.setTimeBegin(beginTime[i]);
-                item.setTimeEnd(endTime[i]);
-                item.setPara(para[i]);
-                name.add(item);
-            }
-            item = new Schedule();
-            item.setNameOfDay("Tuesday");
-            name.add(item);
-            for (int i = 0; i < 4; i++) {
-                item = new Schedule();
-                item.setTimeBegin(beginTime[i]);
-                item.setTimeEnd(endTime[i]);
-                item.setPara(para[i]);
-                name.add(item);
-            }
-            item = new Schedule();
-            item.setNameOfDay("Wednesday");
-            name.add(item);
-            for (int i = 0; i < 4; i++) {
-                item = new Schedule();
-                item.setTimeBegin(beginTime[i]);
-                item.setTimeEnd(endTime[i]);
-                item.setPara(para[i]);
-                name.add(item);
-            }
-
-            View rootView = inflater.inflate(R.layout.fragment_schedule_table, container, false);
-
-            ListView listView = (ListView) rootView.findViewById(R.id.schedule_item_list_view);
-
-            ScheduleListViewAdapter scheduleListViewAdapter = new ScheduleListViewAdapter(this.getActivity(), name);
-
-            listView.setAdapter(scheduleListViewAdapter);
-            return rootView;
         }
     }
 }
