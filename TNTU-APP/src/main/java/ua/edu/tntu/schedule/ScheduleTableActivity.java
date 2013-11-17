@@ -21,10 +21,8 @@ import ua.edu.tntu.ScheduleFragment;
 public class ScheduleTableActivity extends FragmentActivity {
 
     private WeeksPagerAdapter mWeeksPagerAdapter;
-
-    int position;
-
     private ViewPager mViewPager;
+    private int position;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,33 +39,24 @@ public class ScheduleTableActivity extends FragmentActivity {
         // button will take the user one step up in the application's hierarchy.
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
-
-
         actionBar.setCustomView(R.layout.switch_to_select_subgroup_menu);
-
         actionBar.setDisplayShowCustomEnabled(true);
-
         actionBar.setDisplayShowTitleEnabled(true);
-
-        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_SHOW_CUSTOM | ActionBar.DISPLAY_HOME_AS_UP | ActionBar.DISPLAY_SHOW_HOME);
-
-
         Switch sw = (Switch) actionBar.getCustomView().findViewById(R.id.switchForActionBar);
-        mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), true, false);
 
+        sw.setChecked(true);
+
+        mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), true, false);
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mWeeksPagerAdapter);
+
         sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b == true) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean turnSwitchOn) {
+                if (turnSwitchOn == true) {
                     Toast.makeText(ScheduleTableActivity.this, "is a checked", Toast.LENGTH_SHORT).show();
-
-
                     mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), true, false);
-
                     position = mViewPager.getCurrentItem();
-
                     mViewPager = (ViewPager) findViewById(R.id.pager);
                     mViewPager.setAdapter(mWeeksPagerAdapter);
                     mViewPager.setCurrentItem(position);
@@ -75,20 +64,13 @@ public class ScheduleTableActivity extends FragmentActivity {
                     Toast.makeText(ScheduleTableActivity.this, "is not checked", Toast.LENGTH_SHORT).show();
                     mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), false, true);
                     position = mViewPager.getCurrentItem();
-
                     mViewPager = (ViewPager) findViewById(R.id.pager);
                     mViewPager.setAdapter(mWeeksPagerAdapter);
                     mViewPager.setCurrentItem(position);
-
                 }
 
             }
         });
-
-
-//        // Set up the ViewPager, attaching the adapter.
-//        mViewPager = (ViewPager) findViewById(R.id.pager);
-//        mViewPager.setAdapter(mWeeksPagerAdapter);
     }
 
     @Override
@@ -117,52 +99,5 @@ public class ScheduleTableActivity extends FragmentActivity {
         return super.onOptionsItemSelected(item);
 
 
-    }
-
-    public class WeeksPagerAdapter extends FragmentStatePagerAdapter {
-
-        public static final int NUMBER_OF_WEEKS = 2;
-
-        private boolean firstWeek;
-        private boolean secondWeek;
-
-        public WeeksPagerAdapter(FragmentManager fm, boolean firstWeek, boolean secondWeek) {
-            super(fm);
-            this.firstWeek = firstWeek;
-            this.secondWeek = secondWeek;
-        }
-
-        @Override
-        public Fragment getItem(int i) {
-//            Bundle args = new Bundle();
-//            args.putInt(WeekObjectFragment.ARG_OBJECT, i + 1);
-//            fragment.setArguments(args);
-            if (i == 0) {
-                return new ScheduleWeekTableFragment(firstWeek);
-            } else {
-                return new ScheduleWeekTableFragment(secondWeek);
-            }
-        }
-
-        @Override
-        public int getCount() {
-            return NUMBER_OF_WEEKS;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-
-            switch (position) {
-
-                case 0:
-                    return "Перший теждень";
-
-                case 1:
-                    return "Другий тиждень";
-
-                default:
-                    return null;
-            }
-        }
     }
 }
