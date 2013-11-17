@@ -8,6 +8,12 @@
     <string name="title_about">Про кафедру</string>
     <string name="title_contacts">Контакти</string>
     <string name="title_activity_news_page">Article</string>
+    <string name="address_title">Адреса:</string>
+    <string name="address">м. Тернопіль, вул. Руська 56, ТНТУ ім. І. Пулюя (Корпус №1), \nКафедра ПІ (1 поверх, к. 104)</string>
+    <string name="email_title">E-mail:</string>
+    <string name="email">SoftEng@tstu.edu.ua</string>
+    <string name="phone_title">Телефон:</string>
+    <string name="phone">+380 35 225-64-96</string>
 
 
 </resources>

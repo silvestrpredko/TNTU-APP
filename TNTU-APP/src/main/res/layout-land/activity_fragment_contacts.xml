@@ -8,73 +8,73 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Адреса:"
+        android:text="@string/address_title"
         android:id="@+id/addressTitleTextView"
-        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="32sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:fontFamily="sans-serif-condensed"
-        android:textSize="32sp" />
+        android:layout_marginTop="8dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="м. Тернопіль, \nвул. Руська 56\nТНТУ ім. І. Пулюя (Корпус №1), \nКафедра ПІ (1 поверх, к. 104)"
+        android:text="@string/address"
         android:id="@+id/addressTextView"
-        android:layout_below="@+id/addressTitleTextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:paddingTop="8dp"
         android:textColor="@color/gray"
         android:fontFamily="sans-serif-light"
-        android:gravity="center"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:layout_below="@+id/addressTitleTextView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="E-mail:"
+        android:text="@string/email_title"
         android:id="@+id/emailTitleTextView"
-        android:layout_marginTop="30dp"
         android:textSize="32sp"
         android:fontFamily="sans-serif-condensed"
         android:layout_below="@+id/addressTextView"
-        android:layout_centerHorizontal="true" />
+        android:layout_toLeftOf="@+id/addressTitleTextView"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SoftEng@tstu.edu.ua"
+        android:text="@string/email"
         android:id="@+id/emailTextView"
-        android:layout_below="@+id/emailTitleTextView"
-        android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif-light"
         android:paddingTop="8dp"
         android:textSize="18sp"
-        android:autoLink="email" />
+        android:autoLink="email"
+        android:layout_below="@+id/emailTitleTextView"
+        android:layout_alignLeft="@+id/emailTitleTextView" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Телефон:"
+        android:text="@string/phone_title"
         android:id="@+id/phoneTitleTextView"
         android:fontFamily="sans-serif-condensed"
         android:textSize="32sp"
-        android:layout_below="@+id/emailTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_below="@+id/addressTextView"
+        android:layout_toRightOf="@+id/addressTitleTextView"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+380 35 225-64-96"
+        android:text="@string/phone"
         android:id="@+id/phoneTextView"
-        android:layout_below="@+id/phoneTitleTextView"
-        android:layout_centerHorizontal="true"
         android:paddingTop="8dp"
-        android:autoLink="phone"
+        android:textSize="16sp"
         android:fontFamily="sans-serif-light"
-        android:autoText="false"
-        android:textSize="16sp" />
+        android:layout_below="@+id/phoneTitleTextView"
+        android:layout_alignLeft="@+id/phoneTitleTextView"
+        android:autoLink="phone" />
 
 </RelativeLayout>

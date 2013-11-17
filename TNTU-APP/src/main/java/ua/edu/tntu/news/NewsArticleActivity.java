@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,7 +19,11 @@ import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 import ua.edu.tntu.NewsFragment;
 import ua.edu.tntu.R;
 
-public class NewsArticleActivity extends Activity {
+public class NewsArticleActivity extends Activity implements View.OnClickListener {
+
+    public static final String IMG_URL = "ua.edu.tntu.news";
+    private ImageView imageView;
+    private String imgURL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +34,7 @@ public class NewsArticleActivity extends Activity {
         Intent intent = getIntent();
 
         String title = intent.getStringExtra(NewsFragment.NEWS_ARTICLE_TITLE);
-        String imgURL = intent.getStringExtra(NewsFragment.NEWS_IMG_URL_BIG);
+        imgURL = intent.getStringExtra(NewsFragment.NEWS_IMG_URL_BIG);
         String article = intent.getStringExtra(NewsFragment.NEWS_ARTICLE_TEXT);
 
         TextView articleNewsTitle = (TextView) findViewById(R.id.newsTitleTextView);
@@ -48,7 +53,9 @@ public class NewsArticleActivity extends Activity {
 
         animateFirstListener = new AnimateFirstDisplayListener();
 
-        ImageView imageView = (ImageView) findViewById(R.id.newsImageView);
+        imageView = (ImageView) findViewById(R.id.newsImageView);
+        imageView.setOnClickListener(this);
+
         ImageLoader imageLoader;
         imageLoader = ImageLoader.getInstance();
         imageLoader.init(ImageLoaderConfiguration.createDefault(getApplicationContext()));
@@ -85,4 +92,13 @@ public class NewsArticleActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(this, FullScreenImageActivity.class);
+
+        String fullScreenImageURL = imgURL;
+        intent.putExtra(IMG_URL, fullScreenImageURL);
+
+        startActivity(intent);
+    }
 }
