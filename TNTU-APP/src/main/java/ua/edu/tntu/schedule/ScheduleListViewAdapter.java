@@ -11,12 +11,12 @@ import java.util.ArrayList;
 
 import ua.edu.tntu.R;
 
-public class ScheduleListViewAdapter extends ArrayAdapter<Schedule> {
+public class ScheduleListViewAdapter extends ArrayAdapter<ScheduleBlok> {
 
     private final Context context;
-    private final ArrayList<Schedule> item;
+    private final ArrayList<ScheduleBlok> item;
 
-    public ScheduleListViewAdapter(Context context, ArrayList<Schedule> item) {
+    public ScheduleListViewAdapter(Context context, ArrayList<ScheduleBlok> item) {
         super(context, R.layout.item_class, R.layout.item_day, item);
         this.context = context;
         this.item = item;

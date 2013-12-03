@@ -17,7 +17,7 @@ import ua.edu.tntu.R;
 public class ScheduleExpandableListAdapter extends BaseExpandableListAdapter
         implements ExpandableListView.OnChildClickListener {
 
-    private static final String GROUP_NAME = "ua.edu.tntu.schedule.expandedlistexample.NAME";
+    private static final String GROUP_NAME = "GROUP_NAME";
 
     private final SparseArray<ScheduleGroup> groups;
     private LayoutInflater inflater;

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/clouds">
+    android:background="@color/white">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,9 +13,18 @@
         android:text="Large Text"
         android:id="@+id/textViewDay"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:textColor="@color/asbestos" />
+        android:textColor="@color/asbestos"
+        android:layout_alignParentTop="true"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp" />
 
-
-</LinearLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="45dp"
+        android:id="@+id/separatorRight"
+        android:visibility="visible"
+        android:background="@color/clouds"
+        android:layout_gravity="right"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

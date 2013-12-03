@@ -3,13 +3,11 @@ package ua.edu.tntu.schedule;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -20,20 +18,34 @@ import ua.edu.tntu.ScheduleFragment;
 
 public class ScheduleTableActivity extends FragmentActivity {
 
+    private static final String GROUP_NAME = "GROUP_NAME";
     private WeeksPagerAdapter mWeeksPagerAdapter;
     private ViewPager mViewPager;
     private int position;
+    private String groupName;
+
+    private static String TAG = "myLogs";
+
+    public ScheduleTableActivity() {
+        this.groupName = null;
+        position = 0;
+    }
+
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weeks);
+        groupName = getIntent().getStringExtra(GROUP_NAME);
+
+        Log.d(TAG, "GroupName: " + groupName);
+
 
         // mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager());
 
         // Set up action bar.
         final ActionBar actionBar = getActionBar();
 
-        actionBar.setTitle("Schedule");
+        actionBar.setTitle("ScheduleBlok");
 
         // Specify that the Home button should show an "Up" caret, indicating that touching the
         // button will take the user one step up in the application's hierarchy.

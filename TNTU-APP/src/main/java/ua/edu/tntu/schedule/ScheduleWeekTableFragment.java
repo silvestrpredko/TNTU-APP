@@ -27,38 +27,38 @@ public class ScheduleWeekTableFragment extends Fragment {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
 
-        ArrayList<Schedule> name = new ArrayList<Schedule>();
+        ArrayList<ScheduleBlok> name = new ArrayList<ScheduleBlok>();
 
         if (this.group == false) {
             String[] beginTime = new String[]{"8:00", "9:30", "11:10", "12:30"};
             String[] endTime = new String[]{"9:20", "10:50", "12:20", "13:10"};
             String[] para = new String[]{"Matan", "Fizika", "Geometry", "egeneering"};
             String[] day = new String[]{"Monday", "Tuesday"};
-            Schedule item = new Schedule();
+            ScheduleBlok item = new ScheduleBlok();
             item.setNameOfDay("Monday");
             name.add(item);
             for (int i = 0; i < 4; i++) {
-                item = new Schedule();
+                item = new ScheduleBlok();
                 item.setTimeBegin(beginTime[i]);
                 item.setTimeEnd(endTime[i]);
                 item.setPara(para[i]);
                 name.add(item);
             }
-            item = new Schedule();
+            item = new ScheduleBlok();
             item.setNameOfDay("Tuesday");
             name.add(item);
             for (int i = 0; i < 4; i++) {
-                item = new Schedule();
+                item = new ScheduleBlok();
                 item.setTimeBegin(beginTime[i]);
                 item.setTimeEnd(endTime[i]);
                 item.setPara(para[i]);
                 name.add(item);
             }
-            item = new Schedule();
+            item = new ScheduleBlok();
             item.setNameOfDay("Wednesday");
             name.add(item);
             for (int i = 0; i < 4; i++) {
-                item = new Schedule();
+                item = new ScheduleBlok();
                 item.setTimeBegin(beginTime[i]);
                 item.setTimeEnd(endTime[i]);
                 item.setPara(para[i]);
@@ -70,31 +70,31 @@ public class ScheduleWeekTableFragment extends Fragment {
             String[] endTime = new String[]{"9:20", "10:50", "12:20", "13:10"};
             String[] para = new String[]{"Matan", "Fizika", "Geometry", "egeneering"};
             String[] day = new String[]{"Monday", "Tuesday"};
-            Schedule item = new Schedule();
+            ScheduleBlok item = new ScheduleBlok();
             item.setNameOfDay("Dima");
             name.add(item);
             for (int i = 0; i < 4; i++) {
-                item = new Schedule();
+                item = new ScheduleBlok();
                 item.setTimeBegin(beginTime[i]);
                 item.setTimeEnd(endTime[i]);
                 item.setPara(para[i]);
                 name.add(item);
             }
-            item = new Schedule();
+            item = new ScheduleBlok();
             item.setNameOfDay("Silvestr");
             name.add(item);
             for (int i = 0; i < 4; i++) {
-                item = new Schedule();
+                item = new ScheduleBlok();
                 item.setTimeBegin(beginTime[i]);
                 item.setTimeEnd(endTime[i]);
                 item.setPara(para[i]);
                 name.add(item);
             }
-            item = new Schedule();
+            item = new ScheduleBlok();
             item.setNameOfDay("Pasha");
             name.add(item);
             for (int i = 0; i < 4; i++) {
-                item = new Schedule();
+                item = new ScheduleBlok();
                 item.setTimeBegin(beginTime[i]);
                 item.setTimeEnd(endTime[i]);
                 item.setPara(para[i]);

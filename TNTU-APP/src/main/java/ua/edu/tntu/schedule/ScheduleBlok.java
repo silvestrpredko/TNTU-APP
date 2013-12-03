@@ -1,12 +1,12 @@
 package ua.edu.tntu.schedule;
 
-public class Schedule {
+public class ScheduleBlok {
     private String timeBegin;
     private String timeEnd;
     private String para;
     private String nameOfDay;
 
-    public Schedule() {
+    public ScheduleBlok() {
         this.nameOfDay = null;
         this.para = null;
         this.timeBegin = null;
