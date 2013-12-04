@@ -1,4 +1,4 @@
-package ua.edu.tntu.news;
+package ua.edu.tntu;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,26 +14,9 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import ua.edu.tntu.NewsFragment;
-import ua.edu.tntu.R;
+import ua.edu.tntu.news.NewsArticleActivity;
 
 public class FullScreenImageActivity extends Activity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_full_screan_news_image);
-
-        Intent intent = getIntent();
-
-        String imgURL = intent.getStringExtra(NewsArticleActivity.IMG_URL);
-
-        PhotoImageView touch = new PhotoImageView(this);
-        touch.setImageBitmap(getBitmapFromURL(imgURL));
-        touch.setMaxZoom(4f); //change the max level of zoom, default is 3f
-        setContentView(touch);
-    }
-
 
     public static Bitmap getBitmapFromURL(String src) {
         try {
@@ -48,6 +31,23 @@ public class FullScreenImageActivity extends Activity {
             e.printStackTrace();
             return null;
         }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_full_screan_news_image);
+
+        Intent intent = getIntent();
+
+        String imgURL;
+
+        imgURL = intent.getStringExtra(NewsArticleActivity.IMG_URL);
+
+        PhotoImageView touch = new PhotoImageView(this);
+        touch.setImageBitmap(getBitmapFromURL(imgURL));
+        touch.setMaxZoom(4f); //change the max level of zoom, default is 3f
+        setContentView(touch);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package ua.edu.tntu.news;
+package ua.edu.tntu.info;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -9,23 +9,20 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class XMLPullParserHandler {
-    List<NewsRowItem> newsItems;
-    private NewsRowItem newsItem;
+public class InfoXMLPullParser {
+
+    List<InfoRowItem> infoRowItems;
+    private InfoRowItem infoRowItem;
     private String text;
 
-    public XMLPullParserHandler() {
-        newsItems = new ArrayList<NewsRowItem>();
+    public InfoXMLPullParser() {
+        infoRowItems = new ArrayList<InfoRowItem>();
     }
 
-    public List<NewsRowItem> getNewsItems() {
-        return newsItems;
-    }
+    public List<InfoRowItem> parse(String url) throws XmlPullParserException, IOException {
 
-    public List<NewsRowItem> parse(String url) throws XmlPullParserException, IOException {
-
-        XmlPullParserFactory factory = null;
-        XmlPullParser parser = null;
+        XmlPullParserFactory factory;
+        XmlPullParser parser;
 
         URL input = new URL(url);
 
@@ -46,8 +43,8 @@ public class XMLPullParserHandler {
 
                     case XmlPullParser.START_TAG:
                         if (tagName.equalsIgnoreCase("item")) {
-                            // create a new instance of newsItem
-                            newsItem = new NewsRowItem();
+                            // create a new instance of infoRowItem
+                            infoRowItem = new InfoRowItem();
                         }
                         break;
 
@@ -57,18 +54,16 @@ public class XMLPullParserHandler {
 
                     case XmlPullParser.END_TAG:
                         if (tagName.equalsIgnoreCase("item")) {
-                            // add newsItem object to list
-                            newsItems.add(newsItem);
+                            // add infoRowItem object to list
+                            infoRowItems.add(infoRowItem);
                         } else if (tagName.equalsIgnoreCase("title")) {
-                            newsItem.setTitle(text);
+                            infoRowItem.setTitle(text);
                         } else if (tagName.equalsIgnoreCase("id")) {
-                            newsItem.setId(Integer.parseInt(text));
+                            infoRowItem.setId(Integer.parseInt(text));
                         } else if (tagName.equalsIgnoreCase("article")) {
-                            newsItem.setArticle(text);
-                        } else if (tagName.equalsIgnoreCase("imgSmall")) {
-                            newsItem.setImageSmall(text);
-                        } else if (tagName.equalsIgnoreCase("imgBig")) {
-                            newsItem.setImageBig(text);
+                            infoRowItem.setArticle(text);
+                        } else if (tagName.equalsIgnoreCase("img")) {
+                            infoRowItem.setImage(text);
                         }
                         break;
 
@@ -84,6 +79,6 @@ public class XMLPullParserHandler {
             e.printStackTrace();
         }
 
-        return newsItems;
+        return infoRowItems;
     }
 }
