@@ -39,6 +39,7 @@ public class ScheduleExpandableListAdapter extends BaseExpandableListAdapter
         return 0;
     }
 
+
     @Override
     public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {

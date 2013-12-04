@@ -31,6 +31,7 @@ public class WeeksPagerAdapter extends FragmentStatePagerAdapter {
         }
     }
 
+
     @Override
     public int getCount() {
         return NUMBER_OF_WEEKS;

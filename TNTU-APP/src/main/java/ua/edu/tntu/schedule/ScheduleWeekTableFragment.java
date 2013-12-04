@@ -69,6 +69,7 @@ public class ScheduleWeekTableFragment extends Fragment {
                 name.add(item);
             }
 
+
         } else {
             String[] beginTime = new String[]{"8:00", "9:30", "11:10", "12:30"};
             String[] endTime = new String[]{"9:20", "10:50", "12:20", "13:10"};

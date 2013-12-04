@@ -98,6 +98,7 @@ public class ScheduleXMLResourceParser {
                     }
                 }
 
+
                 if (event == XmlResourceParser.END_TAG && closeSwitchSubGroup) {
                     if (parser.getName().equals("subgroup")) {
                         break;
