@@ -3,6 +3,7 @@ package ua.edu.tntu;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,22 +11,27 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import java.util.ArrayList;
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
 import java.util.List;
 
 import ua.edu.tntu.info.InfoArticleActivity;
 import ua.edu.tntu.info.InfoListAdapter;
-
+import ua.edu.tntu.info.InfoRowItem;
+import ua.edu.tntu.info.InfoXMLPullParser;
 
 public class InfoFragment extends Fragment implements
         AdapterView.OnItemClickListener {
 
-    public final static String INFO_ARTICLE_TITLE = "ua.edu.tntu.TITLE_INFO";
+    public final static String INFO_ARTICLE_TITLE = "ua.edu.tntu.info.TITLE_INFO";
+    public final static String INFO_IMG_URL = "ua.edu.tntu.info.IMG";
+    public final static String INFO_ARTICLE_TEXT = "ua.edu.tntu.info.ARTICLE";
 
-    private static final String[] titles = new String[]{"Персонал", "Навчання", "Працевлаштування", "Наукова робота"};
+    private static final String XML_URL = "https://www.dropbox.com/s/3ox61e0rfnrnlxf/info_db.xml?dl=1";
 
-    private ListView listView;
-    private List<String> rowItems;
+    private boolean alreadyParsed = false;
+    private List<InfoRowItem> items;
 
     @Override
     public void onAttach(Activity activity) {
@@ -37,19 +43,34 @@ public class InfoFragment extends Fragment implements
 
         View rootView = inflater.inflate(R.layout.activity_fragment_info, container, false);
 
-        rowItems = new ArrayList<String>();
+        assert rootView != null;
+        ListView listView = (ListView) rootView.findViewById(R.id.infoListView);
 
-        for (int i = 0; i < titles.length; i++) {
-            rowItems.add(titles[i]);
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.
+                    ThreadPolicy.Builder().
+                    permitAll().build();
+            StrictMode.setThreadPolicy(policy);
         }
 
-        assert rootView != null;
-        listView = (ListView) rootView.findViewById(R.id.infoListView);
+        try {
+            InfoXMLPullParser parser = new InfoXMLPullParser();
 
-        InfoListAdapter adapter = new InfoListAdapter(rootView.getContext(),
-                R.layout.info_listrow_details, rowItems);
+            if (!alreadyParsed) {
+                items = parser.parse(XML_URL);
+                alreadyParsed = true; // don't parse again!
+            }
 
-        listView.setAdapter(adapter);
+            InfoListAdapter adapter = new InfoListAdapter(this.getActivity(),
+                    R.layout.info_listrow_details, items);
+
+            listView.setAdapter(adapter);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        }
+
         listView.setOnItemClickListener(this);
         return rootView;
     }
@@ -59,9 +80,15 @@ public class InfoFragment extends Fragment implements
 
         Intent intent = new Intent(this.getActivity(), InfoArticleActivity.class);
 
-        String title = (String) parent.getItemAtPosition(position);
+        InfoRowItem rowItem = (InfoRowItem) parent.getItemAtPosition(position);
+
+        String title = rowItem.getTitle();
+        String imgURL = rowItem.getImage();
+        String article = rowItem.getArticle();
 
         intent.putExtra(INFO_ARTICLE_TITLE, title);
+        intent.putExtra(INFO_IMG_URL, imgURL);
+        intent.putExtra(INFO_ARTICLE_TEXT, article);
 
         (this.getActivity()).startActivity(intent);
     }

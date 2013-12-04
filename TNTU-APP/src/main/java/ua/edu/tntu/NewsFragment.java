@@ -19,7 +19,7 @@ import java.util.List;
 import ua.edu.tntu.news.NewsArticleActivity;
 import ua.edu.tntu.news.NewsListAdapter;
 import ua.edu.tntu.news.NewsRowItem;
-import ua.edu.tntu.news.XMLPullParserHandler;
+import ua.edu.tntu.news.NewsXMLPullParser;
 
 public class NewsFragment extends Fragment implements
         AdapterView.OnItemClickListener {
@@ -31,7 +31,6 @@ public class NewsFragment extends Fragment implements
 
     private static final String XML_URL = "https://www.dropbox.com/s/v69tmu21hufl8kl/news_db.xml?dl=1";
 
-    private ListView listView;
     private List<NewsRowItem> items;
 
     private boolean alreadyParsed = false;
@@ -47,7 +46,7 @@ public class NewsFragment extends Fragment implements
         View rootView = inflater.inflate(R.layout.activity_fragment_news, container, false);
 
         assert rootView != null;
-        listView = (ListView) rootView.findViewById(R.id.newsListView);
+        ListView listView = (ListView) rootView.findViewById(R.id.newsListView);
 
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy policy = new StrictMode.
@@ -57,7 +56,7 @@ public class NewsFragment extends Fragment implements
         }
 
         try {
-            XMLPullParserHandler parser = new XMLPullParserHandler();
+            NewsXMLPullParser parser = new NewsXMLPullParser();
 
             if (!alreadyParsed) {
                 items = parser.parse(XML_URL);

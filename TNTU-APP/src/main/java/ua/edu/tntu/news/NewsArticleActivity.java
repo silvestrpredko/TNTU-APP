@@ -16,13 +16,13 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 
+import ua.edu.tntu.FullScreenImageActivity;
 import ua.edu.tntu.NewsFragment;
 import ua.edu.tntu.R;
 
 public class NewsArticleActivity extends Activity implements View.OnClickListener {
 
     public static final String IMG_URL = "ua.edu.tntu.news";
-    private ImageView imageView;
     private String imgURL;
 
     @Override
@@ -53,7 +53,7 @@ public class NewsArticleActivity extends Activity implements View.OnClickListene
 
         animateFirstListener = new AnimateFirstDisplayListener();
 
-        imageView = (ImageView) findViewById(R.id.newsImageView);
+        ImageView imageView = (ImageView) findViewById(R.id.newsImageView);
         imageView.setOnClickListener(this);
 
         ImageLoader imageLoader;

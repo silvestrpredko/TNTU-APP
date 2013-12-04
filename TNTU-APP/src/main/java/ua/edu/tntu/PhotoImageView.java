@@ -1,4 +1,4 @@
-package ua.edu.tntu.news;
+package ua.edu.tntu;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -220,5 +220,4 @@ public class PhotoImageView extends ImageView {
         bottom = height * saveScale - height - (2 * redundantYSpace * saveScale);
         setImageMatrix(matrix);
     }
-
 }

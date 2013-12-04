@@ -12,12 +12,12 @@ import java.util.List;
 
 import ua.edu.tntu.R;
 
-public class InfoListAdapter extends ArrayAdapter<String> {
+public class InfoListAdapter extends ArrayAdapter<InfoRowItem> {
 
     private Context context;
 
     public InfoListAdapter(Context context, int resourceId,
-                           List<String> items) {
+                           List<InfoRowItem> items) {
         super(context, resourceId, items);
         this.context = context;
     }
@@ -28,7 +28,7 @@ public class InfoListAdapter extends ArrayAdapter<String> {
 
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
-        String rowItem = getItem(position);
+        InfoRowItem rowItem = getItem(position);
 
         LayoutInflater mInflater = (LayoutInflater) context
                 .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
@@ -42,7 +42,7 @@ public class InfoListAdapter extends ArrayAdapter<String> {
         } else
             holder = (ViewHolder) convertView.getTag();
 
-        holder.txtTitle.setText(rowItem);
+        holder.txtTitle.setText(rowItem.getTitle());
 
         return convertView;
     }

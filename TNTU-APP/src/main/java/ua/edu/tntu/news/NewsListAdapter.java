@@ -36,6 +36,9 @@ public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
                 cacheInMemory(true).cacheOnDisc(true).build();
 
         animateFirstListener = new AnimateFirstDisplayListener();
+
+        imageLoader = ImageLoader.getInstance();
+        imageLoader.init(ImageLoaderConfiguration.createDefault(getContext()));
     }
 
     private class ViewHolder {
@@ -63,8 +66,6 @@ public class NewsListAdapter extends ArrayAdapter<NewsRowItem> {
 
         holder.txtTitle.setText(rowItem.getTitle());
 
-        imageLoader = ImageLoader.getInstance();
-        imageLoader.init(ImageLoaderConfiguration.createDefault(getContext()));
         imageLoader.displayImage(rowItem.getImageSmall(), holder.imageView,
                 displayImageOptions, animateFirstListener);
 
