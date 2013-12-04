@@ -16,20 +16,24 @@ import ua.edu.tntu.R;
  */
 public class ScheduleWeekTableFragment extends Fragment {
 
-    private boolean group;
+    private boolean week;
+    private ScheduleXMLResourceParser scheduleParser;
 
-    public ScheduleWeekTableFragment(boolean group) {
-        this.group = group;
+    public ScheduleWeekTableFragment(boolean week) {
+        this.week = week;
+        scheduleParser = new ScheduleXMLResourceParser(getActivity().getApplicationContext());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+        scheduleParser.getSchedule();
+
 
         ArrayList<ScheduleBlok> name = new ArrayList<ScheduleBlok>();
 
-        if (this.group == false) {
+        if (this.week == false) {
             String[] beginTime = new String[]{"8:00", "9:30", "11:10", "12:30"};
             String[] endTime = new String[]{"9:20", "10:50", "12:20", "13:10"};
             String[] para = new String[]{"Matan", "Fizika", "Geometry", "egeneering"};

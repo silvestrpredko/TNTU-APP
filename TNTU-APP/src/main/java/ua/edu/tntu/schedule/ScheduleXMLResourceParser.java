@@ -15,14 +15,14 @@ import ua.edu.tntu.R;
  */
 public class ScheduleXMLResourceParser {
 
-    Context context;
+    private Context context;
     private static final String TAG = "myLogs";
     private static final String Sp = " СЕ-21\n";
     private static final String subSp = " 2\n";
     private String name;
     private String nameWeek;
 
-    boolean[] switchWeek = new boolean[2];
+    private boolean[] switchWeek = new boolean[2];
 
     // constructor for  to get the context object from where you are using this plist parsing
     public ScheduleXMLResourceParser(Context context) {
@@ -63,6 +63,7 @@ public class ScheduleXMLResourceParser {
                     }
                     if (parser.getName().equals("week") && switchSubGroup) {
                         tempWeek = true;
+                        Log.d(TAG, "Name: " + parser.getName());
                     }
                 }
 

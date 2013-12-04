@@ -5,12 +5,22 @@ public class ScheduleBlok {
     private String timeEnd;
     private String para;
     private String nameOfDay;
+    private String location;
 
     public ScheduleBlok() {
         this.nameOfDay = null;
         this.para = null;
         this.timeBegin = null;
         this.timeEnd = null;
+        this.location = null;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public String getNameOfDay() {
@@ -44,7 +54,5 @@ public class ScheduleBlok {
     public void setPara(String para) {
         this.para = para;
     }
-
-
 }
 

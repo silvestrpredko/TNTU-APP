@@ -7,767 +7,354 @@
             1
             <week>
                 first
-                <day>Monday</day>
-                <lecture>sadasd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>asdasdd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <day>Понеділок</day>
 
-                <day>Tuesday</day>
-                <lecture>Правознавство</lecture>
+                <lecture>Філософія</lecture>
                 <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Комунізм</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Фальсифікація</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <endTime>10:50</endTime>
+                <location>К8-12</location>
 
-                <day>Wednesday</day>
-                <lecture>Вікно</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Фізика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Іноземна Мова</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-309</location>
 
-                <day>Thursday</day>
-                <lecture>Економіка</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Література</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Комп’ютерна графіка</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>K1-809</location>
 
-                <day>Friday</day>
-                <lecture>Борщ</lecture>
+                <day>Вівторок</day>
+
+                <lecture>Теорія електричних та магнітних кіл</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К7-109</location>
+
+                <lecture>Теорія електричних та магнітних кіл</lecture>
                 <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Фізкультура</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <endTime>10:50</endTime>
+                <location>К7-318</location>
+
+                <lecture>Фізичне виховання</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К10</location>
+
+                <day>Середа</day>
+
+                <lecture>Алгоритми та методи обчислень</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К2-60</location>
+
+                <lecture>Українська мова</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К2-68</location>
+
+                <lecture>Основи економічних теорій</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-86</location>
+
+                <day>Четвер</day>
+
+                <lecture>Фізичне виховання</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К10</location>
+
+                <lecture>Українська мова</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-309</location>
+
+                <lecture>Теорія ймовірностей і мат. стат.</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К4-204</location>
+
+                <lecture>Теорія ймовірностей і мат. стат.</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К4-204</location>
+
+                <day>П’ятниця</day>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>K1-603</location>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>K1-301</location>
+
+                <lecture>Комп’ютерна графіка</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>K1-802</location>
             </week>
             <week>
                 second
-                <day>Monday</day>
+                <day>Понеділок</day>
+
                 <lecture>Філософія</lecture>
                 <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Інформатика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Економіка</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <endTime>10:50</endTime>
+                <location>К8-12</location>
 
-                <day>Tuesday</day>
-                <lecture>Ukraine Language</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Mechanic</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Krem</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Іноземна Мова</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-309</location>
 
-                <day>Wednesday</day>
-                <lecture>Вікно</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Фізика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <day>Вівторок</day>
 
-                <day>Thursday</day>
-                <lecture>Економіка</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Психологія</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Теорія електричних та магнітних кіл</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К7-109</location>
 
-                <day>Friday</day>
-                <lecture>кооперація</lecture>
+                <lecture>Теорія електричних та магнітних кіл</lecture>
                 <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Інформатика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <endTime>10:50</endTime>
+                <location>К7-318</location>
+
+                <lecture>Фізичне виховання</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К10</location>
+
+                <day>Середа</day>
+
+                <lecture>Алгоритми та методи обчислень</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К2-60</location>
+
+                <lecture>Алгоритми та методи обчислень</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К2-60</location>
+
+                <lecture>Основи економічних теорій</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-86</location>
+
+                <day>Четвер</day>
+
+                <lecture>Філософія</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К10</location>
+
+                <lecture>Українська мова</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-309</location>
+
+                <lecture>Теорія ймовірностей і мат. стат.</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К4-204</location>
+
+                <day>П’ятниця</day>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>K1-603</location>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>K1-301</location>
+
+                <lecture>Комп’ютерна графіка</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>K1-802</location>
             </week>
         </subgroup>
         <subgroup>
             2
             <week>
                 first
-                <day>Monday</day>
-                <lecture>sadasd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>asdasdd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <day>Понеділок</day>
 
-                <day>Tuesday</day>
-                <lecture>asdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Krem</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Wednesday</day>
-                <lecture>dfawdwd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdwafawf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Thursday</day>
-                <lecture>awfgawfdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awfawdafwd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Friday</day>
-                <lecture>awdawfawf</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawfawfafaf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-            </week>
-            <week>
-                second
-                <day>Monday</day>
-                <lecture>sadasd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>asdasdd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Tuesday</day>
-                <lecture>asdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Krem</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Wednesday</day>
-                <lecture>dfawdwd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdwafawf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Thursday</day>
-                <lecture>awfgawfdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awfawdafwd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Friday</day>
-                <lecture>awdawfawf</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawfawfafaf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-            </week>
-        </subgroup>
-    </group>
-    <group>
-        СП-21
-        <subgroup>
-            1
-            <week>
-                first
-                <day>Monday</day>
-                <lecture>sadasd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>asdasdd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Tuesday</day>
-                <lecture>Правознавство</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Комунізм</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Фальсифікація</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Wednesday</day>
-                <lecture>Вікно</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Фізика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Thursday</day>
-                <lecture>Економіка</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Література</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Friday</day>
-                <lecture>Борщ</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Фізкультура</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-            </week>
-            <week>
-                second
-                <day>Monday</day>
                 <lecture>Філософія</lecture>
                 <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Інформатика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Економіка</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <endTime>10:50</endTime>
+                <location>К8-12</location>
 
-                <day>Tuesday</day>
-                <lecture>Ukraine Language</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Mechanic</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Krem</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Іноземна Мова</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-311</location>
 
-                <day>Wednesday</day>
-                <lecture>Вікно</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Фізика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Комп’ютерна графіка</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>K1-809</location>
 
-                <day>Thursday</day>
-                <lecture>Економіка</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Психологія</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Алгоритми та методи обчислень</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>K2-64</location>
 
-                <day>Friday</day>
-                <lecture>кооперація</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Інформатика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-            </week>
-        </subgroup>
-        <subgroup>
-            2
-            <week>
-                first
-                <day>Monday</day>
-                <lecture>sadasd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>asdasdd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <day>Вівторок</day>
 
-                <day>Tuesday</day>
-                <lecture>asdawfw</lecture>
+                <lecture>Теорія електричних та магнітних кіл</lecture>
                 <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Krem</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <endTime>10:50</endTime>
+                <location>К7-318</location>
 
-                <day>Wednesday</day>
-                <lecture>dfawdwd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdwafawf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Теорія електричних та магнітних кіл</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К7-109</location>
 
-                <day>Thursday</day>
-                <lecture>awfgawfdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awfawdafwd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Фізичне виховання</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К10</location>
 
-                <day>Friday</day>
-                <lecture>awdawfawf</lecture>
+                <day>Середа</day>
+
+                <lecture>Комп’ютерна графіка</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К1-802</location>
+
+                <lecture>Українська мова</lecture>
                 <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawfawfafaf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <endTime>10:50</endTime>
+                <location>К2-68</location>
+
+                <lecture>Основи економічних теорій</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-86</location>
+
+                <day>Четвер</day>
+
+                <lecture>Фізичне виховання</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К10</location>
+
+                <lecture>Українська мова</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-309</location>
+
+                <lecture>Теорія ймовірностей і мат. стат.</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К4-204</location>
+
+                <lecture>Теорія ймовірностей і мат. стат.</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К4-204</location>
+
+                <day>П’ятниця</day>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>K1-301</location>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>K1-605</location>
             </week>
             <week>
                 second
-                <day>Monday</day>
-                <lecture>sadasd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>asdasdd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <day>Понеділок</day>
 
-                <day>Tuesday</day>
-                <lecture>asdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Krem</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Wednesday</day>
-                <lecture>dfawdwd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdwafawf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Thursday</day>
-                <lecture>awfgawfdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awfawdafwd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Friday</day>
-                <lecture>awdawfawf</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawfawfafaf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-            </week>
-        </subgroup>
-    </group>
-    <group>
-        СЕ-21
-        <subgroup>
-            1
-            <week>
-                first
-                <day>Monday</day>
-                <lecture>sadasd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>asdasdd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Tuesday</day>
-                <lecture>Правознавство</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Комунізм</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Фальсифікація</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Wednesday</day>
-                <lecture>Вікно</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Фізика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Thursday</day>
-                <lecture>Економіка</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Література</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Friday</day>
-                <lecture>Борщ</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Фізкультура</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-            </week>
-            <week>
-                second
-                <day>Monday</day>
                 <lecture>Філософія</lecture>
                 <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Інформатика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Економіка</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <endTime>10:50</endTime>
+                <location>К8-12</location>
 
-                <day>Tuesday</day>
-                <lecture>Ukraine Language</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Mechanic</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Krem</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Іноземна Мова</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-309</location>
 
-                <day>Wednesday</day>
-                <lecture>Вікно</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Фізика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Алгоритми та методи обчислень</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>K2-61</location>
 
-                <day>Thursday</day>
-                <lecture>Економіка</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Психологія</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <day>Вівторок</day>
 
-                <day>Friday</day>
-                <lecture>кооперація</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Інформатика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-            </week>
-        </subgroup>
-        <subgroup>
-            2
-            <week>
-                first
-                <day>Monday</day>
-                <lecture>sadasd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>asdasdd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Теорія електричних та магнітних кіл</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К7-109</location>
 
-                <day>Tuesday</day>
-                <lecture>asdawfw</lecture>
+                <lecture>Теорія електричних та магнітних кіл</lecture>
                 <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Krem</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <endTime>10:50</endTime>
+                <location>К7-318</location>
 
-                <day>Wednesday</day>
-                <lecture>dfawdwd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdwafawf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Фізичне виховання</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К10</location>
 
-                <day>Thursday</day>
-                <lecture>awfgawfdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awfawdafwd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <day>Середа</day>
 
-                <day>Friday</day>
-                <lecture>awdawfawf</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawfawfafaf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-            </week>
-            <week>
-                second
+                <lecture>Комп’ютерна графіка</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К1-802</location>
 
-                <day>Monday</day>
-                <lecture>sadasd</lecture>
+                <lecture>Алгоритми та методи обчислень</lecture>
                 <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>asdasdd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <endTime>10:50</endTime>
+                <location>К2-60</location>
 
-                <day>Tuesday</day>
-                <lecture>asdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Krem</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Основи економічних теорій</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-86</location>
 
-                <day>Wednesday</day>
-                <lecture>dfawdwd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdwafawf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <day>Четвер</day>
 
-                <day>Thursday</day>
-                <lecture>awfgawfdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Zin</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Friday</day>
-                <lecture>Cheverda</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Predko</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-            </week>
-        </subgroup>
-    </group>
-    <group>
-        СБ-21
-        <subgroup>
-            1
-            <week>
-                first
-                <day>Monday</day>
-                <lecture>sadasd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>asdasdd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Tuesday</day>
-                <lecture>Правознавство</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Комунізм</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Фальсифікація</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Wednesday</day>
-                <lecture>Вікно</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Фізика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Thursday</day>
-                <lecture>Економіка</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Література</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Friday</day>
-                <lecture>Борщ</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Фізкультура</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-            </week>
-            <week>
-                second
-                <day>Monday</day>
                 <lecture>Філософія</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Інформатика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Економіка</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К10</location>
 
-                <day>Tuesday</day>
-                <lecture>Ukraine Language</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Mechanic</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Krem</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Філософія</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-309</location>
 
-                <day>Wednesday</day>
-                <lecture>Вікно</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Фізика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Теорія ймовірностей і мат. стат.</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К4-204</location>
 
-                <day>Thursday</day>
-                <lecture>Економіка</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Психологія</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <day>П’ятниця</day>
 
-                <day>Friday</day>
-                <lecture>кооперація</lecture>
+                <lecture>Комп’ютерна логіка</lecture>
                 <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>Інформатика</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-            </week>
-        </subgroup>
-        <subgroup>
-            2
-            <week>
-                first
-                <day>Monday</day>
-                <lecture>sadasd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>asdasdd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <endTime>10:50</endTime>
+                <location>K1-301</location>
 
-                <day>Tuesday</day>
-                <lecture>asdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Krem</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Wednesday</day>
-                <lecture>dfawdwd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdwafawf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Thursday</day>
-                <lecture>awfgawfdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awfawdafwd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Friday</day>
-                <lecture>awdawfawf</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawfawfafaf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-            </week>
-            <week>
-                second
-
-                <day>Monday</day>
-                <lecture>sadasd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>asdasdd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Tuesday</day>
-                <lecture>asdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-                <lecture>Krem</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Wednesday</day>
-                <lecture>dfawdwd</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdwafawf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Thursday</day>
-                <lecture>awfgawfdawfw</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awfawdafwd</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
-
-                <day>Friday</day>
-                <lecture>awdawfawf</lecture>
-                <startTime>9:30</startTime>
-                <endTime>11:20</endTime>
-                <lecture>awdawfawfafaf</lecture>
-                <startTime>11:30</startTime>
-                <endTime>12:50</endTime>
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>K1-605</location>
             </week>
         </subgroup>
     </group>

@@ -54,15 +54,15 @@ public class ScheduleTableActivity extends FragmentActivity {
         actionBar.setCustomView(R.layout.switch_to_select_subgroup_menu);
         actionBar.setDisplayShowCustomEnabled(true);
         actionBar.setDisplayShowTitleEnabled(true);
-        Switch sw = (Switch) actionBar.getCustomView().findViewById(R.id.switchForActionBar);
+        Switch switchSubGroup = (Switch) actionBar.getCustomView().findViewById(R.id.switchForActionBar);
 
-        sw.setChecked(true);
+        switchSubGroup.setChecked(true);
 
         mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), true, false);
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mWeeksPagerAdapter);
 
-        sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        switchSubGroup.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean turnSwitchOn) {
                 if (turnSwitchOn == true) {
