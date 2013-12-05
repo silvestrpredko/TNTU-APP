@@ -27,11 +27,12 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
-        android:id="@+id/textViewPara"
+        android:id="@+id/textViewLecture"
         android:fontFamily="sans-serif-light"
         android:textColor="@color/asbestos"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/textViewLocation" />
+        android:layout_toRightOf="@+id/separator"
+        android:layout_marginLeft="40dp" />
 
 
     <TextView

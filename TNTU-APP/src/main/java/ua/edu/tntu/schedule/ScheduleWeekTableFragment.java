@@ -17,93 +17,44 @@ import ua.edu.tntu.R;
 public class ScheduleWeekTableFragment extends Fragment {
 
     private boolean week;
+    private boolean switcher;
     private ScheduleXMLResourceParser scheduleParser;
+    private ArrayList<ScheduleBlok> scheduleBlokContainer;
+    private static String TAG = "myLogs";
 
     public ScheduleWeekTableFragment(boolean week) {
         this.week = week;
-        scheduleParser = new ScheduleXMLResourceParser(getActivity().getApplicationContext());
+        switcher = false;
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-        scheduleParser.getSchedule();
 
+        scheduleParser = new ScheduleXMLResourceParser(this.getActivity().getApplicationContext());
+
+        ArrayList<ScheduleBlok> temp = scheduleParser.getSchedule();
 
         ArrayList<ScheduleBlok> name = new ArrayList<ScheduleBlok>();
 
         if (this.week == false) {
-            String[] beginTime = new String[]{"8:00", "9:30", "11:10", "12:30"};
-            String[] endTime = new String[]{"9:20", "10:50", "12:20", "13:10"};
-            String[] para = new String[]{"Matan", "Fizika", "Geometry", "egeneering"};
-            String[] day = new String[]{"Monday", "Tuesday"};
-            ScheduleBlok item = new ScheduleBlok();
-            item.setNameOfDay("Monday");
-            name.add(item);
-            for (int i = 0; i < 4; i++) {
-                item = new ScheduleBlok();
-                item.setTimeBegin(beginTime[i]);
-                item.setTimeEnd(endTime[i]);
-                item.setPara(para[i]);
-                name.add(item);
+            for (int i = 0; i < temp.size(); i++) {
+                if (temp.get(i).getLecture().equals("empty") && temp.get(i).getNameOfDay().equals("empty")) {
+                    switcher = true;
+                    i++;
+                }
+                if (switcher == true) {
+                    name.add(temp.get(i));
+                }
             }
-            item = new ScheduleBlok();
-            item.setNameOfDay("Tuesday");
-            name.add(item);
-            for (int i = 0; i < 4; i++) {
-                item = new ScheduleBlok();
-                item.setTimeBegin(beginTime[i]);
-                item.setTimeEnd(endTime[i]);
-                item.setPara(para[i]);
-                name.add(item);
-            }
-            item = new ScheduleBlok();
-            item.setNameOfDay("Wednesday");
-            name.add(item);
-            for (int i = 0; i < 4; i++) {
-                item = new ScheduleBlok();
-                item.setTimeBegin(beginTime[i]);
-                item.setTimeEnd(endTime[i]);
-                item.setPara(para[i]);
-                name.add(item);
-            }
-
-
         } else {
-            String[] beginTime = new String[]{"8:00", "9:30", "11:10", "12:30"};
-            String[] endTime = new String[]{"9:20", "10:50", "12:20", "13:10"};
-            String[] para = new String[]{"Matan", "Fizika", "Geometry", "egeneering"};
-            String[] day = new String[]{"Monday", "Tuesday"};
-            ScheduleBlok item = new ScheduleBlok();
-            item.setNameOfDay("Dima");
-            name.add(item);
-            for (int i = 0; i < 4; i++) {
-                item = new ScheduleBlok();
-                item.setTimeBegin(beginTime[i]);
-                item.setTimeEnd(endTime[i]);
-                item.setPara(para[i]);
-                name.add(item);
-            }
-            item = new ScheduleBlok();
-            item.setNameOfDay("Silvestr");
-            name.add(item);
-            for (int i = 0; i < 4; i++) {
-                item = new ScheduleBlok();
-                item.setTimeBegin(beginTime[i]);
-                item.setTimeEnd(endTime[i]);
-                item.setPara(para[i]);
-                name.add(item);
-            }
-            item = new ScheduleBlok();
-            item.setNameOfDay("Pasha");
-            name.add(item);
-            for (int i = 0; i < 4; i++) {
-                item = new ScheduleBlok();
-                item.setTimeBegin(beginTime[i]);
-                item.setTimeEnd(endTime[i]);
-                item.setPara(para[i]);
-                name.add(item);
+            for (int i = 0; i < temp.size(); i++) {
+                if (temp.get(i).getNameOfDay().equals("empty") && temp.get(i).getLecture().equals("empty")) {
+                    break;
+                }
+                name.add(temp.get(i));
             }
         }
 

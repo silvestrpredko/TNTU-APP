@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -24,21 +23,22 @@ public class ScheduleTableActivity extends FragmentActivity {
     private int position;
     private String groupName;
 
-    private static String TAG = "myLogs";
+    private ScheduleXMLResourceParser scheduleParser;
+
 
     public ScheduleTableActivity() {
         this.groupName = null;
         position = 0;
     }
 
-
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weeks);
         groupName = getIntent().getStringExtra(GROUP_NAME);
 
-        Log.d(TAG, "GroupName: " + groupName);
+//        scheduleParser = new ScheduleXMLResourceParser(getApplicationContext());
 
+//        scheduleParser.getSchedule();
 
         // mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager());
 
@@ -61,6 +61,7 @@ public class ScheduleTableActivity extends FragmentActivity {
         mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), true, false);
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mWeeksPagerAdapter);
+
 
         switchSubGroup.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

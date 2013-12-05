@@ -3,16 +3,17 @@ package ua.edu.tntu.schedule;
 public class ScheduleBlok {
     private String timeBegin;
     private String timeEnd;
-    private String para;
+    private String lecture;
     private String nameOfDay;
     private String location;
+    private String week;
 
     public ScheduleBlok() {
-        this.nameOfDay = null;
-        this.para = null;
-        this.timeBegin = null;
-        this.timeEnd = null;
-        this.location = null;
+        this.nameOfDay = "empty";
+        this.lecture = "empty";
+        this.timeBegin = "empty";
+        this.timeEnd = "empty";
+        this.location = "empty";
     }
 
     public String getLocation() {
@@ -47,12 +48,12 @@ public class ScheduleBlok {
         this.timeEnd = timeEnd;
     }
 
-    public String getPara() {
-        return para;
+    public String getLecture() {
+        return lecture;
     }
 
-    public void setPara(String para) {
-        this.para = para;
+    public void setLecture(String lecture) {
+        this.lecture = lecture;
     }
 }
 
