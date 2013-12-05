@@ -5,7 +5,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.IOException;
-import java.net.URL;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,19 +19,20 @@ public class InfoXMLPullParser {
         infoRowItems = new ArrayList<InfoRowItem>();
     }
 
-    public List<InfoRowItem> parse(String url) throws XmlPullParserException, IOException {
+    public List<InfoRowItem> parse(InputStream inputStream) throws XmlPullParserException, IOException {
 
         XmlPullParserFactory factory;
         XmlPullParser parser;
 
-        URL input = new URL(url);
+        int readLimit = 32 * 1024;
+        inputStream.mark(readLimit);
 
         try {
             factory = XmlPullParserFactory.newInstance();
             factory.setNamespaceAware(true);
             parser = factory.newPullParser();
 
-            parser.setInput(input.openStream(), null);
+            parser.setInput(inputStream, null);
 
             int eventType = parser.getEventType();
 

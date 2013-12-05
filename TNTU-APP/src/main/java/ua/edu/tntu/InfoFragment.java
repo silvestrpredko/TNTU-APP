@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import android.widget.ListView;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 import ua.edu.tntu.info.InfoArticleActivity;
@@ -28,10 +30,11 @@ public class InfoFragment extends Fragment implements
     public final static String INFO_IMG_URL = "ua.edu.tntu.info.IMG";
     public final static String INFO_ARTICLE_TEXT = "ua.edu.tntu.info.ARTICLE";
 
-    private static final String XML_URL = "https://www.dropbox.com/s/3ox61e0rfnrnlxf/info_db.xml?dl=1";
-
     private boolean alreadyParsed = false;
     private List<InfoRowItem> items;
+
+    String filename = "info.xml";
+    InputStream inputStream;
 
     @Override
     public void onAttach(Activity activity) {
@@ -42,6 +45,13 @@ public class InfoFragment extends Fragment implements
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.activity_fragment_info, container, false);
+
+        try {
+            inputStream = getActivity().getAssets().open(filename);
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.d("", "ERROR OPENING FILE " + filename);
+        }
 
         assert rootView != null;
         ListView listView = (ListView) rootView.findViewById(R.id.infoListView);
@@ -57,7 +67,8 @@ public class InfoFragment extends Fragment implements
             InfoXMLPullParser parser = new InfoXMLPullParser();
 
             if (!alreadyParsed) {
-                items = parser.parse(XML_URL);
+                items = parser.parse(inputStream);
+                Log.d("PARSER", "IT'S OK!!!");
                 alreadyParsed = true; // don't parse again!
             }
 

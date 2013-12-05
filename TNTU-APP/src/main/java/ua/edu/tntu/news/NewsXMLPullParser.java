@@ -4,8 +4,11 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.URL;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,19 +21,21 @@ public class NewsXMLPullParser {
         newsItems = new ArrayList<NewsRowItem>();
     }
 
-    public List<NewsRowItem> parse(String url) throws XmlPullParserException, IOException {
+    public List<NewsRowItem> parse(File file) throws XmlPullParserException, IOException {
 
         XmlPullParserFactory factory;
         XmlPullParser parser;
 
-        URL input = new URL(url);
+        int readLimit = 32 * 1024;
+        InputStream inputStream = new BufferedInputStream(new FileInputStream(file), readLimit);
+        inputStream.mark(readLimit);
 
         try {
             factory = XmlPullParserFactory.newInstance();
             factory.setNamespaceAware(true);
             parser = factory.newPullParser();
 
-            parser.setInput(input.openStream(), null);
+            parser.setInput(inputStream, null);
 
             int eventType = parser.getEventType();
 
