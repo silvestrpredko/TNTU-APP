@@ -2,7 +2,7 @@
 <resources>
 
     <string name="action_settings">Settings</string>
-    <string name="app_name">TNTU App</string>
+    <string name="app_name"></string>
     <string name="title_news">Новини</string>
     <string name="title_schedule">Розклад</string>
     <string name="title_about">Про кафедру</string>
@@ -19,5 +19,4 @@
         <item>Перша</item>
         <item>Друга</item>
     </string-array>
-
 </resources>
