@@ -30,7 +30,7 @@
         android:id="@+id/textViewLecture"
         android:fontFamily="sans-serif-light"
         android:textColor="@color/asbestos"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:layout_alignTop="@+id/textViewTimeBegin"
         android:layout_toRightOf="@+id/separator"
         android:layout_marginLeft="10dp"

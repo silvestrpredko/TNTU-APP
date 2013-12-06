@@ -1,6 +1,370 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
 <schedule>
+    <group>
+        СП-21
+        <subgroup>
+            1
+            <week>
+                first
+                <day>Понеділок</day>
+
+                <lecture>Філософія</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К8-12 (лекція)</location>
+
+                <lecture>Іноземна Мова</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-306 (практична)</location>
+
+                <lecture>Математичний аналіз</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>K4-402 (практична)</location>
+
+                <lecture>Мова Програмування Java</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>K4-402 (практична)</location>
+
+                <day>Вівторок</day>
+
+                <lecture>Теорія електричних та магнітних кіл</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К7-109</location>
+
+                <lecture>Теорія електричних та магнітних кіл</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К7-318</location>
+
+                <lecture>Фізичне виховання</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К10</location>
+
+                <day>Середа</day>
+
+                <lecture>Алгоритми та методи обчислень</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К2-60</location>
+
+                <lecture>Українська мова</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К2-68</location>
+
+                <lecture>Основи економічних теорій</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-86</location>
+
+                <day>Четвер</day>
+
+                <lecture>Фізичне виховання</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К10</location>
+
+                <lecture>Українська мова</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-309</location>
+
+                <lecture>Теорія ймовірностей і мат. стат.</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К4-204</location>
+
+                <lecture>Теорія ймовірностей і мат. стат.</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К4-204</location>
+
+                <day>П’ятниця</day>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>K1-603</location>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>K1-301</location>
+
+                <lecture>Комп’ютерна графіка</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>K1-802</location>
+            </week>
+            <week>
+                second
+                <day>Понеділок</day>
+
+                <lecture>Філософія</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К8-12</location>
+
+                <lecture>Іноземна Мова</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-309</location>
+
+                <day>Вівторок</day>
+
+                <lecture>Теорія електричних та магнітних кіл</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К7-109</location>
+
+                <lecture>Теорія електричних та магнітних кіл</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К7-318</location>
+
+                <lecture>Фізичне виховання</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К10</location>
+
+                <day>Середа</day>
+
+                <lecture>Алгоритми та методи обчислень</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К2-60</location>
+
+                <lecture>Алгоритми та методи обчислень</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К2-60</location>
+
+                <lecture>Основи економічних теорій</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-86</location>
+
+                <day>Четвер</day>
+
+                <lecture>Фізичне виховання</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К10</location>
+
+                <lecture>Філософія</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К4-402</location>
+
+                <lecture>Теорія ймовірностей і мат. стат.</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К4-204</location>
+
+                <day>П’ятниця</day>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>K1-603</location>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>K1-301</location>
+
+                <lecture>Комп’ютерна графіка</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>K1-802</location>
+            </week>
+        </subgroup>
+        <subgroup>
+            2
+            <week>
+                first
+                <day>Понеділок</day>
+
+                <lecture>Філософія</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К8-12</location>
+
+                <lecture>Іноземна Мова</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-311</location>
+
+                <lecture>Комп’ютерна графіка</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>K1-809</location>
+
+                <lecture>Алгоритми та методи обчислень</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>K2-64</location>
+
+                <day>Вівторок</day>
+
+                <lecture>Теорія електричних та магнітних кіл</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К7-318</location>
+
+                <lecture>Теорія електричних та магнітних кіл</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К7-109</location>
+
+                <lecture>Фізичне виховання</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К10</location>
+
+                <day>Середа</day>
+
+                <lecture>Комп’ютерна графіка</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К1-802</location>
+
+                <lecture>Українська мова</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К2-68</location>
+
+                <lecture>Основи економічних теорій</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-86</location>
+
+                <day>Четвер</day>
+
+                <lecture>Фізичне виховання</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К10</location>
+
+                <lecture>Українська мова</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-309</location>
+
+                <lecture>Теорія ймовірностей і мат. стат.</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К4-204</location>
+
+                <lecture>Теорія ймовірностей і мат. стат.</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К4-204</location>
+
+                <day>П’ятниця</day>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>K1-301</location>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>K1-605</location>
+            </week>
+            <week>
+                second
+                <day>Понеділок</day>
+
+                <lecture>Філософія</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К8-12</location>
+
+                <lecture>Іноземна Мова</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-309</location>
+
+                <lecture>Алгоритми та методи обчислень</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>K2-61</location>
+
+                <day>Вівторок</day>
+
+                <lecture>Теорія електричних та магнітних кіл</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К7-109</location>
+
+                <lecture>Теорія електричних та магнітних кіл</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К7-318</location>
+
+                <lecture>Фізичне виховання</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К10</location>
+
+                <day>Середа</day>
+
+                <lecture>Комп’ютерна графіка</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К1-802</location>
+
+                <lecture>Алгоритми та методи обчислень</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К2-60</location>
+
+                <lecture>Основи економічних теорій</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-86</location>
+
+                <day>Четвер</day>
+
+                <lecture>Фізичне виховання</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К10</location>
+
+                <lecture>Філософія</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-309</location>
+
+                <lecture>Теорія ймовірностей і мат. стат.</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К4-204</location>
+
+                <day>П’ятниця</day>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>K1-301</location>
+
+                <lecture>Комп’ютерна логіка</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>K1-605</location>
+            </week>
+        </subgroup>
+    </group>
+
     <group>
         СІ-21
         <subgroup>
@@ -355,7 +719,6 @@
                 <startTime>11:10</startTime>
                 <endTime>12:30</endTime>
                 <location>K1-605</location>
-
             </week>
         </subgroup>
     </group>

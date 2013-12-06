@@ -15,38 +15,69 @@ import ua.edu.tntu.R;
  */
 public class ScheduleXMLResourceParser {
 
+    //  variables that replate
     private Context context;
     private String groupName;
     private String subGroup;
+    private int event;
     private boolean switchSubGroup;
 
+    //  variables that relate to field ScheduleBlock class
     private String nameLecture;
     private String nameDay;
     private String nameLocation;
     private String nameStsrtTime;
     private String nameTimeEnd;
 
+    //  variables that relate to Tag XML
     private String nameTextTag;
     private String nameWeek;
     private String nameStartTag;
-    private String temp;
     private ArrayList<ScheduleBlok> scheduleBlokContainer;
+    private ScheduleBlok item;
 
-    private boolean[] switchWeek = new boolean[2];
+    private boolean[] flagSwitchWeek = new boolean[2];
+
+    boolean flagTempGroup;
+    boolean flagTempSubGroup;
+    boolean flagTempWeek;
+    boolean flagCancelWeek_1;
+    boolean flagCancelWeek_2;
+    boolean flagSwitchGroup;
+    boolean flagSwitchSubGroup;
+    boolean flagCloseSwitchSubGroup;
+
+    private XmlResourceParser parser;
 
     // constructor for  to get the context object from where you are using this plist parsing
     public ScheduleXMLResourceParser(Context context, String groupName, boolean switchSubGroup) {
         this.context = context;
         this.groupName = groupName;
         this.switchSubGroup = switchSubGroup;
+
         if (switchSubGroup) {
             subGroup = " 1\n";
         } else {
             subGroup = " 2\n";
         }
+
         this.groupName = " " + this.groupName + "\n";
-        switchWeek[0] = false;
-        switchWeek[1] = false;
+        flagSwitchWeek[0] = false;
+        flagSwitchWeek[1] = false;
+
+        flagTempGroup = false;
+        flagTempSubGroup = false;
+        flagTempWeek = false;
+        flagCancelWeek_1 = false;
+        flagCancelWeek_2 = false;
+        flagSwitchGroup = false;
+        flagSwitchSubGroup = false;
+        flagCloseSwitchSubGroup = false;
+
+        scheduleBlokContainer = new ArrayList<ScheduleBlok>();
+
+        parser = this.context.getResources()
+                .getXml(R.xml.schedule);
     }
 
     public ArrayList<ScheduleBlok> getSchedule() {
@@ -54,19 +85,7 @@ public class ScheduleXMLResourceParser {
         // specifying the  your plist file.And Xml ResourceParser is an event type parser for more details Read android source
         XmlResourceParser parser = this.context.getResources()
                 .getXml(R.xml.schedule);
-        boolean flagTempGroup = false;
-        boolean flagTempSubGroup = false;
-        boolean flagTempWeek = false;
-        boolean flagCancleWeek_1 = false;
-        boolean flagCancleWeek_2 = false;
-        boolean flagSwitchGroup = false;
-        boolean flagSwitchSubGroup = false;
-        boolean flagCloseSwitchSubGroup = false;
 
-        ScheduleBlok item;
-        scheduleBlokContainer = new ArrayList<ScheduleBlok>();
-
-        int event;
         try {
             event = parser.getEventType();
 
@@ -111,18 +130,18 @@ public class ScheduleXMLResourceParser {
 
                     if (flagTempWeek && nameTextTag.equals(" first\n")) {
                         nameWeek = nameTextTag;
-                        switchWeek[0] = true;
+                        flagSwitchWeek[0] = true;
                         flagTempWeek = false;
                     }
                     if (flagTempWeek && nameTextTag.equals(" second\n")) {
                         nameWeek = nameTextTag;
-                        switchWeek[1] = true;
+                        flagSwitchWeek[1] = true;
                         scheduleBlokContainer.add(new ScheduleBlok());
                         flagTempWeek = false;
                     }
                     if (flagSwitchGroup && flagSwitchSubGroup) {
-                        if (switchWeek[0]) {
-                            if (flagCancleWeek_1 == true) {
+                        if (flagSwitchWeek[0]) {
+                            if (flagCancelWeek_1 == true) {
                                 item = new ScheduleBlok();
                                 if (nameStartTag.equals("day") && flagSwitchSubGroup) {
                                     item.setNameOfDay(parser.getText());
@@ -147,10 +166,10 @@ public class ScheduleXMLResourceParser {
                                     }
                                 }
                             }
-                            flagCancleWeek_1 = true;
+                            flagCancelWeek_1 = true;
                         }
-                        if (switchWeek[1]) {
-                            if (flagCancleWeek_2 == true) {
+                        if (flagSwitchWeek[1]) {
+                            if (flagCancelWeek_2 == true) {
                                 item = new ScheduleBlok();
                                 if (nameStartTag.equals("day") && flagSwitchSubGroup) {
                                     item.setNameOfDay(parser.getText());
@@ -175,7 +194,7 @@ public class ScheduleXMLResourceParser {
                                     }
                                 }
                             }
-                            flagCancleWeek_2 = true;
+                            flagCancelWeek_2 = true;
                         }
                     }
                 }
@@ -185,10 +204,10 @@ public class ScheduleXMLResourceParser {
                     }
                     if (parser.getName().equals("week")) {
                         if (nameWeek.equals(" first\n")) {
-                            switchWeek[0] = false;
+                            flagSwitchWeek[0] = false;
                         }
                         if (nameWeek.equals(" second\n")) {
-                            switchWeek[1] = false;
+                            flagSwitchWeek[1] = false;
                         }
                     }
                 }
