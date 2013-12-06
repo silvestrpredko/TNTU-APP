@@ -10,13 +10,13 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 public class WeeksPagerAdapter extends FragmentStatePagerAdapter {
     public static final int NUMBER_OF_WEEKS = 2;
 
-    private boolean firstWeek;
-    private boolean secondWeek;
+    private String groupName;
+    private boolean switchSubGroup;
 
-    public WeeksPagerAdapter(FragmentManager fm, boolean firstWeek, boolean secondWeek) {
+    public WeeksPagerAdapter(FragmentManager fm, String groupName, boolean switchSubGroup) {
         super(fm);
-        this.firstWeek = firstWeek;
-        this.secondWeek = secondWeek;
+        this.groupName = groupName;
+        this.switchSubGroup = switchSubGroup;
     }
 
     @Override
@@ -25,9 +25,9 @@ public class WeeksPagerAdapter extends FragmentStatePagerAdapter {
 //            args.putInt(WeekObjectFragment.ARG_OBJECT, i + 1);
 //            fragment.setArguments(args);
         if (i == 0) {
-            return new ScheduleWeekTableFragment(firstWeek);
+            return new ScheduleWeekTableFragment(this.groupName, this.switchSubGroup, true);
         } else {
-            return new ScheduleWeekTableFragment(secondWeek);
+            return new ScheduleWeekTableFragment(this.groupName, this.switchSubGroup, false);
         }
     }
 
@@ -39,15 +39,11 @@ public class WeeksPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-
         switch (position) {
-
             case 0:
                 return "Перший теждень";
-
             case 1:
                 return "Другий тиждень";
-
             default:
                 return null;
         }

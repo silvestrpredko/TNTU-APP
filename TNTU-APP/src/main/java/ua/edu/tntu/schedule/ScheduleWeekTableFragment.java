@@ -16,16 +16,23 @@ import ua.edu.tntu.R;
  */
 public class ScheduleWeekTableFragment extends Fragment {
 
-    private boolean week;
-    private boolean switcher;
+    private String groupName;
+    private boolean switchSubGroup;
+    private boolean changeWeek;
+    private boolean middleOfTheList;
+    private ArrayList<ScheduleBlok> scheduleList;
+
     private ScheduleXMLResourceParser scheduleParser;
-    private ArrayList<ScheduleBlok> scheduleBlokContainer;
+    private ArrayList<ScheduleBlok> scheduleTempList;
+
+
     private static String TAG = "myLogs";
 
-    public ScheduleWeekTableFragment(boolean week) {
-        this.week = week;
-        switcher = false;
-
+    public ScheduleWeekTableFragment(String groupName, boolean switchSubGroup, boolean changeWeek) {
+        this.groupName = groupName;
+        this.switchSubGroup = switchSubGroup;
+        this.changeWeek = changeWeek;
+        this.middleOfTheList = false;
     }
 
     @Override
@@ -33,34 +40,36 @@ public class ScheduleWeekTableFragment extends Fragment {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
 
-        scheduleParser = new ScheduleXMLResourceParser(this.getActivity().getApplicationContext());
+        scheduleParser = new ScheduleXMLResourceParser(this.getActivity().getApplicationContext(), this.groupName, this.switchSubGroup);
 
-        ArrayList<ScheduleBlok> temp = scheduleParser.getSchedule();
+        scheduleList = scheduleParser.getSchedule();
 
-        ArrayList<ScheduleBlok> name = new ArrayList<ScheduleBlok>();
+        scheduleTempList = new ArrayList<ScheduleBlok>();
 
-        if (this.week == false) {
-            for (int i = 0; i < temp.size(); i++) {
-                if (temp.get(i).getLecture().equals("empty") && temp.get(i).getNameOfDay().equals("empty")) {
-                    switcher = true;
-                    i++;
-                }
-                if (switcher == true) {
-                    name.add(temp.get(i));
+
+        if (this.changeWeek == true) {
+            for (int i = 0; i < scheduleList.size(); i++) {
+                if (scheduleList.get(i).getLecture() == "empty" && scheduleList.get(i).getNameOfDay() == "empty") {
+                    break;
+                } else {
+                    scheduleTempList.add(scheduleList.get(i));
                 }
             }
         } else {
-            for (int i = 0; i < temp.size(); i++) {
-                if (temp.get(i).getNameOfDay().equals("empty") && temp.get(i).getLecture().equals("empty")) {
-                    break;
+            for (int i = 0; i < scheduleList.size(); i++) {
+                if (scheduleList.get(i).getLecture() == "empty" && scheduleList.get(i).getNameOfDay() == "empty") {
+                    middleOfTheList = true;
+                    i++;
                 }
-                name.add(temp.get(i));
+                if (middleOfTheList == true) {
+                    scheduleTempList.add(scheduleList.get(i));
+                }
             }
         }
 
         View rootView = inflater.inflate(R.layout.fragment_schedule_table, container, false);
         ListView listView = (ListView) rootView.findViewById(R.id.schedule_item_list_view);
-        ScheduleListViewAdapter scheduleListViewAdapter = new ScheduleListViewAdapter(this.getActivity(), name);
+        ScheduleListViewAdapter scheduleListViewAdapter = new ScheduleListViewAdapter(this.getActivity(), scheduleTempList);
         listView.setAdapter(scheduleListViewAdapter);
 
         return rootView;

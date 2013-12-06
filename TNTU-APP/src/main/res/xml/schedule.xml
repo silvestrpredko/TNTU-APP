@@ -119,8 +119,8 @@
                 <location>К7-109</location>
 
                 <lecture>Теорія електричних та магнітних кіл</lecture>
-                <startTime>9:30</startTime>
-                <endTime>10:50</endTime>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
                 <location>К7-318</location>
 
                 <lecture>Фізичне виховання</lecture>
@@ -147,15 +147,15 @@
 
                 <day>Четвер</day>
 
-                <lecture>Філософія</lecture>
+                <lecture>Фізичне виховання</lecture>
                 <startTime>8:00</startTime>
                 <endTime>9:20</endTime>
                 <location>К10</location>
 
-                <lecture>Українська мова</lecture>
+                <lecture>Філософія</lecture>
                 <startTime>11:10</startTime>
                 <endTime>12:30</endTime>
-                <location>К1-309</location>
+                <location>К4-402</location>
 
                 <lecture>Теорія ймовірностей і мат. стат.</lecture>
                 <startTime>13:00</startTime>
@@ -329,7 +329,7 @@
 
                 <day>Четвер</day>
 
-                <lecture>Філософія</lecture>
+                <lecture>Фізичне виховання</lecture>
                 <startTime>8:00</startTime>
                 <endTime>9:20</endTime>
                 <location>К10</location>

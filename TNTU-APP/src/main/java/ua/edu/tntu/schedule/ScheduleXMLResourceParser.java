@@ -16,9 +16,9 @@ import ua.edu.tntu.R;
 public class ScheduleXMLResourceParser {
 
     private Context context;
-    private static String TAG = "myLogs";
-    private static final String Sp = " СІ-21\n";
-    private static final String subSp = " 2\n";
+    private String groupName;
+    private String subGroup;
+    private boolean switchSubGroup;
 
     private String nameLecture;
     private String nameDay;
@@ -26,18 +26,25 @@ public class ScheduleXMLResourceParser {
     private String nameStsrtTime;
     private String nameTimeEnd;
 
-    private String name;
+    private String nameTextTag;
     private String nameWeek;
-    private String nameTag;
+    private String nameStartTag;
     private String temp;
     private ArrayList<ScheduleBlok> scheduleBlokContainer;
 
     private boolean[] switchWeek = new boolean[2];
 
     // constructor for  to get the context object from where you are using this plist parsing
-    public ScheduleXMLResourceParser(Context context) {
-
+    public ScheduleXMLResourceParser(Context context, String groupName, boolean switchSubGroup) {
         this.context = context;
+        this.groupName = groupName;
+        this.switchSubGroup = switchSubGroup;
+        if (switchSubGroup) {
+            subGroup = " 1\n";
+        } else {
+            subGroup = " 2\n";
+        }
+        this.groupName = " " + this.groupName + "\n";
         switchWeek[0] = false;
         switchWeek[1] = false;
     }
@@ -47,15 +54,14 @@ public class ScheduleXMLResourceParser {
         // specifying the  your plist file.And Xml ResourceParser is an event type parser for more details Read android source
         XmlResourceParser parser = this.context.getResources()
                 .getXml(R.xml.schedule);
-        boolean tempGroup = false;
-        boolean tempSubGroup = false;
-        boolean tempWeek = false;
-        boolean cancleWeek_1 = false;
-        boolean cancleWeek_2 = false;
-
-        boolean switchGroup = false;
-        boolean switchSubGroup = false;
-        boolean closeSwitchSubGroup = false;
+        boolean flagTempGroup = false;
+        boolean flagTempSubGroup = false;
+        boolean flagTempWeek = false;
+        boolean flagCancleWeek_1 = false;
+        boolean flagCancleWeek_2 = false;
+        boolean flagSwitchGroup = false;
+        boolean flagSwitchSubGroup = false;
+        boolean flagCloseSwitchSubGroup = false;
 
         ScheduleBlok item;
         scheduleBlokContainer = new ArrayList<ScheduleBlok>();
@@ -64,76 +70,74 @@ public class ScheduleXMLResourceParser {
         try {
             event = parser.getEventType();
 
-            // repeting the loop at the end of the doccument
-
             while (event != parser.END_DOCUMENT) {
 
                 if (event == XmlResourceParser.START_TAG) {
                     if (parser.getName().equals("group")) {
-                        tempGroup = true;
+                        flagTempGroup = true;
                     }
-                    if (parser.getName().equals("subgroup") && switchGroup) {
-                        tempSubGroup = true;
+                    if (parser.getName().equals("subgroup") && flagSwitchGroup) {
+                        flagTempSubGroup = true;
                     }
-                    if (parser.getName().equals("week") && switchSubGroup) {
-                        tempWeek = true;
+                    if (parser.getName().equals("week") && flagSwitchSubGroup) {
+                        flagTempWeek = true;
                     }
-                    if (parser.getName().equals("day") && switchSubGroup) {
-                        nameTag = parser.getName();
+                    if (parser.getName().equals("day") && flagSwitchSubGroup) {
+                        nameStartTag = parser.getName();
                     }
-                    if (parser.getName().equals("lecture") && switchSubGroup) {
-                        nameTag = parser.getName();
+                    if (parser.getName().equals("lecture") && flagSwitchSubGroup) {
+                        nameStartTag = parser.getName();
                     }
-                    if (parser.getName().equals("startTime") && switchSubGroup) {
-                        nameTag = parser.getName();
+                    if (parser.getName().equals("startTime") && flagSwitchSubGroup) {
+                        nameStartTag = parser.getName();
                     }
-                    if (parser.getName().equals("endTime") && switchSubGroup) {
-                        nameTag = parser.getName();
+                    if (parser.getName().equals("endTime") && flagSwitchSubGroup) {
+                        nameStartTag = parser.getName();
                     }
-                    if (parser.getName().equals("location") && switchSubGroup) {
-                        nameTag = parser.getName();
+                    if (parser.getName().equals("location") && flagSwitchSubGroup) {
+                        nameStartTag = parser.getName();
                     }
                 }
 
                 if (event == XmlResourceParser.TEXT) {
-                    name = parser.getText();
-                    if (tempGroup && name.equals(Sp)) {
-                        switchGroup = true;
+                    nameTextTag = parser.getText();
+                    if (flagTempGroup && nameTextTag.equals(groupName)) {
+                        flagSwitchGroup = true;
                     }
-                    if (tempSubGroup && name.equals(subSp)) {
-                        switchSubGroup = true;
-                        closeSwitchSubGroup = true;
+                    if (flagTempSubGroup && nameTextTag.equals(subGroup)) {
+                        flagSwitchSubGroup = true;
+                        flagCloseSwitchSubGroup = true;
                     }
 
-                    if (tempWeek && name.equals(" first\n")) {
-                        nameWeek = name;
+                    if (flagTempWeek && nameTextTag.equals(" first\n")) {
+                        nameWeek = nameTextTag;
                         switchWeek[0] = true;
-                        tempWeek = false;
+                        flagTempWeek = false;
                     }
-                    if (tempWeek && name.equals(" second\n")) {
-                        nameWeek = name;
+                    if (flagTempWeek && nameTextTag.equals(" second\n")) {
+                        nameWeek = nameTextTag;
                         switchWeek[1] = true;
                         scheduleBlokContainer.add(new ScheduleBlok());
-                        tempWeek = false;
+                        flagTempWeek = false;
                     }
-                    if (switchGroup && switchSubGroup) {
+                    if (flagSwitchGroup && flagSwitchSubGroup) {
                         if (switchWeek[0]) {
-                            if (cancleWeek_1 == true) {
+                            if (flagCancleWeek_1 == true) {
                                 item = new ScheduleBlok();
-                                if (nameTag.equals("day") && switchSubGroup) {
+                                if (nameStartTag.equals("day") && flagSwitchSubGroup) {
                                     item.setNameOfDay(parser.getText());
                                     scheduleBlokContainer.add(item);
                                 } else {
-                                    if (nameTag.equals("lecture") && switchSubGroup) {
+                                    if (nameStartTag.equals("lecture") && flagSwitchSubGroup) {
                                         nameLecture = parser.getText();
                                     }
-                                    if (nameTag.equals("startTime") && switchSubGroup) {
+                                    if (nameStartTag.equals("startTime") && flagSwitchSubGroup) {
                                         nameStsrtTime = parser.getText();
                                     }
-                                    if (nameTag.equals("endTime") && switchSubGroup) {
+                                    if (nameStartTag.equals("endTime") && flagSwitchSubGroup) {
                                         nameTimeEnd = parser.getText();
                                     }
-                                    if (nameTag.equals("location") && switchSubGroup) {
+                                    if (nameStartTag.equals("location") && flagSwitchSubGroup) {
                                         nameLocation = parser.getText();
                                         item.setLocation(nameLocation);
                                         item.setLecture(nameLecture);
@@ -143,25 +147,25 @@ public class ScheduleXMLResourceParser {
                                     }
                                 }
                             }
-                            cancleWeek_1 = true;
+                            flagCancleWeek_1 = true;
                         }
                         if (switchWeek[1]) {
-                            if (cancleWeek_2 == true) {
+                            if (flagCancleWeek_2 == true) {
                                 item = new ScheduleBlok();
-                                if (nameTag.equals("day") && switchSubGroup) {
+                                if (nameStartTag.equals("day") && flagSwitchSubGroup) {
                                     item.setNameOfDay(parser.getText());
                                     scheduleBlokContainer.add(item);
                                 } else {
-                                    if (nameTag.equals("lecture") && switchSubGroup) {
+                                    if (nameStartTag.equals("lecture") && flagSwitchSubGroup) {
                                         nameLecture = parser.getText();
                                     }
-                                    if (nameTag.equals("startTime") && switchSubGroup) {
+                                    if (nameStartTag.equals("startTime") && flagSwitchSubGroup) {
                                         nameStsrtTime = parser.getText();
                                     }
-                                    if (nameTag.equals("endTime") && switchSubGroup) {
+                                    if (nameStartTag.equals("endTime") && flagSwitchSubGroup) {
                                         nameTimeEnd = parser.getText();
                                     }
-                                    if (nameTag.equals("location") && switchSubGroup) {
+                                    if (nameStartTag.equals("location") && flagSwitchSubGroup) {
                                         nameLocation = parser.getText();
                                         item.setLocation(nameLocation);
                                         item.setLecture(nameLecture);
@@ -171,11 +175,11 @@ public class ScheduleXMLResourceParser {
                                     }
                                 }
                             }
-                            cancleWeek_2 = true;
+                            flagCancleWeek_2 = true;
                         }
                     }
                 }
-                if (event == XmlResourceParser.END_TAG && closeSwitchSubGroup) {
+                if (event == XmlResourceParser.END_TAG && flagCloseSwitchSubGroup) {
                     if (parser.getName().equals("subgroup")) {
                         return scheduleBlokContainer;
                     }

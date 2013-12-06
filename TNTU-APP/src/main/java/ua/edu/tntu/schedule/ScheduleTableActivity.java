@@ -8,8 +8,8 @@ import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
-import android.widget.CompoundButton;
-import android.widget.Switch;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import ua.edu.tntu.R;
@@ -22,70 +22,70 @@ public class ScheduleTableActivity extends FragmentActivity {
     private ViewPager mViewPager;
     private int position;
     private String groupName;
+    private SegmentedRadioGroup segmentSubGroup;
+    private RadioButton radioButtonForFirstSubGroup;
+    private ActionBar actionBar;
+    private boolean switchSubGroup;
 
     private ScheduleXMLResourceParser scheduleParser;
 
 
     public ScheduleTableActivity() {
+        this.switchSubGroup = true;
         this.groupName = null;
-        position = 0;
+        this.position = 0;
     }
 
+    public void changeSubGroup() {
+        mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), groupName, switchSubGroup);
+        position = mViewPager.getCurrentItem();
+        mViewPager = (ViewPager) findViewById(R.id.pager);
+        mViewPager.setAdapter(mWeeksPagerAdapter);
+        mViewPager.setCurrentItem(position);
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weeks);
+
+        //set group name
         groupName = getIntent().getStringExtra(GROUP_NAME);
 
-//        scheduleParser = new ScheduleXMLResourceParser(getApplicationContext());
+        //set action bar
+        actionBar = getActionBar();
 
-//        scheduleParser.getSchedule();
-
-        // mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager());
-
-        // Set up action bar.
-        final ActionBar actionBar = getActionBar();
-
-        actionBar.setTitle("ScheduleBlok");
-
-        // Specify that the Home button should show an "Up" caret, indicating that touching the
-        // button will take the user one step up in the application's hierarchy.
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setCustomView(R.layout.switch_to_select_subgroup_menu);
+
+        actionBar.setCustomView(R.layout.segment_to_select_subgroup_menu);
         actionBar.setDisplayShowCustomEnabled(true);
         actionBar.setDisplayShowTitleEnabled(true);
-        Switch switchSubGroup = (Switch) actionBar.getCustomView().findViewById(R.id.switchForActionBar);
 
-        switchSubGroup.setChecked(true);
+        segmentSubGroup = (SegmentedRadioGroup) actionBar.getCustomView().findViewById(R.id.segment_sub_group);
 
-        mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), true, false);
+        radioButtonForFirstSubGroup = (RadioButton) actionBar.getCustomView().findViewById(R.id.firstSubGroup);
+        radioButtonForFirstSubGroup.setChecked(true);
+
+        mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), groupName, switchSubGroup);
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mWeeksPagerAdapter);
 
-
-        switchSubGroup.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        segmentSubGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean turnSwitchOn) {
-                if (turnSwitchOn == true) {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.firstSubGroup) {
+                    switchSubGroup = true;
                     Toast.makeText(ScheduleTableActivity.this, "is a checked", Toast.LENGTH_SHORT).show();
-                    mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), true, false);
-                    position = mViewPager.getCurrentItem();
-                    mViewPager = (ViewPager) findViewById(R.id.pager);
-                    mViewPager.setAdapter(mWeeksPagerAdapter);
-                    mViewPager.setCurrentItem(position);
+                    changeSubGroup();
                 } else {
+                    switchSubGroup = false;
                     Toast.makeText(ScheduleTableActivity.this, "is not checked", Toast.LENGTH_SHORT).show();
-                    mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), false, true);
-                    position = mViewPager.getCurrentItem();
-                    mViewPager = (ViewPager) findViewById(R.id.pager);
-                    mViewPager.setAdapter(mWeeksPagerAdapter);
-                    mViewPager.setCurrentItem(position);
+                    changeSubGroup();
                 }
-
             }
         });
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -111,7 +111,5 @@ public class ScheduleTableActivity extends FragmentActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-
-
     }
 }

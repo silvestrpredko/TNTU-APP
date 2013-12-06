@@ -14,5 +14,10 @@
     <string name="email">SoftEng@tstu.edu.ua</string>
     <string name="phone_title">Телефон:</string>
     <string name="phone">+380 35 225-64-96</string>
+    <string name="nameGroupForActionBar">Підгрупа</string>
+    <string-array name="sub_groups">
+        <item>Перша</item>
+        <item>Друга</item>
+    </string-array>
 
 </resources>

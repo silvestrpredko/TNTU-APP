@@ -30,10 +30,14 @@
         android:id="@+id/textViewLecture"
         android:fontFamily="sans-serif-light"
         android:textColor="@color/asbestos"
-        android:layout_alignParentTop="true"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/textViewTimeBegin"
         android:layout_toRightOf="@+id/separator"
         android:layout_marginLeft="10dp"
-        android:textSize="18sp" />
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_marginRight="7dp" />
 
 
     <TextView
@@ -47,7 +51,8 @@
         android:textColor="@color/asbestos"
         android:layout_alignBottom="@+id/textViewPara"
         android:layout_alignRight="@+id/separator"
-        android:layout_marginRight="5dp" />
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,9 +62,10 @@
         android:id="@+id/textViewTimeEnd"
         android:fontFamily="sans-serif-light"
         android:textColor="@color/asbestos"
-        android:layout_alignTop="@+id/textViewLocation"
-        android:layout_alignRight="@+id/separator"
-        android:layout_marginRight="5dp" />
+        android:layout_alignBottom="@+id/separator"
+        android:layout_toLeftOf="@+id/textViewLecture"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -69,7 +75,8 @@
         android:fontFamily="sans-serif-light"
         android:textColor="@color/asbestos"
         android:textStyle="italic"
-        android:layout_alignBottom="@+id/separator"
-        android:layout_alignLeft="@+id/textViewLecture" />
+        android:layout_alignTop="@+id/textViewTimeEnd"
+        android:layout_toRightOf="@+id/separator"
+        android:layout_marginLeft="20dp" />
 
 </RelativeLayout>

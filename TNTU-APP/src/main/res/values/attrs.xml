@@ -13,4 +13,8 @@
         <attr name="shouldExpand" format="boolean" />
     </declare-styleable>
 
+    <declare-styleable name="CompoundButton">
+        <attr name="android:button" />
+    </declare-styleable>
+
 </resources>

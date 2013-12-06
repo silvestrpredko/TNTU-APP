@@ -6,7 +6,6 @@ public class ScheduleBlok {
     private String lecture;
     private String nameOfDay;
     private String location;
-    private String week;
 
     public ScheduleBlok() {
         this.nameOfDay = "empty";
