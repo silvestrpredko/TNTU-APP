@@ -10,7 +10,6 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.CheckedTextView;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import ua.edu.tntu.R;
 
@@ -57,15 +56,11 @@ public class ScheduleExpandableListAdapter extends BaseExpandableListAdapter
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(activity, children,
-                        Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(finalConvertView.getContext(), ScheduleTableActivity.class);
                 intent.putExtra(GROUP_NAME, children);
                 (finalConvertView.getContext()).startActivity(intent);
             }
         });
-
         return convertView;
     }
 

@@ -10,7 +10,6 @@ import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import ua.edu.tntu.R;
 import ua.edu.tntu.ScheduleFragment;
@@ -76,11 +75,9 @@ public class ScheduleTableActivity extends FragmentActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId == R.id.firstSubGroup) {
                     switchSubGroup = true;
-                    Toast.makeText(ScheduleTableActivity.this, "is a checked", Toast.LENGTH_SHORT).show();
                     changeSubGroup();
                 } else {
                     switchSubGroup = false;
-                    Toast.makeText(ScheduleTableActivity.this, "is not checked", Toast.LENGTH_SHORT).show();
                     changeSubGroup();
                 }
             }
