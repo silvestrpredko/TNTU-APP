@@ -7,15 +7,16 @@
     <ua.edu.tntu.schedule.SegmentedRadioGroup
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_margin="5dip"
         android:orientation="horizontal"
         android:id="@+id/segment_sub_group"
         android:checkedButton="@+id/button_one"
         android:layout_alignParentLeft="false"
         android:layout_alignParentBottom="false"
-        android:layout_alignParentRight="true">
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="20dp">
 
-        <RadioButton
+    <RadioButton
             android:id="@+id/firstSubGroup"
             android:minWidth="40dip"
             android:minHeight="33dip"
@@ -39,12 +40,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/nameGroupForActionBar"
         android:id="@+id/textViewSubGroup"
         android:longClickable="false"
+        android:fontFamily="sans-serif-light"
         android:linksClickable="false"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/segment_sub_group"
-        android:layout_marginRight="40dp" />
+        android:layout_marginRight="20dp"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
 </RelativeLayout>

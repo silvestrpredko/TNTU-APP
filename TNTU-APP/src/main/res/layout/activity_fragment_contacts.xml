@@ -24,7 +24,7 @@
         android:layout_below="@+id/addressTitleTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:paddingTop="8dp"
+        android:paddingTop="5dp"
         android:textColor="@color/gray"
         android:fontFamily="sans-serif-light"
         android:gravity="center"
@@ -35,23 +35,23 @@
         android:layout_height="wrap_content"
         android:text="E-mail:"
         android:id="@+id/emailTitleTextView"
-        android:layout_marginTop="30dp"
         android:textSize="32sp"
         android:fontFamily="sans-serif-condensed"
-        android:layout_below="@+id/addressTextView"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/showMapButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SoftEng@tstu.edu.ua"
         android:id="@+id/emailTextView"
-        android:layout_below="@+id/emailTitleTextView"
-        android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif-light"
-        android:paddingTop="8dp"
+        android:paddingTop="5dp"
         android:textSize="18sp"
-        android:autoLink="email" />
+        android:autoLink="email"
+        android:layout_below="@+id/emailTitleTextView"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -60,21 +60,35 @@
         android:id="@+id/phoneTitleTextView"
         android:fontFamily="sans-serif-condensed"
         android:textSize="32sp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/emailTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+380 35 225-64-96"
         android:id="@+id/phoneTextView"
-        android:layout_below="@+id/phoneTitleTextView"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="8dp"
-        android:autoLink="phone"
+        android:paddingTop="5dp"
         android:fontFamily="sans-serif-light"
         android:autoText="false"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:layout_below="@+id/phoneTitleTextView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Показати на карті"
+        android:autoLink="map"
+        android:fontFamily="sans-serif-light"
+        android:id="@+id/showMapButton"
+        android:layout_below="@+id/addressTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
 
 </RelativeLayout>

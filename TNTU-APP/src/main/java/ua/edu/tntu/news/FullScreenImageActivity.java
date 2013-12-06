@@ -1,53 +1,50 @@
-package ua.edu.tntu;
+package ua.edu.tntu.news;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.view.MenuItem;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 
-import ua.edu.tntu.news.NewsArticleActivity;
+import ua.edu.tntu.NewsFragment;
+import ua.edu.tntu.R;
+import ua.edu.tntu.TouchImageView;
 
 public class FullScreenImageActivity extends Activity {
 
-    public static Bitmap getBitmapFromURL(String src) {
-        try {
-            URL url = new URL(src);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setDoInput(true);
-            connection.connect();
-            InputStream input = connection.getInputStream();
-            Bitmap myBitmap = BitmapFactory.decodeStream(input);
-            return myBitmap;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
+    String imgURL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_full_screan_news_image);
+        setContentView(R.layout.activity_full_screan_image);
 
         Intent intent = getIntent();
 
-        String imgURL;
-
         imgURL = intent.getStringExtra(NewsArticleActivity.IMG_URL);
 
-        PhotoImageView touch = new PhotoImageView(this);
-        touch.setImageBitmap(getBitmapFromURL(imgURL));
-        touch.setMaxZoom(4f); //change the max level of zoom, default is 3f
-        setContentView(touch);
+        DisplayImageOptions displayImageOptions;
+        ImageLoadingListener animateFirstListener;
+
+        displayImageOptions = new DisplayImageOptions.Builder().
+                showImageForEmptyUri(R.drawable.ic_stub).
+                showImageOnFail(R.drawable.ic_stub).
+                cacheInMemory(true).cacheOnDisc(true).build();
+
+        animateFirstListener = new AnimateFirstDisplayListener();
+
+        TouchImageView touch = (TouchImageView) findViewById(R.id.touchImage);
+
+        ImageLoader imageLoader;
+        imageLoader = ImageLoader.getInstance();
+        imageLoader.init(ImageLoaderConfiguration.createDefault(getApplicationContext()));
+        imageLoader.displayImage(imgURL, touch, displayImageOptions, animateFirstListener);
     }
 
     @Override
@@ -75,5 +72,4 @@ public class FullScreenImageActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

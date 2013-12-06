@@ -16,7 +16,7 @@
         android:dividerHeight="1dp"
         android:clipToPadding="false"
         android:groupIndicator="@null"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="32dp" />
+        android:layout_marginLeft="32dp"
+        android:paddingTop="16dp" />
 
 </LinearLayout> 

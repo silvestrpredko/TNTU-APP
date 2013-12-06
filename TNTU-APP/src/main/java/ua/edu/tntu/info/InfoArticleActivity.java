@@ -3,12 +3,12 @@ package ua.edu.tntu.info;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.text.Html;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,15 +17,14 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 
-import ua.edu.tntu.FullScreenImageActivity;
 import ua.edu.tntu.InfoFragment;
 import ua.edu.tntu.NewsFragment;
 import ua.edu.tntu.R;
 import ua.edu.tntu.news.AnimateFirstDisplayListener;
 
-public class InfoArticleActivity extends Activity implements View.OnClickListener {
+public class InfoArticleActivity extends Activity {
 
-    private static final String IMG_URL = "ua.edu.tntu.info.IMG_URL";
+    public static final String IMG_URL = "ua.edu.tntu.info.url";
     private String imageURL;
 
     @Override
@@ -44,7 +43,7 @@ public class InfoArticleActivity extends Activity implements View.OnClickListene
         titleTextView.setText(title);
 
         TextView articleTextView = (TextView) findViewById(R.id.infoArticleTextView);
-        articleTextView.setText(Html.fromHtml(article));
+        articleTextView.setText(Html.fromHtml(article, new ImageGetter(), null));
 
         DisplayImageOptions displayImageOptions;
         ImageLoadingListener animateFirstListener;
@@ -57,7 +56,6 @@ public class InfoArticleActivity extends Activity implements View.OnClickListene
         animateFirstListener = new AnimateFirstDisplayListener();
 
         ImageView imageView = (ImageView) findViewById(R.id.infoArticleImageView);
-        imageView.setOnClickListener(this);
 
         ImageLoader imageLoader;
         imageLoader = ImageLoader.getInstance();
@@ -95,13 +93,22 @@ public class InfoArticleActivity extends Activity implements View.OnClickListene
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(this, FullScreenImageActivity.class);
+    private class ImageGetter implements Html.ImageGetter {
 
-        String fullScreenImageURL = imageURL;
-        intent.putExtra(IMG_URL, fullScreenImageURL);
+        @Override
+        public Drawable getDrawable(String source) {
 
-        startActivity(intent);
+            int id;
+
+            if (source.equals("mihalik.jpg")) {
+                id = R.drawable.mihalik;
+            } else {
+                return null;
+            }
+
+            Drawable d = getResources().getDrawable(id);
+            d.setBounds(0, 0, d.getIntrinsicWidth(), d.getIntrinsicHeight());
+            return d;
+        }
     }
 }

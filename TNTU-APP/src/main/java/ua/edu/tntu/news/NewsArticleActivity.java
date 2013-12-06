@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
+import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -16,13 +17,12 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 
-import ua.edu.tntu.FullScreenImageActivity;
 import ua.edu.tntu.NewsFragment;
 import ua.edu.tntu.R;
 
 public class NewsArticleActivity extends Activity implements View.OnClickListener {
 
-    public static final String IMG_URL = "ua.edu.tntu.news";
+    public static final String IMG_URL = "ua.edu.tntu.news.url";
     private String imgURL;
 
     @Override
@@ -41,7 +41,7 @@ public class NewsArticleActivity extends Activity implements View.OnClickListene
         articleNewsTitle.setText(title);
 
         TextView articleNewsText = (TextView) findViewById(R.id.newsArticleTextView);
-        articleNewsText.setText(article);
+        articleNewsText.setText(Html.fromHtml(article));
 
         DisplayImageOptions displayImageOptions;
         ImageLoadingListener animateFirstListener;
