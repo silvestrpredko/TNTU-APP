@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="action_settings">Settings</string>
-    <string name="app_name"></string>
+    <string name="app_name">TNTUEdu</string>
     <string name="title_news">Новини</string>
     <string name="title_schedule">Розклад</string>
     <string name="title_about">Про кафедру</string>

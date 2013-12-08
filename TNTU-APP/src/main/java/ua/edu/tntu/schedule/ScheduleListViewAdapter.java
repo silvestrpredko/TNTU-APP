@@ -15,7 +15,6 @@ public class ScheduleListViewAdapter extends ArrayAdapter<ScheduleBlok> {
 
     private Context context;
     private ArrayList<ScheduleBlok> scheduleBlokArrayList;
-    private static String TAG = "myLogs";
 
     public ScheduleListViewAdapter(Context context, ArrayList<ScheduleBlok> item) {
         super(context, R.layout.item_class, R.layout.item_day, item);
@@ -27,13 +26,6 @@ public class ScheduleListViewAdapter extends ArrayAdapter<ScheduleBlok> {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        /*for (int i = 0;i < scheduleBlokArrayList.size();i++) {
-            Log.d(TAG, "\n////////////////////////////////\n" + "\n"
-                    + scheduleBlokArrayList.get(i).getNameOfDay() + "\n" + scheduleBlokArrayList.get(i).getLecture() + "\n"
-                    + scheduleBlokArrayList.get(i).getTimeBegin() + "\n" + scheduleBlokArrayList.get(i).getTimeEnd() + "\n"
-                    + scheduleBlokArrayList.get(i).getLocation()
-                    + "\n///////////////////////////////////");
-        }*/
         if (scheduleBlokArrayList.get(position).getNameOfDay() != "empty") {
             View rowViewDay = inflater.inflate(R.layout.item_day, parent, false);
             TextView textViewDay = (TextView) rowViewDay.findViewById(R.id.textViewDay);
