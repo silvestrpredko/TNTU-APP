@@ -26,7 +26,7 @@ public class ScheduleListViewAdapter extends ArrayAdapter<ScheduleBlok> {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        if (scheduleBlokArrayList.get(position).getNameOfDay() != "empty") {
+        if (scheduleBlokArrayList.get(position).getNameOfDay() != null) {
             View rowViewDay = inflater.inflate(R.layout.item_day, parent, false);
             TextView textViewDay = (TextView) rowViewDay.findViewById(R.id.textViewDay);
             textViewDay.setText(scheduleBlokArrayList.get(position).getNameOfDay());

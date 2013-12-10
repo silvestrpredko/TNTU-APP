@@ -83,8 +83,6 @@ public class ScheduleXMLResourceParser {
     public ArrayList<ScheduleBlok> getSchedule() {
 
         // specifying the  your plist file.And Xml ResourceParser is an event type parser for more details Read android source
-        XmlResourceParser parser = this.context.getResources()
-                .getXml(R.xml.schedule);
 
         try {
             event = parser.getEventType();

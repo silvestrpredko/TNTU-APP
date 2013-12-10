@@ -1,5 +1,6 @@
 package ua.edu.tntu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -10,10 +11,12 @@ import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import ua.edu.tntu.preferences.Preference;
+
 public class MainActivity extends FragmentActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -38,6 +41,10 @@ public class MainActivity extends FragmentActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.settings) {
+            Intent preferenceIntent = new Intent(this, Preference.class);
+            startActivity(preferenceIntent);
+        }
         return super.onOptionsItemSelected(item);
     }
 

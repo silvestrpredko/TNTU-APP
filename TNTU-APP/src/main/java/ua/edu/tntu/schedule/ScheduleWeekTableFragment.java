@@ -49,7 +49,7 @@ public class ScheduleWeekTableFragment extends Fragment {
 
         if (this.changeWeek == true) {
             for (int i = 0; i < scheduleList.size(); i++) {
-                if (scheduleList.get(i).getLecture() == "empty" && scheduleList.get(i).getNameOfDay() == "empty") {
+                if (scheduleList.get(i).getLecture() == null && scheduleList.get(i).getNameOfDay() == null) {
                     break;
                 } else {
                     scheduleTempList.add(scheduleList.get(i));
@@ -57,7 +57,7 @@ public class ScheduleWeekTableFragment extends Fragment {
             }
         } else {
             for (int i = 0; i < scheduleList.size(); i++) {
-                if (scheduleList.get(i).getLecture() == "empty" && scheduleList.get(i).getNameOfDay() == "empty") {
+                if (scheduleList.get(i).getLecture() == null && scheduleList.get(i).getNameOfDay() == null) {
                     middleOfTheList = true;
                     i++;
                 }
@@ -69,8 +69,10 @@ public class ScheduleWeekTableFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_schedule_table, container, false);
         ListView listView = (ListView) rootView.findViewById(R.id.schedule_item_list_view);
-        ScheduleListViewAdapter scheduleListViewAdapter = new ScheduleListViewAdapter(this.getActivity(), scheduleTempList);
+        ScheduleListViewAdapter scheduleListViewAdapter = new ScheduleListViewAdapter(this.getActivity().getApplicationContext(), scheduleTempList);
         listView.setAdapter(scheduleListViewAdapter);
+        listView.setSmoothScrollbarEnabled(true);
+        listView.setScrollingCacheEnabled(true);
 
         return rootView;
     }

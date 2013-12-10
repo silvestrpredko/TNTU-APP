@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="preference_check_box_wi_fi"
+        android:title="Wi-Fi only"
+        android:summary="використовувати тільки Wi-Fi"
+        android:soundEffectsEnabled="true"></CheckBoxPreference>
+    <CheckBoxPreference
+        android:key="preference_check_internet"
+        android:checked="true"
+        android:title="Use Internet"
+        android:summary="використовувати інтернет"
+        android:soundEffectsEnabled="true"></CheckBoxPreference>
+    <Preference
+        android:key="preference_about_developers"
+        android:title="About"></Preference>
+
+</PreferenceScreen>

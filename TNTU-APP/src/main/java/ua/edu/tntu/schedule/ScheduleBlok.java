@@ -8,11 +8,11 @@ public class ScheduleBlok {
     private String location;
 
     public ScheduleBlok() {
-        this.nameOfDay = "empty";
-        this.lecture = "empty";
-        this.timeBegin = "empty";
-        this.timeEnd = "empty";
-        this.location = "empty";
+        this.nameOfDay = null;
+        this.lecture = null;
+        this.timeBegin = null;
+        this.timeEnd = null;
+        this.location = null;
     }
 
     public String getLocation() {
