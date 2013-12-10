@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ua.edu.tntu.schedule.SegmentedRadioGroup
         android:layout_width="wrap_content"
@@ -13,14 +13,15 @@
         android:layout_alignParentLeft="false"
         android:layout_alignParentBottom="false"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="9dp"
         android:layout_marginRight="20dp">
 
-    <RadioButton
+        <RadioButton
             android:id="@+id/firstSubGroup"
-            android:minWidth="40dip"
-            android:minHeight="33dip"
+            android:minWidth="42dp"
+            android:minHeight="30dp"
             android:text="Перша"
+            android:fontFamily="sans-serif-light"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:button="@null"
             android:gravity="center"
@@ -28,9 +29,10 @@
 
         <RadioButton
             android:id="@+id/secondSubGroup"
-            android:minWidth="40dip"
-            android:minHeight="33dip"
+            android:minWidth="42dp"
+            android:minHeight="30dp"
             android:text="Друга"
+            android:fontFamily="sans-serif-light"
             android:button="@null"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceSmall"

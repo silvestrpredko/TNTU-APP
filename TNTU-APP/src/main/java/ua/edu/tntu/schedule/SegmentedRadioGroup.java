@@ -35,5 +35,4 @@ public class SegmentedRadioGroup extends RadioGroup {
             super.getChildAt(0).setBackgroundResource(R.drawable.segment_button);
         }
     }
-
 }

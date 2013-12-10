@@ -61,6 +61,7 @@
         android:fontFamily="sans-serif-condensed"
         android:textSize="32sp"
         android:layout_marginTop="20dp"
+        android:autoLink="phone"
         android:layout_below="@+id/emailTextView"
         android:layout_centerHorizontal="true" />
 
