@@ -47,9 +47,8 @@
         android:longClickable="false"
         android:fontFamily="sans-serif-light"
         android:linksClickable="false"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/segment_sub_group"
-        android:layout_marginRight="20dp"
         android:textColor="@color/white"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
