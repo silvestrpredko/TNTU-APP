@@ -4,12 +4,18 @@
     <CheckBoxPreference
         android:key="preference_check_box_wi_fi"
         android:title="Wi-Fi only"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/asbestos"
+        android:textSize="20dp"
         android:summary="використовувати тільки Wi-Fi"
         android:soundEffectsEnabled="true"></CheckBoxPreference>
     <CheckBoxPreference
         android:key="preference_check_internet"
         android:checked="true"
         android:title="Use Internet"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/asbestos"
+        android:textSize="20dp"
         android:summary="використовувати інтернет"
         android:soundEffectsEnabled="true"></CheckBoxPreference>
     <Preference
