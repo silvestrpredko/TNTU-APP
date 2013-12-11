@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="м. Тернопіль, \nвул. Руська 56\nТНТУ ім. І. Пулюя (Корпус №1), \nКафедра ПІ (1 поверх, к. 104)"
+        android:text="м. Тернопіль, \nвул. Руська, 56\nТНТУ ім. І. Пулюя (Корпус №1), \nКафедра ПІ (1 поверх, к. 104)"
         android:id="@+id/addressTextView"
         android:layout_below="@+id/addressTitleTextView"
         android:layout_alignParentLeft="true"
@@ -74,6 +74,7 @@
         android:fontFamily="sans-serif-light"
         android:autoText="false"
         android:textSize="16sp"
+        android:autoLink="phone"
         android:layout_below="@+id/phoneTitleTextView"
         android:layout_centerHorizontal="true" />
 

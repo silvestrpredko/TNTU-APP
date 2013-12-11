@@ -41,7 +41,7 @@ public class WeeksPagerAdapter extends FragmentStatePagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "Перший теждень";
+                return "Перший тиждень";
             case 1:
                 return "Другий тиждень";
             default:

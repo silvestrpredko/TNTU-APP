@@ -17,6 +17,7 @@
         android:clipToPadding="false"
         android:groupIndicator="@null"
         android:layout_marginLeft="32dp"
-        android:paddingTop="16dp" />
+        android:paddingTop="16dp"
+        android:scrollingCache="true" />
 
 </LinearLayout> 

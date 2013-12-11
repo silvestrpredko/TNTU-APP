@@ -10,5 +10,7 @@
         android:layout_alignParentTop="true"
         android:divider="@color/clouds"
         android:dividerHeight="1dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:scrollingCache="true"
+        android:smoothScrollbar="true" />
 </RelativeLayout>
