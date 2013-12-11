@@ -76,7 +76,7 @@
         android:textColor="@color/asbestos"
         android:textStyle="italic"
         android:layout_alignTop="@+id/textViewTimeEnd"
-        android:layout_toRightOf="@+id/separator"
-        android:layout_marginLeft="20dp" />
+        android:layout_alignLeft="@+id/textViewLecture"
+        android:layout_alignStart="@+id/textViewLecture" />
 
 </RelativeLayout>

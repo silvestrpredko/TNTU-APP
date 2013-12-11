@@ -71,9 +71,6 @@ public class ScheduleWeekTableFragment extends Fragment {
         ListView listView = (ListView) rootView.findViewById(R.id.schedule_item_list_view);
         ScheduleListViewAdapter scheduleListViewAdapter = new ScheduleListViewAdapter(this.getActivity().getApplicationContext(), scheduleTempList);
         listView.setAdapter(scheduleListViewAdapter);
-        listView.setSmoothScrollbarEnabled(true);
-        listView.setScrollingCacheEnabled(true);
-
         return rootView;
     }
 }
