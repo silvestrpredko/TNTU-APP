@@ -24,7 +24,6 @@ public class ScheduleWeekTableFragment extends Fragment {
     private final String TOP_FOR_POSITION_FIRST_WEEK = "TOP_FIRST_POSITION";
     private final String TOP_FOR_POSITION_SECOND_WEEK = "TOP_SECOND_POSITION";
 
-
     private int indexFirstWeek;
     private int indexSecondWeek;
     private int topFirstWeek;

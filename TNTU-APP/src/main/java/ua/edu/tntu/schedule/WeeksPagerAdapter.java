@@ -8,17 +8,13 @@ import android.support.v4.app.FragmentStatePagerAdapter;
  * Created by Silvestr on 17.11.13.
  */
 public class WeeksPagerAdapter extends FragmentStatePagerAdapter {
+
     public static final int NUMBER_OF_WEEKS = 2;
 
-    private String groupName;
-    private boolean switchSubGroup;
     private ScheduleXMLResourceParser resourceParser;
 
     public WeeksPagerAdapter(FragmentManager fm, ScheduleXMLResourceParser resourceParser) {
         super(fm);
-
-        this.groupName = groupName;
-        this.switchSubGroup = switchSubGroup;
         this.resourceParser = resourceParser;
     }
 

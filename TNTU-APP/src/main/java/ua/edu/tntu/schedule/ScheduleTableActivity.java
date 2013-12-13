@@ -2,7 +2,9 @@ package ua.edu.tntu.schedule;
 
 import android.app.ActionBar;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
@@ -16,7 +18,13 @@ import ua.edu.tntu.ScheduleFragment;
 
 public class ScheduleTableActivity extends FragmentActivity {
 
-    private static final String GROUP_NAME = "GROUP_NAME";
+    private final String GROUP_NAME = "GROUP_NAME";
+
+    private final String INDEX_FOR_POSITION_FIRST_WEEK = "INDEX_FIRST_POSITION";
+    private final String INDEX_FOR_POSITION_SECOND_WEEK = "INDEX_SECOND_POSITION";
+    private final String TOP_FOR_POSITION_FIRST_WEEK = "TOP_FIRST_POSITION";
+    private final String TOP_FOR_POSITION_SECOND_WEEK = "TOP_SECOND_POSITION";
+
     private WeeksPagerAdapter mWeeksPagerAdapter;
     private ViewPager mViewPager;
     private int position;
@@ -26,7 +34,6 @@ public class ScheduleTableActivity extends FragmentActivity {
     private ActionBar actionBar;
     private boolean switchSubGroup;
 
-//    private ScheduleXMLResourceParser scheduleParser;
 
 
     public ScheduleTableActivity() {
@@ -36,7 +43,6 @@ public class ScheduleTableActivity extends FragmentActivity {
     }
 
     public void changeSubGroup(ScheduleXMLResourceParser scheduleParser) {
-//        this.scheduleParser = scheduleParser;
         mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), scheduleParser);
         position = mViewPager.getCurrentItem();
         mViewPager = (ViewPager) findViewById(R.id.pager);
@@ -110,5 +116,17 @@ public class ScheduleTableActivity extends FragmentActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor positionSaver = sharedPreferences.edit();
+        positionSaver.putInt(INDEX_FOR_POSITION_FIRST_WEEK, 0);
+        positionSaver.putInt(TOP_FOR_POSITION_FIRST_WEEK, 0);
+        positionSaver.putInt(INDEX_FOR_POSITION_SECOND_WEEK, 0);
+        positionSaver.putInt(TOP_FOR_POSITION_SECOND_WEEK, 0);
+        positionSaver.commit();
     }
 }
