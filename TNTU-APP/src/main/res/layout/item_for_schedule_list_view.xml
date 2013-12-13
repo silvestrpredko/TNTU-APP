@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textViewNameOfDay"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/asbestos"
+        android:layout_alignParentTop="true"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="45dp"
+        android:id="@+id/separatorRightForDay"
+        android:visibility="visible"
+        android:background="@color/clouds"
+        android:layout_gravity="right"
+        android:layout_alignParentRight="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/horizontalSeparator"
+        android:background="@color/clouds"
+        android:layout_alignTop="@+id/separatorRightForClass"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="70dp"
+        android:id="@+id/separator"
+        android:visibility="visible"
+        android:background="@color/clouds"
+        android:layout_alignTop="@+id/horizontalSeparator"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="77dp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="70dp"
+        android:id="@+id/separatorRightForClass"
+        android:visibility="visible"
+        android:background="@color/clouds"
+        android:layout_below="@+id/separatorRightForDay"
+        android:layout_alignLeft="@+id/separatorRightForDay"
+        android:layout_alignStart="@+id/separatorRightForDay"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textViewLecture"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/asbestos"
+        android:textSize="15sp"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_marginLeft="39dp"
+        android:layout_alignTop="@+id/horizontalSeparator"
+        android:layout_toRightOf="@+id/separator"
+        android:layout_marginTop="5dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textViewTimeBegin"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/asbestos"
+        android:layout_below="@+id/horizontalSeparator"
+        android:layout_alignRight="@+id/separator"
+        android:layout_alignEnd="@+id/separator"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/textViewTimeEnd"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/asbestos"
+        android:layout_alignBottom="@+id/separator"
+        android:layout_alignRight="@+id/separator"
+        android:layout_alignEnd="@+id/separator"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Small Text"
+        android:id="@+id/textViewLocation"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/asbestos"
+        android:textStyle="italic"
+        android:layout_alignTop="@+id/textViewTimeEnd"
+        android:layout_alignLeft="@+id/textViewLecture"
+        android:layout_alignStart="@+id/textViewLecture"
+        android:layout_marginBottom="5dp" />
+
+</RelativeLayout>

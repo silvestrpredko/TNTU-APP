@@ -20,10 +20,10 @@ public class ScheduleWeekTableFragment extends Fragment {
     private boolean switchSubGroup;
     private boolean changeWeek;
     private boolean middleOfTheList;
-    private ArrayList<ScheduleBlok> scheduleList;
+    private ArrayList<ScheduleBlock> scheduleList;
 
     private ScheduleXMLResourceParser scheduleParser;
-    private ArrayList<ScheduleBlok> scheduleTempList;
+    private ArrayList<ScheduleBlock> scheduleTempList;
 
 
     private static String TAG = "myLogs";
@@ -44,7 +44,7 @@ public class ScheduleWeekTableFragment extends Fragment {
 
         scheduleList = scheduleParser.getSchedule();
 
-        scheduleTempList = new ArrayList<ScheduleBlok>();
+        scheduleTempList = new ArrayList<ScheduleBlock>();
 
 
         if (this.changeWeek == true) {
