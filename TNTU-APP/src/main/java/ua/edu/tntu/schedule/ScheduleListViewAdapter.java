@@ -23,7 +23,7 @@ public class ScheduleListViewAdapter extends ArrayAdapter<ScheduleBlock> {
         TextView textViewLecture;
         TextView textViewLocation;
         View rightSeparatorForDay;
-        View horizontalSeparator;
+        //        View horizontalSeparator;
         View rightSeparatorForClass;
         View verticalSeparatorForClass;
     }
@@ -52,7 +52,6 @@ public class ScheduleListViewAdapter extends ArrayAdapter<ScheduleBlock> {
             holder.textViewTimeBegin = (TextView) convertView.findViewById(R.id.textViewTimeBegin);
             holder.textViewTimeEnd = (TextView) convertView.findViewById(R.id.textViewTimeEnd);
             holder.rightSeparatorForDay = (View) convertView.findViewById(R.id.separatorRightForDay);
-            holder.horizontalSeparator = (View) convertView.findViewById(R.id.horizontalSeparator);
             holder.verticalSeparatorForClass = (View) convertView.findViewById(R.id.separator);
             holder.rightSeparatorForClass = (View) convertView.findViewById(R.id.separatorRightForClass);
 
@@ -65,7 +64,6 @@ public class ScheduleListViewAdapter extends ArrayAdapter<ScheduleBlock> {
         if (scheduleBlockArrayList.get(position).getNameOfDay() != null) {
             holder.textViewDay.setVisibility(View.VISIBLE);
             holder.rightSeparatorForDay.setVisibility(View.VISIBLE);
-            holder.horizontalSeparator.setVisibility(View.VISIBLE);
             holder.textViewLecture.setVisibility(View.GONE);
             holder.textViewTimeBegin.setVisibility(View.GONE);
             holder.textViewTimeEnd.setVisibility(View.GONE);
@@ -76,7 +74,6 @@ public class ScheduleListViewAdapter extends ArrayAdapter<ScheduleBlock> {
         } else {
             holder.textViewDay.setVisibility(View.GONE);
             holder.rightSeparatorForDay.setVisibility(View.GONE);
-            holder.horizontalSeparator.setVisibility(View.GONE);
             holder.textViewLecture.setVisibility(View.VISIBLE);
             holder.textViewTimeBegin.setVisibility(View.VISIBLE);
             holder.textViewTimeEnd.setVisibility(View.VISIBLE);

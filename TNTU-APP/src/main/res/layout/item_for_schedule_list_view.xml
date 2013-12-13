@@ -28,24 +28,15 @@
         android:layout_alignParentRight="true" />
 
     <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:id="@+id/horizontalSeparator"
-        android:background="@color/clouds"
-        android:layout_alignTop="@+id/separatorRightForClass"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <View
         android:layout_width="1dp"
         android:layout_height="70dp"
         android:id="@+id/separator"
         android:visibility="visible"
         android:background="@color/clouds"
-        android:layout_alignTop="@+id/horizontalSeparator"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="77dp" />
+        android:layout_marginLeft="77dp"
+        android:layout_alignTop="@+id/separatorRightForClass" />
 
     <View
         android:layout_width="1dp"
@@ -68,10 +59,10 @@
         android:textColor="@color/asbestos"
         android:textSize="15sp"
         android:layout_alignWithParentIfMissing="false"
-        android:layout_marginLeft="39dp"
-        android:layout_alignTop="@+id/horizontalSeparator"
+        android:layout_marginLeft="8dp"
         android:layout_toRightOf="@+id/separator"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:layout_alignTop="@+id/separatorRightForClass" />
 
 
     <TextView
@@ -83,11 +74,11 @@
         android:textAlignment="center"
         android:fontFamily="sans-serif-light"
         android:textColor="@color/asbestos"
-        android:layout_below="@+id/horizontalSeparator"
         android:layout_alignRight="@+id/separator"
         android:layout_alignEnd="@+id/separator"
         android:layout_marginTop="5dp"
-        android:layout_marginRight="8dp" />
+        android:layout_marginRight="8dp"
+        android:layout_alignTop="@+id/separatorRightForClass" />
 
     <TextView
         android:layout_width="wrap_content"
