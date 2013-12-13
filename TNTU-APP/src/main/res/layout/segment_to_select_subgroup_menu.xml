@@ -49,9 +49,9 @@
         android:linksClickable="false"
         android:textColor="@color/white"
         android:textSize="22sp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignWithParentIfMissing="false"
-        android:layout_toRightOf="@+id/segment_sub_group" />
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="88dp" />
 </RelativeLayout>

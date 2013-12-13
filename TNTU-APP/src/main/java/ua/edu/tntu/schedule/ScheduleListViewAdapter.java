@@ -86,24 +86,6 @@ public class ScheduleListViewAdapter extends ArrayAdapter<ScheduleBlock> {
             holder.textViewLocation.setText(scheduleBlockArrayList.get(position).getLocation());
         }
 
-
-        /*if (scheduleBlockArrayList.get(position).getNameOfDay() != null) {
-            View rowViewDay = inflater.inflate(R.layout.item_day, parent, false);
-            TextView textViewDay = (TextView) rowViewDay.findViewById(R.id.textViewDay);
-            textViewDay.setText(scheduleBlockArrayList.get(position).getNameOfDay());
-            return rowViewDay;
-        } else {
-            View rowView = inflater.inflate(R.layout.item_for_schedule_list_view, parent, false);
-            TextView textViewTimeBegin = (TextView) rowView.findViewById(R.id.textViewTimeBegin);
-            textViewTimeBegin.setText(scheduleBlockArrayList.get(position).getTimeBegin());
-            TextView textViewTimeEnd = (TextView) rowView.findViewById(R.id.textViewTimeEnd);
-            textViewTimeEnd.setText(scheduleBlockArrayList.get(position).getTimeEnd());
-            TextView textViewLecture = (TextView) rowView.findViewById(R.id.textViewLecture);
-            textViewLecture.setText(scheduleBlockArrayList.get(position).getLecture());
-            TextView textViewLocation = (TextView) rowView.findViewById(R.id.textViewLocation);
-            textViewLocation.setText(scheduleBlockArrayList.get(position).getLocation());
-            return rowView;
-        }*/
         return convertView;
     }
 }

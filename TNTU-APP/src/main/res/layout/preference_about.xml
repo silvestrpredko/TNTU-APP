@@ -17,7 +17,7 @@
         android:fontFamily="sans-serif-light"
         android:layout_above="@+id/textViewAboutNames"
         android:layout_centerHorizontal="true"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,5 +29,5 @@
         android:fontFamily="sans-serif-light"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 </RelativeLayout>

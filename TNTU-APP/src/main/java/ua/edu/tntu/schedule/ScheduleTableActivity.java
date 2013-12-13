@@ -26,7 +26,7 @@ public class ScheduleTableActivity extends FragmentActivity {
     private ActionBar actionBar;
     private boolean switchSubGroup;
 
-    private ScheduleXMLResourceParser scheduleParser;
+//    private ScheduleXMLResourceParser scheduleParser;
 
 
     public ScheduleTableActivity() {
@@ -35,8 +35,9 @@ public class ScheduleTableActivity extends FragmentActivity {
         this.position = 0;
     }
 
-    public void changeSubGroup() {
-        mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), groupName, switchSubGroup);
+    public void changeSubGroup(ScheduleXMLResourceParser scheduleParser) {
+//        this.scheduleParser = scheduleParser;
+        mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), scheduleParser);
         position = mViewPager.getCurrentItem();
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mWeeksPagerAdapter);
@@ -66,19 +67,20 @@ public class ScheduleTableActivity extends FragmentActivity {
         radioButtonForFirstSubGroup = (RadioButton) actionBar.getCustomView().findViewById(R.id.firstSubGroup);
         radioButtonForFirstSubGroup.setChecked(true);
 
-        mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), groupName, switchSubGroup);
+        mWeeksPagerAdapter = new WeeksPagerAdapter(getSupportFragmentManager(), new ScheduleXMLResourceParser(getApplicationContext(), groupName, switchSubGroup));
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mWeeksPagerAdapter);
+
 
         segmentSubGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId == R.id.firstSubGroup) {
                     switchSubGroup = true;
-                    changeSubGroup();
+                    changeSubGroup(new ScheduleXMLResourceParser(getApplicationContext(), groupName, switchSubGroup));
                 } else {
                     switchSubGroup = false;
-                    changeSubGroup();
+                    changeSubGroup(new ScheduleXMLResourceParser(getApplicationContext(), groupName, switchSubGroup));
                 }
             }
         });

@@ -12,11 +12,14 @@ public class WeeksPagerAdapter extends FragmentStatePagerAdapter {
 
     private String groupName;
     private boolean switchSubGroup;
+    private ScheduleXMLResourceParser resourceParser;
 
-    public WeeksPagerAdapter(FragmentManager fm, String groupName, boolean switchSubGroup) {
+    public WeeksPagerAdapter(FragmentManager fm, ScheduleXMLResourceParser resourceParser) {
         super(fm);
+
         this.groupName = groupName;
         this.switchSubGroup = switchSubGroup;
+        this.resourceParser = resourceParser;
     }
 
     @Override
@@ -25,9 +28,9 @@ public class WeeksPagerAdapter extends FragmentStatePagerAdapter {
 //            args.putInt(WeekObjectFragment.ARG_OBJECT, i + 1);
 //            fragment.setArguments(args);
         if (i == 0) {
-            return new ScheduleWeekTableFragment(this.groupName, this.switchSubGroup, true);
+            return new ScheduleWeekTableFragment(resourceParser, true);
         } else {
-            return new ScheduleWeekTableFragment(this.groupName, this.switchSubGroup, false);
+            return new ScheduleWeekTableFragment(resourceParser, false);
         }
     }
 
