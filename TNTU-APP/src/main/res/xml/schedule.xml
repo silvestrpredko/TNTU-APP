@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
 <schedule>
     <group>
         СП-21
@@ -476,6 +475,7 @@
                 <endTime>12:30</endTime>
                 <location>K1-802</location>
             </week>
+
             <week>
                 second
                 <day>Понеділок</day>
@@ -559,6 +559,7 @@
                 <location>K1-802</location>
             </week>
         </subgroup>
+
         <subgroup>
             2
             <week>
@@ -736,5 +737,382 @@
                 <location>K1-605</location>
             </week>
         </subgroup>
+    </group>
+
+    <group>
+        СП-31
+        <subgroup>
+            1
+            <week>
+                first
+                <day>Понеділок</day>
+
+                <lecture>Дискретні структури</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К2-33 (лекція)</location>
+
+                <lecture>Людино-машинна взаємодія</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-33 (лекція)</location>
+
+                <day>Вівторок</day>
+
+                <lecture>Українська мова за професійним спрямуванням</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К8-22 (лекція)</location>
+
+                <lecture>Людино-машинна взаємодія</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <lecture>Дискретні структури</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <lecture>Розробка програм на C# та технологія .NET</lecture>
+                <startTime>16:10</startTime>
+                <endTime>17:30</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <day>Середа</day>
+
+                <lecture>Архітектура та проектування програмного забезпечення</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К2-33 (лекція)</location>
+
+                <lecture>Проектний практикум</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <lecture>Програмування на С# та технологія .NET</lecture>
+                <startTime>16:10</startTime>
+                <endTime>17:30</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <day>Четвер</day>
+
+                <lecture>Розробка програм на C# та технологія .NET</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-33 (лекція)</location>
+
+                <lecture>Архітектура та проектування програмного забезпечення</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К1-101 (лабораторна)</location>
+
+                <lecture>Бази даних</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К1-101 (лабораторна)</location>
+
+                <lecture>Емпіричні методи програмної інженерії</lecture>
+                <startTime>16:10</startTime>
+                <endTime>17:30</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <day>П’ятниця</day>
+
+                <lecture>Бази даних</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>K2-33 (лекція)</location>
+
+                <lecture>Емпіричні методи програмної інженерії</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>K2-33 (лекція)</location>
+            </week>
+
+            <week>
+                second
+                <day>Понеділок</day>
+
+                <lecture>Людино-машинна взаємодія</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-33 (лекція)</location>
+
+                <lecture>Українська мова за професійним спрямуванням</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К1-309 (практична)</location>
+
+                <lecture>Групова динаміка і комунікації</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К2-70 (лекція)</location>
+
+                <day>Вівторок</day>
+
+                <lecture>Політологія</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К8-23 (лекція)</location>
+
+                <lecture>Людино-машинна взаємодія</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <lecture>Програмування на С# та технологія .NET</lecture>
+                <startTime>16:10</startTime>
+                <endTime>17:30</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <day>Середа</day>
+
+                <lecture>Архітектура та проектування програмного забезпечення</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К2-33 (лекція)</location>
+
+                <lecture>Проектний практикум</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <lecture>Групова динаміка і комунікації</lecture>
+                <startTime>16:10</startTime>
+                <endTime>17:30</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <day>Четвер</day>
+
+                <lecture>Розробка програм на C# та технологія .NET</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-33 (лекція)</location>
+
+                <lecture>Архітектура та проектування програмного забезпечення</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К1-101 (лабораторна)</location>
+
+                <lecture>Бази даних</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К1-101 (лабораторна)</location>
+
+                <lecture>Емпіричні методи програмної інженерії</lecture>
+                <startTime>16:10</startTime>
+                <endTime>17:30</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <day>П’ятниця</day>
+
+                <lecture>Бази даних</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>K2-33 (лекція)</location>
+
+                <lecture>Емпіричні методи програмної інженерії</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>K2-33 (лекція)</location>
+
+                <lecture>Політологія</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>K6-12 (практична)</location>
+            </week>
+        </subgroup>
+
+        <subgroup>
+            2
+            <week>
+                first
+                <day>Понеділок</day>
+
+                <lecture>Дискретні структури</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К2-33 (лекція)</location>
+
+                <lecture>Людино-машинна взаємодія</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-33 (лекція)</location>
+
+                <lecture>Групова динаміка і комунікації</lecture>
+                <startTime>16:10</startTime>
+                <endTime>17:30</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <day>Вівторок</day>
+
+                <lecture>Розробка програм на C# та технологія .NET</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <lecture>Людино-машинна взаємодія</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <lecture>Українська мова за професійним спрямуванням</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К8-22 (лекція)</location>
+
+                <day>Середа</day>
+
+                <lecture>Дискретні структури</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К1-101 (лабораторна)</location>
+
+                <lecture>Емпіричні методи програмної інженерії</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <lecture>Проектний практикум</lecture>
+                <startTime>10:50</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <lecture>Архітектура та проектування програмного забезпечення</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К2-33 (лекція)</location>
+
+                <day>Четвер</day>
+
+                <lecture>Бази даних</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К1-101 (лабораторна)</location>
+
+                <lecture>Архітектура та проектування програмного забезпечення</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К1-101 (лабораторна)</location>
+
+                <lecture>Розробка програм на C# та технологія .NET</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-101 (лекція)</location>
+
+                <lecture>Емпіричні методи програмної інженерії</lecture>
+                <startTime>16:10</startTime>
+                <endTime>17:30</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <day>П’ятниця</day>
+
+                <lecture>Бази даних</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>K2-33 (лекція)</location>
+
+                <lecture>Емпіричні методи програмної інженерії</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>K2-33 (лекція)</location>
+            </week>
+
+            <week>
+                second
+                <day>Понеділок</day>
+
+                <lecture>Людино-машинна взаємодія</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-33 (лекція)</location>
+
+                <lecture>Українська мова за професійним спрямуванням</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К1-309 (практична)</location>
+
+                <lecture>Групова динаміка і комунікації</lecture>
+                <startTime>14:40</startTime>
+                <endTime>16:00</endTime>
+                <location>К2-70 (лекція)</location>
+
+                <lecture>Групова динаміка і комунікації</lecture>
+                <startTime>16:10</startTime>
+                <endTime>17:30</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <day>Вівторок</day>
+
+                <lecture>Розробка програм на C# та технологія .NET</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <lecture>Людино-машинна взаємодія</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <lecture>Політологія</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К8-23 (лекція)</location>
+
+                <day>Середа</day>
+
+                <lecture>Емпіричні методи програмної інженерії</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <lecture>Проектний практикум</lecture>
+                <startTime>10:50</startTime>
+                <endTime>12:30</endTime>
+                <location>К1-106 (лабораторна)</location>
+
+                <lecture>Архітектура та проектування програмного забезпечення</lecture>
+                <startTime>13:00</startTime>
+                <endTime>14:20</endTime>
+                <location>К2-33 (лекція)</location>
+
+                <day>Четвер</day>
+
+                <lecture>Бази даних</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>К1-101 (лабораторна)</location>
+
+                <lecture>Архітектура та проектування програмного забезпечення</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>К1-101 (лабораторна)</location>
+
+                <lecture>Розробка програм на C# та технологія .NET</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>К2-33 (лекція)</location>
+
+                <day>П’ятниця</day>
+
+                <lecture>Бази даних</lecture>
+                <startTime>8:00</startTime>
+                <endTime>9:20</endTime>
+                <location>K2-33 (лекція)</location>
+
+                <lecture>Емпіричні методи програмної інженерії</lecture>
+                <startTime>9:30</startTime>
+                <endTime>10:50</endTime>
+                <location>K2-33 (лекція)</location>
+
+                <lecture>Політологія</lecture>
+                <startTime>11:10</startTime>
+                <endTime>12:30</endTime>
+                <location>K6-12 (практична)</location>
+            </week>
+        </subgroup>
+
     </group>
 </schedule>
