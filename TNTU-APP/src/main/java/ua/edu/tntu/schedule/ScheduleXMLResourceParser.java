@@ -10,9 +10,6 @@ import java.util.ArrayList;
 
 import ua.edu.tntu.R;
 
-/**
- * Created by silvestr on 12/3/13.
- */
 public class ScheduleXMLResourceParser {
 
     //  variables that replate
