@@ -20,9 +20,6 @@ public class WeeksPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int i) {
-//            Bundle args = new Bundle();
-//            args.putInt(WeekObjectFragment.ARG_OBJECT, i + 1);
-//            fragment.setArguments(args);
         if (i == 0) {
             return new ScheduleWeekTableFragment(resourceParser, true);
         } else {
